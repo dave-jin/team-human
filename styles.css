@@ -17,6 +17,7 @@ body {
 html[lang="ko"] .hero-text,
 html[lang="ko"] .section-title,
 html[lang="ko"] .events-title,
+html[lang="ko"] .featured-event-info h2,
 html[lang="ko"] .logo,
 html[lang="ko"] .footer-logo {
   font-family: 'Noto Serif KR', serif;
@@ -33,6 +34,10 @@ html[lang="ko"] .team-card h3,
 html[lang="ko"] .event-info h3,
 html[lang="ko"] .nav-link,
 html[lang="ko"] .event-date,
+html[lang="ko"] .featured-event-badge,
+html[lang="ko"] .featured-event-date,
+html[lang="ko"] .featured-event-location,
+html[lang="ko"] .events-section-title,
 html[lang="ko"] .lang-btn {
   font-family: 'Noto Sans KR', sans-serif;
 }
@@ -264,6 +269,84 @@ img {
   margin-bottom: 40px;
 }
 
+/* === Featured Event === */
+.featured-event {
+  display: flex;
+  background: #FFFFFF;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 48px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.featured-event:hover {
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.featured-event-image {
+  flex: 1;
+  min-height: 280px;
+  overflow: hidden;
+}
+
+.featured-event-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.featured-event-info {
+  flex: 1;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.featured-event-badge {
+  display: inline-block;
+  width: fit-content;
+  padding: 4px 12px;
+  background-color: #C45C26;
+  color: #FFFFFF;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 4px;
+}
+
+.featured-event-info h2 {
+  font-family: 'Source Serif 4', serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #2B2220;
+}
+
+.featured-event-date {
+  font-size: 14px;
+  color: #C45C26;
+  font-weight: 600;
+}
+
+.featured-event-location {
+  font-size: 13px;
+  color: #8C8A87;
+  line-height: 1.4;
+}
+
+.events-section-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #8C8A87;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
 .events-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -392,6 +475,22 @@ img {
 
   .events {
     padding: 32px 24px;
+  }
+
+  .featured-event {
+    flex-direction: column;
+  }
+
+  .featured-event-image {
+    min-height: 200px;
+  }
+
+  .featured-event-info {
+    padding: 20px;
+  }
+
+  .featured-event-info h2 {
+    font-size: 20px;
   }
 
   .events-grid {

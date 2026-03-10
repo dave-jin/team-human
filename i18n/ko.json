@@ -23,6 +23,8 @@
   "footer.tagline": "프로덕트 메이커가 만든, 프로덕트 메이커를 위한",
   "events.title": "Events",
   "events.subtitle": "진짜 이벤트, 진짜 사람, 진짜 대화. 함께 만들어요.",
+  "events.upcoming": "다가오는 이벤트",
+  "events.past": "지난 이벤트",
   "events.hackathon2.title": "2nd Cursor Hackathon Seoul",
   "events.hackathon2.location": "추후 공지",
   "events.hackathon.title": "Cursor Hackathon Seoul",
