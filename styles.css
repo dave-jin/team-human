@@ -13,29 +13,28 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Korean font: Noto Serif KR (궁서체 style) */
+/* Korean fonts: Noto Serif KR (serif, matches Source Serif 4) + Noto Sans KR (sans-serif, matches Inter) */
 html[lang="ko"] .hero-text,
 html[lang="ko"] .section-title,
 html[lang="ko"] .events-title,
+html[lang="ko"] .logo,
+html[lang="ko"] .footer-logo {
+  font-family: 'Noto Serif KR', serif;
+}
+
 html[lang="ko"] .team-subtitle,
 html[lang="ko"] .events-subtitle,
 html[lang="ko"] .footer-tagline,
 html[lang="ko"] .belief-card p,
 html[lang="ko"] .team-card p,
-html[lang="ko"] .event-location {
-  font-family: 'Noto Serif KR', serif;
-}
-
+html[lang="ko"] .event-location,
 html[lang="ko"] .belief-card h3,
 html[lang="ko"] .team-card h3,
 html[lang="ko"] .event-info h3,
-html[lang="ko"] .nav-link {
-  font-family: 'Noto Serif KR', serif;
-}
-
-html[lang="ko"] .logo,
-html[lang="ko"] .footer-logo {
-  font-family: 'Noto Serif KR', serif;
+html[lang="ko"] .nav-link,
+html[lang="ko"] .event-date,
+html[lang="ko"] .lang-btn {
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 a {

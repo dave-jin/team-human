@@ -6,8 +6,7 @@
   function getPreferredLang() {
     const stored = localStorage.getItem(STORAGE_KEY);
     if (stored && SUPPORTED_LANGS.includes(stored)) return stored;
-    const browserLang = navigator.language.slice(0, 2);
-    return SUPPORTED_LANGS.includes(browserLang) ? browserLang : DEFAULT_LANG;
+    return DEFAULT_LANG;
   }
 
   function setLang(lang) {
