@@ -1,6 +1,6 @@
 (function () {
   const SUPPORTED_LANGS = ['ko', 'en'];
-  const DEFAULT_LANG = 'ko';
+  const DEFAULT_LANG = 'en';
   const STORAGE_KEY = 'team-human-lang';
 
   function getPreferredLang() {
