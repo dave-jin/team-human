@@ -69,7 +69,19 @@
     nav.appendChild(switcher);
   }
 
+  function shuffleTeamCards() {
+    var grid = document.querySelector('.team-grid');
+    if (!grid) return;
+    var cards = Array.from(grid.children);
+    for (var i = cards.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      grid.appendChild(cards[j]);
+      cards.splice(j, 1, cards[i]);
+    }
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
+    shuffleTeamCards();
     createSwitcher();
     var lang = getPreferredLang();
     setLang(lang);
