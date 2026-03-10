@@ -212,6 +212,7 @@ img {
   height: 200px;
   background-color: #D9D5CD;
   border-radius: 8px;
+  object-fit: cover;
 }
 
 .team-card h3 {
