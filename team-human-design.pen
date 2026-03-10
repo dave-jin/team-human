@@ -1,0 +1,1188 @@
+{
+  "version": "2.8",
+  "children": [
+    {
+      "type": "frame",
+      "id": "bi8Au",
+      "x": 0,
+      "y": 0,
+      "name": "Frame",
+      "clip": true,
+      "width": 800,
+      "height": 600,
+      "fill": "#FFFFFF",
+      "layout": "none"
+    },
+    {
+      "type": "frame",
+      "id": "FAcm9",
+      "x": 0,
+      "y": 0,
+      "name": "Home Page",
+      "width": 1440,
+      "fill": "#EDE8E0",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "H9ddJ",
+          "name": "Header",
+          "width": "fill_container",
+          "padding": [
+            20,
+            48
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "Fvmnb",
+              "name": "Logo",
+              "fill": "#2B2220",
+              "content": "✦ Team Human",
+              "fontFamily": "Source Serif 4",
+              "fontSize": 16,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "text",
+              "id": "7c3SP",
+              "name": "Events Nav",
+              "fill": "#2B2220",
+              "content": "Events",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "E8qFt",
+          "name": "Header Divider",
+          "width": "fill_container",
+          "height": 1,
+          "fill": "#D4CFC7"
+        },
+        {
+          "type": "frame",
+          "id": "qP0MN",
+          "name": "Hero Section",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 32,
+          "padding": [
+            40,
+            48,
+            32,
+            48
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "qG3ij",
+              "name": "Hero Text",
+              "fill": "#2B2220",
+              "content": "We're Team Human, a community of builders who believe the best tech starts with empathy, creativity, and real human connection.",
+              "lineHeight": 1.6,
+              "fontFamily": "Source Serif 4",
+              "fontSize": 16,
+              "fontWeight": "normal",
+              "fontStyle": "italic"
+            },
+            {
+              "type": "frame",
+              "id": "Q0hw9",
+              "name": "Hero Image",
+              "metadata": {
+                "type": "unsplash",
+                "username": "davidschultz",
+                "link": "https://unsplash.com/@davidschultz",
+                "author": "David Schultz"
+              },
+              "width": "fill_container",
+              "height": 450,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "https://images.unsplash.com/photo-1677741857184-e0c232d62638?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzMxNDQ0MTh8&ixlib=rb-4.1.0&q=80&w=1080",
+                "mode": "fill"
+              },
+              "cornerRadius": 12
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "4woII",
+          "name": "What We Believe",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 48,
+          "padding": [
+            80,
+            120
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "b5ElU",
+              "name": "Section Title",
+              "fill": "#2B2220",
+              "content": "What we believe",
+              "fontFamily": "Source Serif 4",
+              "fontSize": 28,
+              "fontWeight": "semibold",
+              "fontStyle": "italic"
+            },
+            {
+              "type": "frame",
+              "id": "42AKh",
+              "name": "Beliefs Grid",
+              "width": "fill_container",
+              "gap": 64,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "qlcSJ",
+                  "name": "Value 1",
+                  "width": 480,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "aEmrd",
+                      "name": "val1Title",
+                      "fill": "#2B2220",
+                      "content": "Empathy First",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "bold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ZhjCd",
+                      "name": "val1Desc",
+                      "fill": "#5C5C5C",
+                      "content": "Great products start with understanding people — not just users, but humans with real needs and emotions.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "0ncgq",
+                  "name": "Value 2",
+                  "width": 480,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "kZWUJ",
+                      "name": "val2Title",
+                      "fill": "#2B2220",
+                      "content": "Creative Courage",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "bold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "iLNmt",
+                      "name": "val2Desc",
+                      "fill": "#5C5C5C",
+                      "content": "AI can optimize, but only humans can imagine what doesn't exist yet. We celebrate the weird, bold ideas.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "V954g",
+                  "name": "Value 3",
+                  "width": 480,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "BGoCY",
+                      "name": "val3Title",
+                      "fill": "#2B2220",
+                      "content": "Community Over Competition",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "bold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ycyQu",
+                      "name": "val3Desc",
+                      "fill": "#5C5C5C",
+                      "content": "We grow faster together. Our meetups are spaces where makers share honestly — wins, failures, and everything between.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "7lNZO",
+                  "name": "Value 4",
+                  "width": 480,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "h3VgP",
+                      "name": "val4Title",
+                      "fill": "#2B2220",
+                      "content": "Craft Matters",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "bold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "2XMZI",
+                      "name": "val4Desc",
+                      "fill": "#5C5C5C",
+                      "content": "In a world of AI-generated everything, the human touch is a superpower. We value intentional, thoughtful work.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "YApOJ",
+          "name": "Team Section",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            80,
+            120
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "Al4e7",
+              "name": "teamTitle",
+              "fill": "#2B2220",
+              "content": "Team",
+              "textAlign": "center",
+              "fontFamily": "Source Serif 4",
+              "fontSize": 28,
+              "fontWeight": "semibold",
+              "fontStyle": "italic"
+            },
+            {
+              "type": "text",
+              "id": "sMQ0h",
+              "name": "teamSubtitle",
+              "fill": "#5C5C5C",
+              "content": "Real events, real people, real conversations.",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "JNo3j",
+              "name": "teamSpacer",
+              "width": 1,
+              "height": 32
+            },
+            {
+              "type": "frame",
+              "id": "qmswE",
+              "name": "Team Grid",
+              "width": "fill_container",
+              "gap": 32,
+              "justifyContent": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "1I38d",
+                  "name": "Danny Kim Card",
+                  "width": 350,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "c37ug",
+                      "name": "Photo",
+                      "width": "fill_container",
+                      "height": 200,
+                      "fill": "#D9D5CD",
+                      "cornerRadius": 8
+                    },
+                    {
+                      "type": "text",
+                      "id": "GOTac",
+                      "name": "card1Name",
+                      "fill": "#2B2220",
+                      "content": "Danny Kim",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "bold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "OaxKT",
+                      "name": "card1Desc",
+                      "fill": "#5C5C5C",
+                      "content": "Great products start with understanding people — not just users, but humans with real needs and emotions.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "yREBf",
+                      "name": "card1Btn",
+                      "fill": "#2B2220",
+                      "cornerRadius": 4,
+                      "padding": [
+                        8,
+                        16
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "scX17",
+                          "name": "card1BtnText",
+                          "fill": "#FFFFFF",
+                          "content": "LinkedIn",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "medium"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "s56pQ",
+                  "name": "Dave Jin Card",
+                  "width": 350,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "fancC",
+                      "name": "Photo",
+                      "width": "fill_container",
+                      "height": 200,
+                      "fill": "#D9D5CD",
+                      "cornerRadius": 8
+                    },
+                    {
+                      "type": "text",
+                      "id": "YJ5Vr",
+                      "name": "card2Name",
+                      "fill": "#2B2220",
+                      "content": "Dave Jin",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "bold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "JxXkh",
+                      "name": "card2Desc",
+                      "fill": "#5C5C5C",
+                      "content": "Great products start with understanding people — not just users, but humans with real needs and emotions.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Kdtxt",
+                      "name": "card2Btn",
+                      "fill": "#2B2220",
+                      "cornerRadius": 4,
+                      "padding": [
+                        8,
+                        16
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "25Lsh",
+                          "name": "card2BtnText",
+                          "fill": "#FFFFFF",
+                          "content": "LinkedIn",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "medium"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "GjgtY",
+                  "name": "Eric Kim Card",
+                  "width": 350,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "ESywa",
+                      "name": "Photo",
+                      "width": "fill_container",
+                      "height": 200,
+                      "fill": "#D9D5CD",
+                      "cornerRadius": 8
+                    },
+                    {
+                      "type": "text",
+                      "id": "8vI6x",
+                      "name": "card3Name",
+                      "fill": "#2B2220",
+                      "content": "Eric Kim",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "bold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "6240x",
+                      "name": "card3Desc",
+                      "fill": "#5C5C5C",
+                      "content": "Great products start with understanding people — not just users, but humans with real needs and emotions.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "7Aago",
+                      "name": "card3Btn",
+                      "fill": "#2B2220",
+                      "cornerRadius": 4,
+                      "padding": [
+                        8,
+                        16
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "pedLG",
+                          "name": "card3BtnText",
+                          "fill": "#FFFFFF",
+                          "content": "LinkedIn",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "medium"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "0N0Cx",
+                  "name": "Kelly Woo Card",
+                  "width": 350,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "UDJwP",
+                      "name": "Photo",
+                      "width": "fill_container",
+                      "height": 200,
+                      "fill": "#D9D5CD",
+                      "cornerRadius": 8
+                    },
+                    {
+                      "type": "text",
+                      "id": "5chkY",
+                      "name": "card4Name",
+                      "fill": "#2B2220",
+                      "content": "Kelly Woo",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "bold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "VQjZg",
+                      "name": "card4Desc",
+                      "fill": "#5C5C5C",
+                      "content": "Great products start with understanding people — not just users, but humans with real needs and emotions.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "EOyH6",
+                      "name": "card4Btn",
+                      "fill": "#2B2220",
+                      "cornerRadius": 4,
+                      "padding": [
+                        8,
+                        16
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "1gv2t",
+                          "name": "card4BtnText",
+                          "fill": "#FFFFFF",
+                          "content": "LinkedIn",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "medium"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "FfqhW",
+                  "name": "Rachel Lee Card",
+                  "width": 350,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "BQr60",
+                      "name": "Photo",
+                      "width": "fill_container",
+                      "height": 200,
+                      "fill": "#D9D5CD",
+                      "cornerRadius": 8
+                    },
+                    {
+                      "type": "text",
+                      "id": "ss0n5",
+                      "name": "card5Name",
+                      "fill": "#2B2220",
+                      "content": "Rachel Lee",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "bold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "HeeCJ",
+                      "name": "card5Desc",
+                      "fill": "#5C5C5C",
+                      "content": "Great products start with understanding people — not just users, but humans with real needs and emotions.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "kwkxI",
+                      "name": "card5Btn",
+                      "fill": "#2B2220",
+                      "cornerRadius": 4,
+                      "padding": [
+                        8,
+                        16
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "acRZF",
+                          "name": "card5BtnText",
+                          "fill": "#FFFFFF",
+                          "content": "LinkedIn",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "medium"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Ych5b",
+                  "name": "Sijin Jeon Card",
+                  "width": 350,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "xRjWN",
+                      "name": "Photo",
+                      "width": "fill_container",
+                      "height": 200,
+                      "fill": "#D9D5CD",
+                      "cornerRadius": 8
+                    },
+                    {
+                      "type": "text",
+                      "id": "KCPKL",
+                      "name": "card6Name",
+                      "fill": "#2B2220",
+                      "content": "Sijin Jeon",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "bold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "yuouo",
+                      "name": "card6Desc",
+                      "fill": "#5C5C5C",
+                      "content": "Great products start with understanding people — not just users, but humans with real needs and emotions.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "UgeZ0",
+                      "name": "card6Btn",
+                      "fill": "#2B2220",
+                      "cornerRadius": 4,
+                      "padding": [
+                        8,
+                        16
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "WL93S",
+                          "name": "card6BtnText",
+                          "fill": "#FFFFFF",
+                          "content": "LinkedIn",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "medium"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "rBb4n",
+          "name": "Footer Divider",
+          "width": "fill_container",
+          "height": 1,
+          "fill": "#D4CFC7"
+        },
+        {
+          "type": "frame",
+          "id": "0M0lo",
+          "name": "Footer",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 8,
+          "padding": [
+            32,
+            48
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "tkyDR",
+              "name": "footerLogo",
+              "fill": "#2B2220",
+              "content": "✦ Team Human",
+              "fontFamily": "Source Serif 4",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "text",
+              "id": "Ps7Td",
+              "name": "footerTagline",
+              "fill": "#8C8A87",
+              "content": "For product makers, by product makers",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "zbMn2",
+      "x": 1540,
+      "y": 0,
+      "name": "Events Page",
+      "width": 1440,
+      "fill": "#EDE8E0",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "dCz8t",
+          "name": "Header",
+          "width": "fill_container",
+          "padding": [
+            20,
+            48
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "H4ok4",
+              "name": "evLogo",
+              "fill": "#2B2220",
+              "content": "✦ Team Human",
+              "fontFamily": "Source Serif 4",
+              "fontSize": 16,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "text",
+              "id": "AhvBz",
+              "name": "evNav",
+              "fill": "#2B2220",
+              "content": "Events",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "OIlF8",
+          "name": "Divider",
+          "width": "fill_container",
+          "height": 1,
+          "fill": "#D4CFC7"
+        },
+        {
+          "type": "frame",
+          "id": "Oz9Sy",
+          "name": "Events Content",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            60,
+            80
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "NCDBr",
+              "name": "evTitle",
+              "fill": "#2B2220",
+              "content": "Events",
+              "fontFamily": "Source Serif 4",
+              "fontSize": 32,
+              "fontWeight": "semibold",
+              "fontStyle": "italic"
+            },
+            {
+              "type": "text",
+              "id": "xNYjN",
+              "name": "evSubtitle",
+              "fill": "#5C5C5C",
+              "content": "Real events, real people, real conversations. Come build with us.",
+              "lineHeight": 1.5,
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "mfZVv",
+              "name": "evSpacer",
+              "width": 1,
+              "height": 24
+            },
+            {
+              "type": "frame",
+              "id": "i7ie8",
+              "name": "Events Grid",
+              "width": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "wG8C6",
+                  "name": "Cursor Hackathon Seoul",
+                  "width": 290,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "BgSm7",
+                      "name": "Event Image",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "priscilladupreez",
+                        "link": "https://unsplash.com/@priscilladupreez",
+                        "author": "Priscilla Du Preez 🇨🇦"
+                      },
+                      "width": "fill_container",
+                      "height": 180,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1513746199652-7a5904642685?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzMxNDQ1MzJ8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "twiLp",
+                      "name": "ev1Info",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 6,
+                      "padding": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "S6dQ7",
+                          "name": "ev1Title",
+                          "fill": "#2B2220",
+                          "content": "Cursor Hackathon Seoul",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "fontWeight": "semibold"
+                        },
+                        {
+                          "type": "text",
+                          "id": "felQN",
+                          "name": "ev1Date",
+                          "fill": "#C45C26",
+                          "content": "Feb 07, 2026",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Hy7b4",
+                          "name": "ev1Loc",
+                          "fill": "#8C8A87",
+                          "content": "서울특별시 강남구 역삼로 55/7 패스트파이브 4층 대강당",
+                          "lineHeight": 1.4,
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "yAE9y",
+                  "name": "Cursor Network Build Day",
+                  "width": 290,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "C8eu0",
+                      "name": "Event Image",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "algoleague",
+                        "link": "https://unsplash.com/@algoleague",
+                        "author": "algoleague"
+                      },
+                      "width": "fill_container",
+                      "height": 180,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1631350024113-334a674d039b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzMxNDQ1MzN8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "NeGVT",
+                      "name": "ev2Info",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 6,
+                      "padding": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "4cy6u",
+                          "name": "ev2Title",
+                          "fill": "#2B2220",
+                          "content": "Cursor Network Build Day",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "fontWeight": "semibold"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Bq628",
+                          "name": "ev2Date",
+                          "fill": "#C45C26",
+                          "content": "Mar 04, 2026",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "fjI50",
+                          "name": "ev2Loc",
+                          "fill": "#8C8A87",
+                          "content": "서울특별시 강남구 역삼로 55/7 패스트파이브 4층 대강당",
+                          "lineHeight": 1.4,
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "FVLHu",
+                  "name": "Cursor Meetup Design Build Ship",
+                  "width": 290,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "LUC3z",
+                      "name": "Event Image",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "snapmaker_official",
+                        "link": "https://unsplash.com/@snapmaker_official",
+                        "author": "Snapmaker 3D Printer"
+                      },
+                      "width": "fill_container",
+                      "height": 180,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1760446410593-0710fb22cafc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzMxNDQ1MzR8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "3CxZL",
+                      "name": "ev3Info",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 6,
+                      "padding": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "rqzNE",
+                          "name": "ev3Title",
+                          "fill": "#2B2220",
+                          "content": "Cursor Meetup: Design, Build, Ship",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "fontWeight": "semibold"
+                        },
+                        {
+                          "type": "text",
+                          "id": "L8s8U",
+                          "name": "ev3Date",
+                          "fill": "#C45C26",
+                          "content": "Oct 25, 2025",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "yaMmx",
+                          "name": "ev3Loc",
+                          "fill": "#8C8A87",
+                          "content": "서울특별시 서초구 서초대로 67 단군소프트 3층",
+                          "lineHeight": 1.4,
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "rNZQZ",
+                  "name": "Cursor Meetup Seoul",
+                  "width": 290,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "GUdbz",
+                      "name": "Event Image",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "tracingben",
+                        "link": "https://unsplash.com/@tracingben",
+                        "author": "Benjamin Fekete"
+                      },
+                      "width": "fill_container",
+                      "height": 180,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1721981317675-85dfe0ec2148?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzMxNDQ1MzR8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "n7QSB",
+                      "name": "ev4Info",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 6,
+                      "padding": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "FVpbz",
+                          "name": "ev4Title",
+                          "fill": "#2B2220",
+                          "content": "Cursor Meetup Seoul",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "fontWeight": "semibold"
+                        },
+                        {
+                          "type": "text",
+                          "id": "gmYxp",
+                          "name": "ev4Date",
+                          "fill": "#C45C26",
+                          "content": "Jun 14, 2025",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Msi9k",
+                          "name": "ev4Loc",
+                          "fill": "#8C8A87",
+                          "content": "서울 강남구 강남대로 374 케이스퀘어(강남)2 20층 패시드라운지",
+                          "lineHeight": 1.4,
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "7srj6",
+          "name": "Footer Divider",
+          "width": "fill_container",
+          "height": 1,
+          "fill": "#D4CFC7"
+        },
+        {
+          "type": "frame",
+          "id": "2ODPB",
+          "name": "Footer",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 8,
+          "padding": [
+            32,
+            48
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "fAV8c",
+              "name": "evFooterLogo",
+              "fill": "#2B2220",
+              "content": "✦ Team Human",
+              "fontFamily": "Source Serif 4",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "type": "text",
+              "id": "FwLWk",
+              "name": "evFooterTag",
+              "fill": "#8C8A87",
+              "content": "For product makers, by product makers",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
