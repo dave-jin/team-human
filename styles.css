@@ -192,23 +192,43 @@ img {
   text-align: center;
 }
 
+.team .section-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 22px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 28px;
+  letter-spacing: -0.44px;
+  color: #37210d;
+  margin-bottom: 16px;
+}
+
 .team-subtitle {
+  font-family: 'Pretendard', 'Inter', sans-serif;
   font-size: 14px;
-  color: #5C5C5C;
-  margin-bottom: 48px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #37210d;
+  margin-bottom: 56px;
 }
 
 .team-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  gap: 40px 24px;
   text-align: left;
 }
 
 .team-card {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 24px;
+}
+
+.team-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .team-photo {
@@ -220,32 +240,37 @@ img {
 }
 
 .team-card h3 {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Pretendard', 'Inter', sans-serif;
   font-size: 16px;
-  font-weight: 700;
-  color: #2B2220;
+  font-weight: 500;
+  line-height: 16px;
+  color: #37210d;
 }
 
 .team-card p {
-  font-size: 13px;
-  color: #5C5C5C;
-  line-height: 1.5;
+  font-family: 'Pretendard', 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #37210d;
+  opacity: 0.8;
+  line-height: 1.4;
 }
 
 .linkedin-btn {
   display: inline-block;
-  padding: 8px 16px;
-  background-color: #2B2220;
-  color: #FFFFFF;
-  font-size: 12px;
+  padding: 6px 10px;
+  background-color: rgba(55, 33, 13, 0.05);
+  color: #37210d;
+  font-size: 14px;
   font-weight: 500;
+  line-height: 20px;
   border-radius: 4px;
   width: fit-content;
-  transition: opacity 0.2s;
+  transition: background-color 0.2s;
 }
 
 .linkedin-btn:hover {
-  opacity: 0.85;
+  background-color: rgba(55, 33, 13, 0.1);
 }
 
 /* === Events Page === */
