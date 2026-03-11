@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Pretendard', sans-serif;
-  background-color: #EDE8E0;
+  background-color: #F1F1ED;
   color: #2B2220;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -53,11 +53,18 @@ img {
 
 /* === Header === */
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 48px;
-  border-bottom: 1px solid #D4CFC7;
+  background-color: rgba(241, 241, 237, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 .logo {
