@@ -155,11 +155,12 @@ img {
 
 .section-title {
   font-family: 'Libre Baskerville', serif;
-  font-size: 28px;
-  font-weight: 600;
-  font-style: italic;
-  color: #2B2220;
-  margin-bottom: 48px;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: -0.44px;
+  color: #37210d;
+  margin-bottom: 56px;
 }
 
 .section-title.center {
@@ -169,37 +170,37 @@ img {
 .beliefs-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 48px 64px;
+  gap: 48px;
+}
+
+.belief-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .belief-card h3 {
   font-family: 'Pretendard', sans-serif;
   font-size: 16px;
-  font-weight: 700;
-  color: #2B2220;
-  margin-bottom: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #37210d;
 }
 
 .belief-card p {
+  font-family: 'Pretendard', sans-serif;
   font-size: 14px;
-  color: #5C5C5C;
+  color: #37210d;
+  opacity: 0.8;
   line-height: 1.6;
 }
 
 /* === Team === */
 .team {
   padding: 80px 120px;
-  text-align: center;
 }
 
 .team .section-title {
-  font-family: 'Libre Baskerville', serif;
-  font-size: 22px;
-  font-weight: 500;
-  font-style: normal;
-  line-height: 28px;
-  letter-spacing: -0.44px;
-  color: #37210d;
   margin-bottom: 16px;
 }
 
