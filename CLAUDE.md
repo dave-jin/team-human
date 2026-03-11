@@ -19,7 +19,7 @@ i18n/en.json        # English translations
 i18n/ko.json        # Korean translations
 images/
   hackathon-hero.png
-  PFP/              # Team member profile photos (Danny, Dave, Eric, Kelly, Rachel, Sirial, Annie, Chedda)
+  PFP/              # Team member profile photos (Danny, Dave, Eric, Kelly, Rachel, Sireal, Annie, Chedda)
 .vercel/            # Vercel project config
 ```
 
@@ -48,7 +48,7 @@ Team cards are **randomly shuffled** on each page load via `shuffleTeamCards()` 
 | Eric Kim | team.eric | /in/jaeyeonerickim |
 | Kelly Woo | team.kelly | /in/jiheewoo |
 | Rachel Lee | team.rachel | /in/rachelselee |
-| Sirial Jeon | team.sirial | /in/sijinjeon |
+| Sireal Jeon | team.sireal | /in/sijinjeon |
 | Annie Seo | team.annie | /in/ga-on-seo-8b5989165 |
 | Chedda Choi | team.chedda | /in/cheddachoi |
 
@@ -65,3 +65,4 @@ Push to `main` branch triggers Vercel auto-deploy. No build step needed — stat
 ### Collaborators
 - dave-jin (owner)
 - erickimme (write access)
+- sijinjeon (write access)
