@@ -8,7 +8,7 @@
 body {
   font-family: 'Pretendard', sans-serif;
   background-color: #F1F1ED;
-  color: #2B2220;
+  color: #37210D;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
@@ -69,22 +69,17 @@ img {
   font-family: 'Libre Baskerville', serif;
   font-size: 16px;
   font-weight: 700;
-  color: #2B2220;
+  color: #37210D;
 }
 
 .nav-link {
   font-size: 14px;
   font-weight: 500;
-  color: #3E2916;
+  color: #37210D;
   text-decoration: none;
 }
 
 .nav-link:hover {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
-.nav-link.active {
   text-decoration: underline;
   text-underline-offset: 4px;
 }
@@ -99,8 +94,8 @@ img {
 .lang-select {
   font-family: 'Pretendard', sans-serif;
   font-size: 14px;
-  font-weight: 400;
-  color: #2B2220;
+  font-weight: 500;
+  color: #37210D;
   width: 100px;
   background-color: transparent;
   border: 1px solid #DDDDDD;
@@ -116,13 +111,13 @@ img {
 }
 
 .lang-select:hover {
-  background-color: rgba(221, 221, 221, 0.5);
+  background-color: rgba(55, 33, 13, 0.05);  /* #37210D · 5% */
   background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%232B2220' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
 
 .lang-select:focus {
   outline: none;
-  border-color: #2B2220;
+  border-color: #37210D;
 }
 
 /* === Hero === */
@@ -284,23 +279,26 @@ img {
 
 /* === Events Page === */
 .events {
-  padding: 60px 80px;
+  padding: 128px 120px 60px;
 }
 
 .events-title {
   font-family: 'Libre Baskerville', serif;
-  font-size: 32px;
-  font-weight: 600;
-  font-style: italic;
-  color: #2B2220;
-  margin-bottom: 12px;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: -0.44px;
+  color: #37210d;
+  margin-bottom: 16px;
 }
 
 .events-subtitle {
+  font-family: 'Pretendard', sans-serif;
   font-size: 14px;
-  color: #5C5C5C;
-  line-height: 1.5;
-  margin-bottom: 40px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #37210d;
+  margin-bottom: 56px;
 }
 
 /* === Featured Event === */
@@ -356,7 +354,7 @@ img {
   font-family: 'Libre Baskerville', serif;
   font-size: 24px;
   font-weight: 700;
-  color: #2B2220;
+  color: #37210D;
 }
 
 .featured-event-date {
@@ -389,10 +387,13 @@ img {
 
 .event-card {
   background: #FFFFFF;
-  border-radius: 12px;
-  overflow: hidden;
+  border: 1px solid #DDDDDD;
+  border-radius: 16px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   transition: box-shadow 0.2s, transform 0.2s;
-  display: block;
 }
 
 .event-card:hover {
@@ -402,7 +403,9 @@ img {
 
 .event-image {
   width: 100%;
-  height: 180px;
+  background-color: #F1F1ED;
+  aspect-ratio: 432 / 243;
+  border-radius: 8px;
   overflow: hidden;
 }
 
@@ -410,31 +413,41 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 8px;
 }
 
 .event-info {
-  padding: 16px;
+  padding: 8px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 10px;
+  color: #37210d;
 }
 
 .event-info h3 {
-  font-size: 15px;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 16px;
   font-weight: 600;
-  color: #2B2220;
+  line-height: 18px;
+  color: #37210d;
 }
 
 .event-date {
+  font-family: 'Pretendard', sans-serif;
   font-size: 12px;
-  color: #C45C26;
   font-weight: 500;
+  line-height: 1.4;
+  color: #37210d;
 }
 
 .event-location {
-  font-size: 11px;
-  color: #8C8A87;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
   line-height: 1.4;
+  color: #37210d;
+  opacity: 0.6;
+  margin-top: -4px;
 }
 
 /* === Footer === */
@@ -453,7 +466,7 @@ img {
   font-family: 'Libre Baskerville', serif;
   font-size: 14px;
   font-weight: 700;
-  color: #2B2220;
+  color: #37210D;
 }
 
 .footer-tagline {
@@ -472,7 +485,7 @@ img {
   }
 
   .events {
-    padding: 40px 48px;
+    padding: 120px 48px 40px;
   }
 }
 
@@ -504,7 +517,7 @@ img {
   }
 
   .events {
-    padding: 32px 24px;
+    padding: 120px 24px 32px;
   }
 
   .featured-event {
