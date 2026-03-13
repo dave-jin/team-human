@@ -6,21 +6,20 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: #EDE8E0;
-  color: #2B2220;
+  font-family: 'Pretendard', sans-serif;
+  background-color: #F1F1ED;
+  color: #37210D;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Korean fonts: Noto Serif KR (serif, matches Source Serif 4) + Noto Sans KR (sans-serif, matches Inter) */
-html[lang="ko"] .hero-text,
+/* Korean fonts: Libre Baskerville (serif titles) + Pretendard (sans-serif body) */
 html[lang="ko"] .section-title,
 html[lang="ko"] .events-title,
 html[lang="ko"] .featured-event-info h2,
 html[lang="ko"] .logo,
 html[lang="ko"] .footer-logo {
-  font-family: 'Noto Serif KR', serif;
+  font-family: 'Libre Baskerville', serif;
 }
 
 html[lang="ko"] .team-subtitle,
@@ -38,8 +37,8 @@ html[lang="ko"] .featured-event-badge,
 html[lang="ko"] .featured-event-date,
 html[lang="ko"] .featured-event-location,
 html[lang="ko"] .events-section-title,
-html[lang="ko"] .lang-btn {
-  font-family: 'Noto Sans KR', sans-serif;
+html[lang="ko"] .lang-select {
+  font-family: 'Pretendard', sans-serif;
 }
 
 a {
@@ -54,98 +53,102 @@ img {
 
 /* === Header === */
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 48px;
-  border-bottom: 1px solid #D4CFC7;
+  padding: 20px 32px;
+  background-color: rgb(241, 241, 237);
 }
 
 .logo {
-  font-family: 'Source Serif 4', serif;
+  font-family: 'Libre Baskerville', serif;
   font-size: 16px;
   font-weight: 700;
-  color: #2B2220;
+  color: #37210D;
 }
 
 .nav-link {
   font-size: 14px;
-  color: #2B2220;
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  font-weight: 500;
+  color: #37210D;
+  text-decoration: none;
 }
 
-.nav-link.active {
-  font-weight: 600;
+.nav-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 /* === Language Switcher === */
 .header nav {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 32px;
 }
 
-.lang-switcher {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.lang-sep {
-  font-size: 12px;
-  color: #B5B0A8;
-}
-
-.lang-btn {
-  background: none;
-  border: none;
-  font-family: 'Inter', sans-serif;
-  font-size: 12px;
+.lang-select {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 14px;
   font-weight: 500;
-  color: #8C8A87;
-  cursor: pointer;
-  padding: 4px 6px;
+  color: #37210D;
+  width: 100px;
+  background-color: transparent;
+  border: 1px solid #DDDDDD;
   border-radius: 4px;
-  transition: color 0.2s, background-color 0.2s;
+  padding: 6px 12px;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%232B2220' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  padding-right: 22px;
 }
 
-.lang-btn:hover {
-  color: #2B2220;
+.lang-select:hover {
+  background-color: rgba(55, 33, 13, 0.05);  /* #37210D · 5% */
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%232B2220' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
 
-.lang-btn.active {
-  color: #2B2220;
-  font-weight: 700;
-  background-color: rgba(43, 34, 32, 0.08);
+.lang-select:focus {
+  outline: none;
+  border-color: #37210D;
 }
 
 /* === Hero === */
 .hero {
-  padding: 40px 48px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 120px 32px 80px;
 }
 
 .hero-text {
-  font-family: 'Source Serif 4', serif;
-  font-style: italic;
-  font-size: 16px;
-  color: #2B2220;
-  line-height: 1.6;
-  margin-bottom: 32px;
-  max-width: 800px;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #37210d;
+  opacity: 0.8;
+  line-height: 1.4;
 }
 
 .hero-image {
   width: 100%;
-  border-radius: 12px;
+  aspect-ratio: 1376 / 774;
+  border-radius: 16px;
   overflow: hidden;
-  background-color: #C4BFB7;
 }
 
 .hero-image img {
   width: 100%;
-  height: 450px;
+  height: 100%;
   object-fit: cover;
+  border-radius: 16px;
 }
 
 /* === Beliefs === */
@@ -154,12 +157,13 @@ img {
 }
 
 .section-title {
-  font-family: 'Source Serif 4', serif;
-  font-size: 28px;
-  font-weight: 600;
-  font-style: italic;
-  color: #2B2220;
-  margin-bottom: 48px;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: -0.44px;
+  color: #37210d;
+  margin-bottom: 56px;
 }
 
 .section-title.center {
@@ -169,46 +173,66 @@ img {
 .beliefs-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 48px 64px;
+  gap: 48px;
+}
+
+.belief-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .belief-card h3 {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Pretendard', sans-serif;
   font-size: 16px;
-  font-weight: 700;
-  color: #2B2220;
-  margin-bottom: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #37210d;
 }
 
 .belief-card p {
+  font-family: 'Pretendard', sans-serif;
   font-size: 14px;
-  color: #5C5C5C;
+  color: #37210d;
+  opacity: 0.8;
   line-height: 1.6;
 }
 
 /* === Team === */
 .team {
   padding: 80px 120px;
-  text-align: center;
+}
+
+.team .section-title {
+  margin-bottom: 16px;
 }
 
 .team-subtitle {
+  font-family: 'Pretendard', sans-serif;
   font-size: 14px;
-  color: #5C5C5C;
-  margin-bottom: 48px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #37210d;
+  margin-bottom: 56px;
 }
 
 .team-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  gap: 40px 24px;
   text-align: left;
 }
 
 .team-card {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 24px;
+}
+
+.team-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .team-photo {
@@ -220,53 +244,61 @@ img {
 }
 
 .team-card h3 {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Pretendard', sans-serif;
   font-size: 16px;
-  font-weight: 700;
-  color: #2B2220;
+  font-weight: 500;
+  line-height: 16px;
+  color: #37210d;
 }
 
 .team-card p {
-  font-size: 13px;
-  color: #5C5C5C;
-  line-height: 1.5;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #37210d;
+  opacity: 0.8;
+  line-height: 1.4;
 }
 
 .linkedin-btn {
   display: inline-block;
-  padding: 8px 16px;
-  background-color: #2B2220;
-  color: #FFFFFF;
-  font-size: 12px;
+  padding: 6px 10px;
+  background-color: rgba(55, 33, 13, 0.05);
+  color: #37210D;
+  font-size: 14px;
   font-weight: 500;
+  line-height: 20px;
   border-radius: 4px;
   width: fit-content;
-  transition: opacity 0.2s;
+  transition: background-color 0.2s;
 }
 
 .linkedin-btn:hover {
-  opacity: 0.85;
+  background-color: rgba(55, 33, 13, 0.1);
 }
 
 /* === Events Page === */
 .events {
-  padding: 60px 80px;
+  padding: 128px 120px 60px;
 }
 
 .events-title {
-  font-family: 'Source Serif 4', serif;
-  font-size: 32px;
-  font-weight: 600;
-  font-style: italic;
-  color: #2B2220;
-  margin-bottom: 12px;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: -0.44px;
+  color: #37210d;
+  margin-bottom: 16px;
 }
 
 .events-subtitle {
+  font-family: 'Pretendard', sans-serif;
   font-size: 14px;
-  color: #5C5C5C;
-  line-height: 1.5;
-  margin-bottom: 40px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #37210d;
+  margin-bottom: 56px;
 }
 
 /* === Featured Event === */
@@ -319,10 +351,10 @@ img {
 }
 
 .featured-event-info h2 {
-  font-family: 'Source Serif 4', serif;
+  font-family: 'Libre Baskerville', serif;
   font-size: 24px;
   font-weight: 700;
-  color: #2B2220;
+  color: #37210D;
 }
 
 .featured-event-date {
@@ -338,7 +370,7 @@ img {
 }
 
 .events-section-title {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Pretendard', sans-serif;
   font-size: 14px;
   font-weight: 600;
   color: #8C8A87;
@@ -355,10 +387,13 @@ img {
 
 .event-card {
   background: #FFFFFF;
-  border-radius: 12px;
-  overflow: hidden;
+  border: 1px solid #DDDDDD;
+  border-radius: 16px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   transition: box-shadow 0.2s, transform 0.2s;
-  display: block;
 }
 
 .event-card:hover {
@@ -368,7 +403,9 @@ img {
 
 .event-image {
   width: 100%;
-  height: 180px;
+  background-color: #F1F1ED;
+  aspect-ratio: 432 / 243;
+  border-radius: 8px;
   overflow: hidden;
 }
 
@@ -376,31 +413,41 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 8px;
 }
 
 .event-info {
-  padding: 16px;
+  padding: 8px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 10px;
+  color: #37210d;
 }
 
 .event-info h3 {
-  font-size: 15px;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 16px;
   font-weight: 600;
-  color: #2B2220;
+  line-height: 18px;
+  color: #37210d;
 }
 
 .event-date {
+  font-family: 'Pretendard', sans-serif;
   font-size: 12px;
-  color: #C45C26;
   font-weight: 500;
+  line-height: 1.4;
+  color: #37210d;
 }
 
 .event-location {
-  font-size: 11px;
-  color: #8C8A87;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
   line-height: 1.4;
+  color: #37210d;
+  opacity: 0.6;
+  margin-top: -4px;
 }
 
 /* === Footer === */
@@ -416,10 +463,10 @@ img {
 }
 
 .footer-logo {
-  font-family: 'Source Serif 4', serif;
+  font-family: 'Libre Baskerville', serif;
   font-size: 14px;
   font-weight: 700;
-  color: #2B2220;
+  color: #37210D;
 }
 
 .footer-tagline {
@@ -438,7 +485,7 @@ img {
   }
 
   .events {
-    padding: 40px 48px;
+    padding: 120px 48px 40px;
   }
 }
 
@@ -448,11 +495,7 @@ img {
   }
 
   .hero {
-    padding: 24px 24px 20px;
-  }
-
-  .hero-image img {
-    height: 250px;
+    padding: 80px 24px 48px;
   }
 
   .beliefs {
@@ -474,7 +517,7 @@ img {
   }
 
   .events {
-    padding: 32px 24px;
+    padding: 120px 24px 32px;
   }
 
   .featured-event {

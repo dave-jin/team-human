@@ -36,36 +36,30 @@
   }
 
   function updateSwitcher(lang) {
-    document.querySelectorAll('.lang-btn').forEach(function (btn) {
-      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
-    });
+    var select = document.querySelector('.lang-select');
+    if (select) select.value = lang;
   }
 
   function createSwitcher() {
     var nav = document.querySelector('.header nav');
     if (!nav) return;
 
-    var switcher = document.createElement('div');
-    switcher.className = 'lang-switcher';
+    var select = document.createElement('select');
+    select.className = 'lang-select';
 
-    SUPPORTED_LANGS.forEach(function (lang, i) {
-      if (i > 0) {
-        var sep = document.createElement('span');
-        sep.className = 'lang-sep';
-        sep.textContent = '/';
-        switcher.appendChild(sep);
-      }
-      var btn = document.createElement('button');
-      btn.className = 'lang-btn';
-      btn.setAttribute('data-lang', lang);
-      btn.textContent = lang.toUpperCase();
-      btn.addEventListener('click', function () {
-        setLang(lang);
-      });
-      switcher.appendChild(btn);
+    SUPPORTED_LANGS.forEach(function (lang) {
+      var option = document.createElement('option');
+      option.value = lang;
+      var labels = { en: 'English', ko: '한국어' };
+      option.textContent = labels[lang] || lang.toUpperCase();
+      select.appendChild(option);
     });
 
-    nav.appendChild(switcher);
+    select.addEventListener('change', function () {
+      setLang(select.value);
+    });
+
+    nav.appendChild(select);
   }
 
   function shuffleTeamCards() {
