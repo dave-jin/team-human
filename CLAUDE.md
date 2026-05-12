@@ -7,7 +7,7 @@ Team Human is a community homepage for an AI-era human-centered tech community b
 - **Pure HTML/CSS/JS** — no build tools, no frameworks
 - **Hosting:** Vercel (auto-deploy on push to `main`)
 - **Repo:** github.com/dave-jin/team-human
-- **Domain:** team-human.vercel.app
+- **Production domain:** withteamhuman.com (apex) + www.withteamhuman.com — registered via Gabia, DNS pointed at Vercel's `76.76.21.21` A record. The auto-generated `team-human-neon.vercel.app` and `team-human-*.vercel.app` aliases still resolve.
 
 ## Project Structure
 ```
