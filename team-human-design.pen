@@ -910,6 +910,92 @@
         },
         {
           "type": "frame",
+          "id": "communityCta",
+          "name": "Community CTA",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            80,
+            120
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "communityTitle",
+              "name": "Community Title",
+              "fill": "#37210D",
+              "content": "Join the conversation",
+              "textAlign": "center",
+              "fontFamily": "Libre Baskerville",
+              "fontSize": 22,
+              "fontWeight": "medium",
+              "letterSpacing": -0.44
+            },
+            {
+              "type": "text",
+              "id": "communityDesc",
+              "name": "Community Description",
+              "fill": "#37210D",
+              "content": "Hop into our KakaoTalk open chat to meet fellow builders, share what you're working on, and stay in the loop on upcoming events.",
+              "textAlign": "center",
+              "lineHeight": 1.6,
+              "fontFamily": "Pretendard",
+              "fontSize": 14,
+              "fontWeight": "normal",
+              "maxWidth": 520
+            },
+            {
+              "type": "frame",
+              "id": "communitySpacer",
+              "name": "Spacer",
+              "width": 1,
+              "height": 16
+            },
+            {
+              "type": "frame",
+              "id": "kakaoBtn",
+              "name": "KakaoTalk Button",
+              "fill": "#FEE500",
+              "cornerRadius": 999,
+              "padding": [
+                14,
+                24
+              ],
+              "gap": 8,
+              "alignItems": "center",
+              "metadata": {
+                "href": "https://open.kakao.com/o/pyheuCui",
+                "icon": "speech-bubble"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "id": "kakaoBtnIcon",
+                  "name": "Icon",
+                  "fill": "#181600",
+                  "content": "💬",
+                  "fontFamily": "Pretendard",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "kakaoBtnLabel",
+                  "name": "Label",
+                  "fill": "#181600",
+                  "content": "Open KakaoTalk Chat",
+                  "fontFamily": "Pretendard",
+                  "fontSize": 16,
+                  "fontWeight": "semibold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
           "id": "rBb4n",
           "name": "Footer Divider",
           "width": "fill_container",

@@ -561,6 +561,60 @@ img {
   margin-top: -4px;
 }
 
+/* === Community CTA === */
+.community-cta {
+  padding: 80px 120px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.community-cta .section-title {
+  margin-bottom: 16px;
+}
+
+.community-cta-desc {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #37210D;
+  opacity: 0.8;
+  max-width: 520px;
+  margin: 0 0 32px;
+}
+
+.kakao-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 24px;
+  background-color: #FEE500;
+  color: #181600;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  border-radius: 999px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(254, 229, 0, 0.25);
+}
+
+.kakao-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(254, 229, 0, 0.4);
+}
+
+.kakao-btn:focus-visible {
+  outline: 2px solid #37210D;
+  outline-offset: 4px;
+}
+
+.kakao-btn-icon {
+  flex-shrink: 0;
+}
+
 /* === Footer === */
 .footer {
   border-top: 1px solid #D4CFC7;
@@ -592,6 +646,10 @@ img {
   }
 
   .team {
+    padding: 60px 48px;
+  }
+
+  .community-cta {
     padding: 60px 48px;
   }
 
@@ -634,6 +692,10 @@ img {
   .team-grid {
     grid-template-columns: 1fr;
     gap: 24px;
+  }
+
+  .community-cta {
+    padding: 48px 24px;
   }
 
   .events {
