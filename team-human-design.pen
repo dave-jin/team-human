@@ -1007,33 +1007,77 @@
           "id": "0M0lo",
           "name": "Footer",
           "width": "fill_container",
-          "layout": "vertical",
-          "gap": 8,
           "padding": [
             32,
             48
           ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
           "children": [
             {
               "type": "frame",
-              "id": "tkyDR",
-              "name": "footerLogo",
-              "metadata": {
-                "type": "local",
-                "src": "images/logo.svg",
-                "alt": "Team Human"
-              },
-              "height": 18
+              "id": "footerInfo",
+              "name": "Footer Info",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "tkyDR",
+                  "name": "footerLogo",
+                  "metadata": {
+                    "type": "local",
+                    "src": "images/logo.svg",
+                    "alt": "Team Human"
+                  },
+                  "height": 18
+                },
+                {
+                  "type": "text",
+                  "id": "Ps7Td",
+                  "name": "footerTagline",
+                  "fill": "#8C8A87",
+                  "content": "For product makers, by product makers",
+                  "fontFamily": "Pretendard",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
             },
             {
-              "type": "text",
-              "id": "Ps7Td",
-              "name": "footerTagline",
-              "fill": "#8C8A87",
-              "content": "For product makers, by product makers",
-              "fontFamily": "Pretendard",
-              "fontSize": 12,
-              "fontWeight": "normal"
+              "type": "frame",
+              "id": "footerSocials",
+              "name": "Footer Socials",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "footerLinkedin",
+                  "name": "LinkedIn Link",
+                  "metadata": {
+                    "href": "https://www.linkedin.com/company/113454183",
+                    "icon": "linkedin",
+                    "ariaLabel": "Team Human on LinkedIn"
+                  },
+                  "width": 40,
+                  "height": 40,
+                  "cornerRadius": 999,
+                  "alignItems": "center",
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "footerLinkedinIcon",
+                      "name": "LinkedIn Icon",
+                      "fill": "#37210D",
+                      "content": "in",
+                      "fontFamily": "Pretendard",
+                      "fontSize": 14,
+                      "fontWeight": "bold"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }
@@ -1642,33 +1686,77 @@
           "id": "2ODPB",
           "name": "Footer",
           "width": "fill_container",
-          "layout": "vertical",
-          "gap": 8,
           "padding": [
             32,
             48
           ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
           "children": [
             {
               "type": "frame",
-              "id": "fAV8c",
-              "name": "evFooterLogo",
-              "metadata": {
-                "type": "local",
-                "src": "images/logo.svg",
-                "alt": "Team Human"
-              },
-              "height": 18
+              "id": "evFooterInfo",
+              "name": "Footer Info",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "fAV8c",
+                  "name": "evFooterLogo",
+                  "metadata": {
+                    "type": "local",
+                    "src": "images/logo.svg",
+                    "alt": "Team Human"
+                  },
+                  "height": 18
+                },
+                {
+                  "type": "text",
+                  "id": "FwLWk",
+                  "name": "evFooterTag",
+                  "fill": "#8C8A87",
+                  "content": "For product makers, by product makers",
+                  "fontFamily": "Pretendard",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
             },
             {
-              "type": "text",
-              "id": "FwLWk",
-              "name": "evFooterTag",
-              "fill": "#8C8A87",
-              "content": "For product makers, by product makers",
-              "fontFamily": "Pretendard",
-              "fontSize": 12,
-              "fontWeight": "normal"
+              "type": "frame",
+              "id": "evFooterSocials",
+              "name": "Footer Socials",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "evFooterLinkedin",
+                  "name": "LinkedIn Link",
+                  "metadata": {
+                    "href": "https://www.linkedin.com/company/113454183",
+                    "icon": "linkedin",
+                    "ariaLabel": "Team Human on LinkedIn"
+                  },
+                  "width": 40,
+                  "height": 40,
+                  "cornerRadius": 999,
+                  "alignItems": "center",
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "evFooterLinkedinIcon",
+                      "name": "LinkedIn Icon",
+                      "fill": "#37210D",
+                      "content": "in",
+                      "fontFamily": "Pretendard",
+                      "fontSize": 14,
+                      "fontWeight": "bold"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }
