@@ -11,7 +11,7 @@ Team Human is a community homepage for an AI-era human-centered tech community b
 
 ## Project Structure
 ```
-index.html               # Homepage (hero, event recap video, beliefs, team, footer)
+index.html               # Homepage (hero with image/video slider, beliefs, team, footer)
 events.html              # Events page (event cards)
 styles.css               # All styles (responsive, Korean font support)
 i18n.js                  # i18n engine (KO/EN switcher, localStorage)
@@ -70,7 +70,7 @@ Team cards are **randomly shuffled** on each page load via `shuffleTeamCards()` 
 
 - **Team roster** — adding/removing/renaming a member, swapping their photo, updating their description, or changing their LinkedIn URL → update the corresponding card in the `Team Grid` frame (name, `metadata.src` for photo, description text, `metadata.href` on the LinkedIn button).
 - **Events** — adding a new event, archiving the featured/upcoming event into past events, changing date/location/title, or swapping the event image → update the `Featured Event` frame and/or the cards inside `Events Grid` (title, date, location, `metadata.src`, `metadata.href`). Featured event has its own frame; past events live in `Events Grid`, ordered most-recent first. Event images live in `images/Event/` and follow the `YYMMDD<slug>.png` naming convention.
-- **Event recap video** — the homepage `.event-recap` section between `.hero` and `.beliefs` embeds a YouTube video for the most-recent event. To rotate it, change the `videoId` in both `index.html` (iframe `src`) and the `Event Recap → Recap Video` frame in `.pen` (`metadata.videoId` + `metadata.url`); update `recap.title` copy in both i18n files if reframing.
+- **Hero slider** — the `.hero-slider` inside `.hero` is a scroll-snap carousel with 2 slides (group photo + YouTube recap), navigated by dots, prev/next arrows, swipe, and keyboard left/right. Slider logic lives in `i18n.js → initHeroSlider()`. To rotate the recap video, change the iframe `src` in `index.html` and update `metadata.videoId` + `metadata.url` on `Hero Slider → Slide 2` in `.pen`. To swap the hero photo, replace `images/hackathon-hero.png` (or update the `src` in both `index.html` and the slider's `Slide 1` frame). When adding/removing slides, keep the dot count (`.hero-slider-dot`) and the .pen `Slider Dots.metadata.items` in sync.
 - **Beliefs** — copy changes to any of the 4 belief titles/descriptions → update `Value 1–4` frames in the `Beliefs Grid`.
 - **Hero text / subtitles / footer tagline** — keep `Hero Text`, `teamSubtitle`, `evSubtitle`, `footerTagline` content in sync with `i18n/en.json` (the .pen mirrors the English copy).
 - **Header / nav** — keep the `Lang Select` dropdown (English / 한국어), fixed positioning (`metadata.position: "fixed"`), and `images/logo.svg` reference in both Home and Events headers in sync with the live markup.

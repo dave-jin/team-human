@@ -22,20 +22,28 @@
     <p class="hero-text" data-i18n="hero.text">
       We're Team Human, a community of builders who believe the best tech starts with empathy, creativity, and real human connection.
     </p>
-    <div class="hero-image">
-      <img src="images/hackathon-hero.png" alt="Team Human group photo at Cursor Hackathon Seoul">
-    </div>
-  </section>
-
-  <section class="event-recap">
-    <h2 class="event-recap-title" data-i18n="recap.title">From our recent events</h2>
-    <div class="event-recap-video">
-      <iframe
-        src="https://www.youtube-nocookie.com/embed/73UMS4CliLw?rel=0"
-        title="Cursor Eurekathon Seoul — Team Human recap"
-        loading="lazy"
-        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
+    <div class="hero-slider" aria-roledescription="carousel" aria-label="Team Human moments">
+      <div class="hero-slider-track">
+        <div class="hero-slide" role="group" aria-roledescription="slide" aria-label="1 of 2: Group photo">
+          <img src="images/hackathon-hero.png" alt="Team Human group photo at Cursor Hackathon Seoul">
+        </div>
+        <div class="hero-slide" role="group" aria-roledescription="slide" aria-label="2 of 2: Eurekathon recap">
+          <div class="hero-slide-video">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/73UMS4CliLw?rel=0&amp;enablejsapi=1"
+              title="Cursor Eurekathon Seoul — Team Human recap"
+              loading="lazy"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="hero-slider-arrow hero-slider-arrow--prev" aria-label="Previous slide">‹</button>
+      <button type="button" class="hero-slider-arrow hero-slider-arrow--next" aria-label="Next slide">›</button>
+      <div class="hero-slider-dots" role="tablist" aria-label="Choose slide">
+        <button type="button" class="hero-slider-dot is-active" data-index="0" role="tab" aria-selected="true" aria-label="Slide 1"></button>
+        <button type="button" class="hero-slider-dot" data-index="1" role="tab" aria-selected="false" aria-label="Slide 2"></button>
+      </div>
     </div>
   </section>
 

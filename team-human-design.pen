@@ -139,57 +139,65 @@
             {
               "type": "frame",
               "id": "Q0hw9",
-              "name": "Hero Image",
+              "name": "Hero Slider",
               "metadata": {
-                "type": "local",
-                "src": "images/hackathon-hero.png",
-                "alt": "Team Human group photo at Cursor Hackathon Seoul",
-                "aspectRatio": "1376 / 774"
-              },
-              "width": "fill_container",
-              "fill": "#C4BFB7",
-              "cornerRadius": 16
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "eventRecap",
-          "name": "Event Recap",
-          "width": "fill_container",
-          "layout": "vertical",
-          "gap": 24,
-          "padding": [
-            0,
-            32,
-            80,
-            32
-          ],
-          "children": [
-            {
-              "type": "text",
-              "id": "recapTitle",
-              "name": "Recap Title",
-              "fill": "#37210D",
-              "content": "From our recent events",
-              "fontFamily": "Libre Baskerville",
-              "fontSize": 22,
-              "fontWeight": "medium",
-              "letterSpacing": -0.44
-            },
-            {
-              "type": "frame",
-              "id": "recapVideo",
-              "name": "Recap Video",
-              "metadata": {
-                "control": "youtube-embed",
-                "videoId": "73UMS4CliLw",
-                "url": "https://www.youtube.com/watch?v=73UMS4CliLw",
-                "aspectRatio": "16 / 9"
+                "control": "carousel",
+                "aspectRatio": "1376 / 774",
+                "slides": 2,
+                "navigation": "dots + arrows + keyboard",
+                "scrollSnap": true
               },
               "width": "fill_container",
               "fill": "#000000",
-              "cornerRadius": 16
+              "cornerRadius": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "heroSlide1",
+                  "name": "Slide 1 — Group Photo",
+                  "metadata": {
+                    "type": "local",
+                    "src": "images/hackathon-hero.png",
+                    "alt": "Team Human group photo at Cursor Hackathon Seoul"
+                  },
+                  "width": "fill_container",
+                  "fill": "#C4BFB7"
+                },
+                {
+                  "type": "frame",
+                  "id": "heroSlide2",
+                  "name": "Slide 2 — Eurekathon Recap",
+                  "metadata": {
+                    "control": "youtube-embed",
+                    "videoId": "73UMS4CliLw",
+                    "url": "https://www.youtube.com/watch?v=73UMS4CliLw"
+                  },
+                  "width": "fill_container",
+                  "fill": "#000000"
+                },
+                {
+                  "type": "frame",
+                  "id": "heroSliderDots",
+                  "name": "Slider Dots",
+                  "metadata": {
+                    "anchor": "bottom-center",
+                    "items": 2
+                  },
+                  "fill": "rgba(0, 0, 0, 0.25)",
+                  "cornerRadius": 999,
+                  "padding": [6, 10],
+                  "gap": 8
+                },
+                {
+                  "type": "frame",
+                  "id": "heroSliderArrows",
+                  "name": "Slider Arrows",
+                  "metadata": {
+                    "anchor": "middle-edges",
+                    "icons": ["‹", "›"]
+                  }
+                }
+              ]
             }
           ]
         },

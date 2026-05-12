@@ -73,9 +73,82 @@
     }
   }
 
+  function initHeroSlider() {
+    var slider = document.querySelector('.hero-slider');
+    if (!slider) return;
+    var track = slider.querySelector('.hero-slider-track');
+    var slides = Array.from(track.querySelectorAll('.hero-slide'));
+    var dots = Array.from(slider.querySelectorAll('.hero-slider-dot'));
+    var prev = slider.querySelector('.hero-slider-arrow--prev');
+    var next = slider.querySelector('.hero-slider-arrow--next');
+    if (!slides.length) return;
+
+    function currentIndex() {
+      var w = track.clientWidth;
+      if (!w) return 0;
+      return Math.round(track.scrollLeft / w);
+    }
+
+    function pauseIframesExcept(idx) {
+      slides.forEach(function (slide, i) {
+        if (i === idx) return;
+        var iframe = slide.querySelector('iframe');
+        if (!iframe || !iframe.contentWindow) return;
+        try {
+          iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+        } catch (e) {}
+      });
+    }
+
+    function update() {
+      var idx = currentIndex();
+      dots.forEach(function (dot, i) {
+        var active = i === idx;
+        dot.classList.toggle('is-active', active);
+        dot.setAttribute('aria-selected', active ? 'true' : 'false');
+      });
+      pauseIframesExcept(idx);
+    }
+
+    function goTo(idx) {
+      var clamped = Math.max(0, Math.min(slides.length - 1, idx));
+      var target = slides[clamped];
+      if (!target) return;
+      track.scrollTo({ left: target.offsetLeft, behavior: 'smooth' });
+    }
+
+    dots.forEach(function (dot) {
+      dot.addEventListener('click', function () {
+        goTo(parseInt(dot.getAttribute('data-index'), 10));
+      });
+    });
+
+    if (prev) prev.addEventListener('click', function () { goTo(currentIndex() - 1); });
+    if (next) next.addEventListener('click', function () { goTo(currentIndex() + 1); });
+
+    var scrollTimer;
+    track.addEventListener('scroll', function () {
+      clearTimeout(scrollTimer);
+      scrollTimer = setTimeout(update, 80);
+    });
+
+    slider.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft') { e.preventDefault(); goTo(currentIndex() - 1); }
+      else if (e.key === 'ArrowRight') { e.preventDefault(); goTo(currentIndex() + 1); }
+    });
+    slider.setAttribute('tabindex', '0');
+
+    window.addEventListener('resize', function () {
+      goTo(currentIndex());
+    });
+
+    update();
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     shuffleTeamCards();
     createSwitcher();
+    initHeroSlider();
     var lang = getPreferredLang();
     setLang(lang);
   });
