@@ -154,6 +154,47 @@
         },
         {
           "type": "frame",
+          "id": "eventRecap",
+          "name": "Event Recap",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            0,
+            32,
+            80,
+            32
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "recapTitle",
+              "name": "Recap Title",
+              "fill": "#37210D",
+              "content": "From our recent events",
+              "fontFamily": "Libre Baskerville",
+              "fontSize": 22,
+              "fontWeight": "medium",
+              "letterSpacing": -0.44
+            },
+            {
+              "type": "frame",
+              "id": "recapVideo",
+              "name": "Recap Video",
+              "metadata": {
+                "control": "youtube-embed",
+                "videoId": "73UMS4CliLw",
+                "url": "https://www.youtube.com/watch?v=73UMS4CliLw",
+                "aspectRatio": "16 / 9"
+              },
+              "width": "fill_container",
+              "fill": "#000000",
+              "cornerRadius": 16
+            }
+          ]
+        },
+        {
+          "type": "frame",
           "id": "4woII",
           "name": "What We Believe",
           "width": "fill_container",
@@ -1052,6 +1093,79 @@
               "width": "fill_container",
               "gap": 24,
               "children": [
+                {
+                  "type": "frame",
+                  "id": "evPobaco",
+                  "name": "POBACO",
+                  "width": 390,
+                  "fill": "#FFFFFF",
+                  "stroke": "#DDDDDD",
+                  "strokeWidth": 1,
+                  "cornerRadius": 16,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 8,
+                  "metadata": {
+                    "href": "https://luma.com/0go3dkbs"
+                  },
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "evPobacoImg",
+                      "name": "Event Image",
+                      "metadata": {
+                        "type": "local",
+                        "src": "images/Event/260505pobaco.png",
+                        "alt": "POBACO: Potluck + Vibe Coding"
+                      },
+                      "width": "fill_container",
+                      "fill": "#F1F1ED",
+                      "cornerRadius": 8
+                    },
+                    {
+                      "type": "frame",
+                      "id": "evPobacoInfo",
+                      "name": "evPobacoInfo",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 10,
+                      "padding": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "evPobacoTitle",
+                          "name": "evPobacoTitle",
+                          "fill": "#37210D",
+                          "content": "POBACO: Potluck + Vibe Coding",
+                          "fontFamily": "Pretendard",
+                          "fontSize": 15,
+                          "fontWeight": "semibold"
+                        },
+                        {
+                          "type": "text",
+                          "id": "evPobacoDate",
+                          "name": "evPobacoDate",
+                          "fill": "#37210D",
+                          "content": "May 05, 2026",
+                          "fontFamily": "Pretendard",
+                          "fontSize": 12,
+                          "fontWeight": "medium"
+                        },
+                        {
+                          "type": "text",
+                          "id": "evPobacoLoc",
+                          "name": "evPobacoLoc",
+                          "fill": "#8C8A87",
+                          "content": "서울특별시 강남구 역삼로 557 한국투자액셀러레이터",
+                          "lineHeight": 1.4,
+                          "fontFamily": "Pretendard",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
                 {
                   "type": "frame",
                   "id": "evHackathon2",
