@@ -20,7 +20,7 @@ i18n/ko.json             # Korean translations
 images/
   hackathon-hero.png
   logo.svg               # Team Human wordmark used in header + footer (header 20px, footer 18px)
-  PFP/                   # Team member profile photos (Danny, Dave, Eric, Kelly, Rachel, Sireal, Annie, Chedda)
+  PFP/                   # Team member profile photos (Danny, Dave, Eric, Kelly, Rachel, Sireal, Annie)
   Event/                 # Event card images (YYMMDD<slug>.png)
 team-human-design.pen    # Pencil design source-of-truth mockup (Home + Events frames)
 .vercel/                 # Vercel project config
@@ -43,7 +43,7 @@ When adding/editing team members, update **3 files**:
 
 Team cards are **randomly shuffled** on each page load via `shuffleTeamCards()` in `i18n.js`.
 
-### Current Team (8 members)
+### Current Team (7 members)
 | Name | i18n Key | LinkedIn |
 |------|----------|----------|
 | Danny Kim | team.danny | /in/jydkim |
@@ -53,7 +53,6 @@ Team cards are **randomly shuffled** on each page load via `shuffleTeamCards()` 
 | Rachel Lee | team.rachel | /in/rachelselee |
 | Sireal Jeon | team.sireal | /in/sijinjeon |
 | Annie Seo | team.annie | /in/ga-on-seo-8b5989165 |
-| Chedda Choi | team.chedda | /in/cheddachoi |
 
 ### Design tokens
 - **Background:** `#F1F1ED` (cool cream) — body + sticky header

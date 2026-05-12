@@ -854,77 +854,6 @@
                       ]
                     }
                   ]
-                },
-                {
-                  "type": "frame",
-                  "id": "cheddaCard",
-                  "name": "Chedda Choi Card",
-                  "width": 350,
-                  "layout": "vertical",
-                  "gap": 12,
-                  "children": [
-                    {
-                      "type": "frame",
-                      "id": "cheddaPhoto",
-                      "name": "Photo",
-                      "metadata": {
-                        "type": "local",
-                        "src": "images/PFP/Chedda.png",
-                        "alt": "Chedda Choi"
-                      },
-                      "width": "fill_container",
-                      "height": 200,
-                      "fill": "#D9D5CD",
-                      "cornerRadius": 8
-                    },
-                    {
-                      "type": "text",
-                      "id": "cheddaName",
-                      "name": "card8Name",
-                      "fill": "#37210D",
-                      "content": "Chedda Choi",
-                      "fontFamily": "Pretendard",
-                      "fontSize": 16,
-                      "fontWeight": "bold"
-                    },
-                    {
-                      "type": "text",
-                      "id": "cheddaDesc",
-                      "name": "card8Desc",
-                      "fill": "#37210D",
-                      "content": "Developers deserve a stage, not just a desk. I'm here to help them share, connect, and grow.",
-                      "lineHeight": 1.5,
-                      "fontFamily": "Pretendard",
-                      "fontSize": 13,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "frame",
-                      "id": "cheddaBtn",
-                      "name": "card8Btn",
-                      "fill": "#EDE9E2",
-                      "cornerRadius": 4,
-                      "padding": [
-                        6,
-                        10
-                      ],
-                      "metadata": {
-                        "href": "https://www.linkedin.com/in/cheddachoi"
-                      },
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "cheddaBtnText",
-                          "name": "card8BtnText",
-                          "fill": "#37210D",
-                          "content": "LinkedIn",
-                          "fontFamily": "Pretendard",
-                          "fontSize": 14,
-                          "fontWeight": "medium"
-                        }
-                      ]
-                    }
-                  ]
                 }
               ]
             }
@@ -1118,122 +1047,84 @@
             },
             {
               "type": "frame",
-              "id": "featuredEvent",
-              "name": "Featured Event",
-              "width": "fill_container",
-              "fill": "#FFFFFF",
-              "cornerRadius": 12,
-              "metadata": {
-                "href": "https://luma.com/5xmpcai9"
-              },
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "featuredImage",
-                  "name": "Featured Image",
-                  "metadata": {
-                    "type": "local",
-                    "src": "images/Event/260404cursor-hackthon-seoul.png",
-                    "alt": "2nd Cursor Hackathon Seoul"
-                  },
-                  "width": 600,
-                  "height": 320,
-                  "fill": "#D9D5CD"
-                },
-                {
-                  "type": "frame",
-                  "id": "featuredInfo",
-                  "name": "Featured Info",
-                  "width": 600,
-                  "layout": "vertical",
-                  "gap": 10,
-                  "padding": 32,
-                  "justifyContent": "center",
-                  "children": [
-                    {
-                      "type": "frame",
-                      "id": "featuredBadge",
-                      "name": "Upcoming Badge",
-                      "fill": "#C45C26",
-                      "cornerRadius": 4,
-                      "padding": [
-                        4,
-                        12
-                      ],
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "featuredBadgeText",
-                          "name": "BadgeText",
-                          "fill": "#FFFFFF",
-                          "content": "UPCOMING",
-                          "fontFamily": "Pretendard",
-                          "fontSize": 11,
-                          "fontWeight": "semibold",
-                          "letterSpacing": 0.5
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "id": "featuredTitle",
-                      "name": "Featured Title",
-                      "fill": "#37210D",
-                      "content": "2nd Cursor Hackathon Seoul",
-                      "fontFamily": "Libre Baskerville",
-                      "fontSize": 24,
-                      "fontWeight": "bold"
-                    },
-                    {
-                      "type": "text",
-                      "id": "featuredDate",
-                      "name": "Featured Date",
-                      "fill": "#C45C26",
-                      "content": "Apr 04, 2026",
-                      "fontFamily": "Pretendard",
-                      "fontSize": 14,
-                      "fontWeight": "semibold"
-                    },
-                    {
-                      "type": "text",
-                      "id": "featuredLoc",
-                      "name": "Featured Location",
-                      "fill": "#8C8A87",
-                      "content": "TBA",
-                      "lineHeight": 1.4,
-                      "fontFamily": "Pretendard",
-                      "fontSize": 13,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "featuredSpacer",
-              "name": "Featured Spacer",
-              "width": 1,
-              "height": 32
-            },
-            {
-              "type": "text",
-              "id": "pastEventsTitle",
-              "name": "Past Events Heading",
-              "fill": "#8C8A87",
-              "content": "PAST EVENTS",
-              "fontFamily": "Pretendard",
-              "fontSize": 14,
-              "fontWeight": "semibold",
-              "letterSpacing": 1
-            },
-            {
-              "type": "frame",
               "id": "i7ie8",
               "name": "Events Grid",
               "width": "fill_container",
               "gap": 24,
               "children": [
+                {
+                  "type": "frame",
+                  "id": "evHackathon2",
+                  "name": "Eureka Cursor Hackathon Seoul",
+                  "width": 390,
+                  "fill": "#FFFFFF",
+                  "stroke": "#DDDDDD",
+                  "strokeWidth": 1,
+                  "cornerRadius": 16,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 8,
+                  "metadata": {
+                    "href": "https://luma.com/5xmpcai9"
+                  },
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "evHackathon2Img",
+                      "name": "Event Image",
+                      "metadata": {
+                        "type": "local",
+                        "src": "images/Event/260404cursor-hackthon-seoul.png",
+                        "alt": "Eureka! Cursor Hackathon Seoul"
+                      },
+                      "width": "fill_container",
+                      "fill": "#F1F1ED",
+                      "cornerRadius": 8
+                    },
+                    {
+                      "type": "frame",
+                      "id": "evHackathon2Info",
+                      "name": "evHackathon2Info",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 10,
+                      "padding": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "evHackathon2Title",
+                          "name": "evHackathon2Title",
+                          "fill": "#37210D",
+                          "content": "Eureka! Cursor Hackathon Seoul",
+                          "fontFamily": "Pretendard",
+                          "fontSize": 15,
+                          "fontWeight": "semibold"
+                        },
+                        {
+                          "type": "text",
+                          "id": "evHackathon2Date",
+                          "name": "evHackathon2Date",
+                          "fill": "#37210D",
+                          "content": "Apr 04, 2026",
+                          "fontFamily": "Pretendard",
+                          "fontSize": 12,
+                          "fontWeight": "medium"
+                        },
+                        {
+                          "type": "text",
+                          "id": "evHackathon2Loc",
+                          "name": "evHackathon2Loc",
+                          "fill": "#8C8A87",
+                          "content": "TBA",
+                          "lineHeight": 1.4,
+                          "fontFamily": "Pretendard",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
                 {
                   "type": "frame",
                   "id": "evBuildDay",
