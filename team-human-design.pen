@@ -74,14 +74,20 @@
                   "name": "Lang Select",
                   "metadata": {
                     "control": "select",
-                    "options": ["English", "한국어"]
+                    "options": [
+                      "English",
+                      "한국어"
+                    ]
                   },
                   "width": 100,
                   "fill": "#F1F1ED",
                   "stroke": "#DDDDDD",
                   "strokeWidth": 1,
                   "cornerRadius": 4,
-                  "padding": [6, 12],
+                  "padding": [
+                    6,
+                    12
+                  ],
                   "alignItems": "center",
                   "justifyContent": "space_between",
                   "children": [
@@ -185,7 +191,10 @@
                   },
                   "fill": "rgba(0, 0, 0, 0.25)",
                   "cornerRadius": 999,
-                  "padding": [6, 10],
+                  "padding": [
+                    6,
+                    10
+                  ],
                   "gap": 8
                 },
                 {
@@ -194,7 +203,10 @@
                   "name": "Slider Arrows",
                   "metadata": {
                     "anchor": "middle-edges",
-                    "icons": ["‹", "›"]
+                    "icons": [
+                      "‹",
+                      "›"
+                    ]
                   }
                 }
               ]
@@ -1144,14 +1156,20 @@
                   "name": "Lang Select",
                   "metadata": {
                     "control": "select",
-                    "options": ["English", "한국어"]
+                    "options": [
+                      "English",
+                      "한국어"
+                    ]
                   },
                   "width": 100,
                   "fill": "#F1F1ED",
                   "stroke": "#DDDDDD",
                   "strokeWidth": 1,
                   "cornerRadius": 4,
-                  "padding": [6, 12],
+                  "padding": [
+                    6,
+                    12
+                  ],
                   "alignItems": "center",
                   "justifyContent": "space_between",
                   "children": [
@@ -1223,6 +1241,217 @@
               "name": "evSpacer",
               "width": 1,
               "height": 24
+            },
+            {
+              "type": "frame",
+              "id": "featuredEvent1",
+              "name": "Featured Event 1",
+              "width": "fill_container",
+              "fill": "#FFFFFF",
+              "cornerRadius": 12,
+              "metadata": {
+                "href": "https://luma.com/elhey8nv?tk=ANT130"
+              },
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "featuredImage1",
+                  "name": "Featured Image",
+                  "metadata": {
+                    "type": "local",
+                    "src": "images/Event/260618push-to-prod-seoul.png",
+                    "alt": "Push to Prod SEOUL"
+                  },
+                  "width": 600,
+                  "height": 320,
+                  "fill": "#D9D5CD"
+                },
+                {
+                  "type": "frame",
+                  "id": "featuredInfo1",
+                  "name": "Featured Info",
+                  "width": 600,
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 32,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "featuredBadge1",
+                      "name": "Upcoming Badge",
+                      "fill": "#C45C26",
+                      "cornerRadius": 4,
+                      "padding": [
+                        4,
+                        12
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "featuredBadgeText1",
+                          "name": "BadgeText",
+                          "fill": "#FFFFFF",
+                          "content": "UPCOMING",
+                          "fontFamily": "Pretendard",
+                          "fontSize": 11,
+                          "fontWeight": "semibold",
+                          "letterSpacing": 0.5
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "featuredTitle1",
+                      "name": "Featured Title",
+                      "fill": "#37210D",
+                      "content": "Push to Prod SEOUL",
+                      "fontFamily": "Libre Baskerville",
+                      "fontSize": 24,
+                      "fontWeight": "bold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "featuredDate1",
+                      "name": "Featured Date",
+                      "fill": "#C45C26",
+                      "content": "Jun 18, 2026",
+                      "fontFamily": "Pretendard",
+                      "fontSize": 14,
+                      "fontWeight": "semibold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "featuredLoc1",
+                      "name": "Featured Location",
+                      "fill": "#8C8A87",
+                      "content": "Yeongdong-daero, Gangnam-gu, Seoul",
+                      "lineHeight": 1.4,
+                      "fontFamily": "Pretendard",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "featuredSpacer1",
+              "name": "Featured Spacer",
+              "width": 1,
+              "height": 32
+            },
+            {
+              "type": "frame",
+              "id": "featuredEvent2",
+              "name": "Featured Event 2",
+              "width": "fill_container",
+              "fill": "#FFFFFF",
+              "cornerRadius": 12,
+              "metadata": {
+                "href": "https://luma.com/6y8qjtgr"
+              },
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "featuredImage2",
+                  "name": "Featured Image",
+                  "metadata": {
+                    "type": "local",
+                    "src": "images/Event/260627cursor-hackathon-seoul-3rd.png",
+                    "alt": "Cursor Hackathon Seoul 3rd"
+                  },
+                  "width": 600,
+                  "height": 320,
+                  "fill": "#D9D5CD"
+                },
+                {
+                  "type": "frame",
+                  "id": "featuredInfo2",
+                  "name": "Featured Info",
+                  "width": 600,
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 32,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "featuredBadge2",
+                      "name": "Upcoming Badge",
+                      "fill": "#C45C26",
+                      "cornerRadius": 4,
+                      "padding": [
+                        4,
+                        12
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "featuredBadgeText2",
+                          "name": "BadgeText",
+                          "fill": "#FFFFFF",
+                          "content": "UPCOMING",
+                          "fontFamily": "Pretendard",
+                          "fontSize": 11,
+                          "fontWeight": "semibold",
+                          "letterSpacing": 0.5
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "featuredTitle2",
+                      "name": "Featured Title",
+                      "fill": "#37210D",
+                      "content": "Cursor Hackathon Seoul 3rd",
+                      "fontFamily": "Libre Baskerville",
+                      "fontSize": 24,
+                      "fontWeight": "bold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "featuredDate2",
+                      "name": "Featured Date",
+                      "fill": "#C45C26",
+                      "content": "Jun 27, 2026",
+                      "fontFamily": "Pretendard",
+                      "fontSize": 14,
+                      "fontWeight": "semibold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "featuredLoc2",
+                      "name": "Featured Location",
+                      "fill": "#8C8A87",
+                      "content": "Seocho-gu, Seoul — Seoul AI Hub",
+                      "lineHeight": 1.4,
+                      "fontFamily": "Pretendard",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "featuredSpacer2",
+              "name": "Featured Spacer 2",
+              "width": 1,
+              "height": 32
+            },
+            {
+              "type": "text",
+              "id": "pastEventsTitle",
+              "name": "Past Events Heading",
+              "fill": "#8C8A87",
+              "content": "PAST EVENTS",
+              "fontFamily": "Pretendard",
+              "fontSize": 14,
+              "fontWeight": "semibold",
+              "letterSpacing": 1
             },
             {
               "type": "frame",
