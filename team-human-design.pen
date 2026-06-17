@@ -915,6 +915,77 @@
                       ]
                     }
                   ]
+                },
+                {
+                  "type": "frame",
+                  "id": "smuCard",
+                  "name": "SMU Card",
+                  "width": 350,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "smuPhoto",
+                      "name": "Photo",
+                      "metadata": {
+                        "type": "local",
+                        "src": "images/PFP/SMU.png",
+                        "alt": "SMU"
+                      },
+                      "width": "fill_container",
+                      "height": 200,
+                      "fill": "#D9D5CD",
+                      "cornerRadius": 8
+                    },
+                    {
+                      "type": "text",
+                      "id": "smuName",
+                      "name": "card8Name",
+                      "fill": "#37210D",
+                      "content": "SMU",
+                      "fontFamily": "Pretendard",
+                      "fontSize": 16,
+                      "fontWeight": "bold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "smuDesc",
+                      "name": "card8Desc",
+                      "fill": "#37210D",
+                      "content": "The tools keep changing, but the urge to build and learn together doesn't. That's what keeps me coming back.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Pretendard",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "smuBtn",
+                      "name": "card8Btn",
+                      "fill": "#EDE9E2",
+                      "cornerRadius": 4,
+                      "padding": [
+                        6,
+                        10
+                      ],
+                      "metadata": {
+                        "href": "https://www.linkedin.com/in/smu00"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "smuBtnText",
+                          "name": "card8BtnText",
+                          "fill": "#37210D",
+                          "content": "LinkedIn",
+                          "fontFamily": "Pretendard",
+                          "fontSize": 14,
+                          "fontWeight": "medium"
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             }
