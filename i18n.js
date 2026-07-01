@@ -29,6 +29,12 @@
         el.textContent = translations[key];
       }
     });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n-placeholder');
+      if (translations[key] !== undefined) {
+        el.placeholder = translations[key];
+      }
+    });
     var titleKey = document.querySelector('title').getAttribute('data-i18n-title');
     if (titleKey && translations[titleKey]) {
       document.title = translations[titleKey];
@@ -145,10 +151,50 @@
     update();
   }
 
+  function initContactForm() {
+    var form = document.querySelector('.contact-form');
+    if (!form) return;
+
+    var fields = form.querySelector('.contact-fields');
+    var submit = form.querySelector('.contact-submit');
+    var idle = form.querySelector('.contact-submit-idle');
+    var busy = form.querySelector('.contact-submit-busy');
+    var statusOk = form.querySelector('.contact-status--success');
+    var statusErr = form.querySelector('.contact-status--error');
+
+    function setBusy(isBusy) {
+      submit.disabled = isBusy;
+      if (idle) idle.hidden = isBusy;
+      if (busy) busy.hidden = !isBusy;
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (statusErr) statusErr.hidden = true;
+      setBusy(true);
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      }).then(function (res) {
+        if (!res.ok) throw new Error('Submission failed');
+        form.reset();
+        if (fields) fields.hidden = true;
+        if (statusOk) statusOk.hidden = false;
+      }).catch(function () {
+        if (statusErr) statusErr.hidden = false;
+      }).finally(function () {
+        setBusy(false);
+      });
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     shuffleTeamCards();
     createSwitcher();
     initHeroSlider();
+    initContactForm();
     var lang = getPreferredLang();
     setLang(lang);
   });

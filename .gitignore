@@ -2,3 +2,7 @@
 .DS_Store
 .gstack/
 ref/
+
+# Formspree CLI — never commit the deploy key or local deps
+.env
+node_modules/
