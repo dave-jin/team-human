@@ -120,7 +120,13 @@ The workflow runs `rm -rf .git` before `vercel deploy --prod`, so the upload car
 
 Rejected alternatives: adding collaborators to the Vercel account (Hobby is single-seat → needs Pro), and turning off Vercel's git-author check (no such toggle on Hobby).
 
-**Required repo secrets** (Settings → Secrets → Actions): `VERCEL_TOKEN` (Vercel account token), `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID`. If `VERCEL_TOKEN` expires, production stops updating — the workflow run fails loudly; mint a new token at vercel.com/account/tokens and re-set the secret.
+**Required repo secrets** (Settings → Secrets → Actions): `VERCEL_TOKEN` (Vercel account token), `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID`. If `VERCEL_TOKEN` expires, production stops updating — the workflow run fails loudly; mint a new token at vercel.com/account/tokens and re-set the secret:
+
+```
+pbpaste | gh secret set VERCEL_TOKEN -R dave-jin/team-human
+```
+
+The argument after `set` is the secret **name**, not the token — and the value must be the bare token with nothing around it. The Vercel CLI rejects any token containing a space, `-`, `/` or `|` (`Error: You defined "--token", but its contents are invalid`), so a stray prompt or command line pasted along with it fails the deploy.
 
 Manual deploy from a local clone (needs the CLI logged in as the account owner): `vercel deploy --prod`. Preview deploys for PRs from forks are not covered — fork PRs cannot read repo secrets.
 
