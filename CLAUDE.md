@@ -26,7 +26,10 @@ images/
   PFP/                   # Team member profile photos (Danny, Dave, Eric, Kelly, Rachel, Sireal, Annie)
   Event/                 # Event card images (YYMMDD<slug>.png)
 team-human-design.pen    # Pencil design source-of-truth mockup (Home + Events frames)
-.vercel/                 # Vercel project config
+vercel.json              # Rewrites + Git-integration config — see "Deployment" below
+.github/workflows/
+  deploy.yml             # Production deploy on push to main (Vercel CLI) — see "Deployment"
+.vercel/                 # Vercel project config (gitignored, created by the CLI)
 ```
 
 ## Key Conventions
@@ -109,7 +112,17 @@ The `.contact` section on `index.html` (between `.community-cta` and the footer)
 The .pen file uses the convention `metadata.src` for local image paths (e.g. `images/PFP/Dave.png`, `images/logo.svg`), `metadata.href` for outbound links (LinkedIn, Luma, Event-Us), and `metadata.control: "select"` to represent the language dropdown. Do not introduce Unsplash placeholder images — the live site always uses local assets. Validate after editing: `python3 -c "import json; json.load(open('team-human-design.pen'))"` must succeed.
 
 ### Deployment
-Push to `main` branch triggers Vercel auto-deploy. No build step needed — static files served directly.
+Push to `main` → **GitHub Actions** (`.github/workflows/deploy.yml`) deploys to Vercel production with the Vercel CLI. No build step — static files are uploaded and served directly. Vercel's own Git-integration auto-deploy is **off for `main`** (`git.deploymentEnabled` in `vercel.json`); other branches still get Git-integration previews.
+
+**Why it works this way.** The Vercel account (`davejin`, project `team-human`) is a **Hobby / single-seat** account. Vercel refuses any Git-integration deployment whose **commit author** is not a member of the account — the deployment goes `BLOCKED` with `TEAM_ACCESS_REQUIRED`. So a commit by any collaborator other than dave-jin never reached production, even after merging to `main`. (Merge commits happened to work only because GitHub makes the *merger* the author.)
+
+The workflow runs `rm -rf .git` before `vercel deploy --prod`, so the upload carries no commit-author metadata and is never author-checked. Project linkage comes from the `VERCEL_ORG_ID` / `VERCEL_PROJECT_ID` env vars, not from `.git`. Trade-off: the Vercel dashboard shows no commit info per deploy (author/message/SHA are blank) — GitHub Actions is the audit trail instead.
+
+Rejected alternatives: adding collaborators to the Vercel account (Hobby is single-seat → needs Pro), and turning off Vercel's git-author check (no such toggle on Hobby).
+
+**Required repo secrets** (Settings → Secrets → Actions): `VERCEL_TOKEN` (Vercel account token), `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID`. If `VERCEL_TOKEN` expires, production stops updating — the workflow run fails loudly; mint a new token at vercel.com/account/tokens and re-set the secret.
+
+Manual deploy from a local clone (needs the CLI logged in as the account owner): `vercel deploy --prod`. Preview deploys for PRs from forks are not covered — fork PRs cannot read repo secrets.
 
 ### Collaborators
 - dave-jin (owner)

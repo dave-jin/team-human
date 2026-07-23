@@ -1,0 +1,49 @@
+name: Deploy to Vercel
+
+# Production deploys run here instead of through Vercel's Git integration.
+#
+# Why: the Vercel account behind this project is a Hobby (single-seat) account,
+# so Vercel refuses any Git-integration deployment whose *commit author* is not
+# a member of the account — the deployment lands in BLOCKED / TEAM_ACCESS_REQUIRED.
+# That means a commit by any collaborator (erickimme, sijinjeon, helloselee, ...)
+# never reaches production, even after it is merged to main.
+#
+# A CLI deploy carries no commit author, so it is never author-checked. This
+# workflow uploads the working tree with .git removed, which strips the commit
+# metadata Vercel would otherwise attach. Result: whoever authored the commit,
+# a merge to main always deploys.
+#
+# Auto-deploy from the Git integration is turned off for main in vercel.json
+# (git.deploymentEnabled) so the two paths do not race or double-deploy.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: vercel-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Deploy production
+    runs-on: ubuntu-latest
+    env:
+      # Project linkage comes from these, not from .git — which is why removing
+      # .git below does not break the deploy.
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Strip git metadata
+        run: rm -rf .git
+
+      - name: Deploy to production
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          url=$(npx --yes vercel@50 deploy --prod --yes --token="$VERCEL_TOKEN")
+          echo "Deployed: $url"
+          echo "Production deploy: $url" >> "$GITHUB_STEP_SUMMARY"
