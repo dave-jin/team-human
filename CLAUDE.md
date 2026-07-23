@@ -13,7 +13,9 @@ Team Human is a community homepage for an AI-era human-centered tech community b
 ```
 index.html               # Homepage (hero with image/video slider, beliefs, team, KakaoTalk CTA, contact form, footer)
 events.html              # Events page (event cards)
+guide.html               # Community share guide (Korean-only, no i18n) — see "Guide page" below
 styles.css               # All styles (responsive, Korean font support)
+guide.js                 # Guide page only (copy-to-clipboard + checklist) — guide.html does NOT load i18n.js
 i18n.js                  # i18n engine (KO/EN switcher, localStorage, contact-form AJAX handler)
 i18n/en.json             # English translations
 i18n/ko.json             # Korean translations
@@ -56,6 +58,19 @@ Team cards are **randomly shuffled** on each page load via `shuffleTeamCards()` 
 | Rachel Lee | team.rachel | /in/rachelselee |
 | Sireal Jeon | team.sireal | /in/sijinjeon |
 | Annie Seo | team.annie | /in/ga-on-seo-8b5989165 |
+
+### Guide page (`guide.html`)
+The community **share guide** — the rules for posting hiring/product/event news in the KakaoTalk open chat. Written to be shared as a link into that chat, so it is **mobile-first and Korean-only**.
+
+- **URL:** `/guide` (Vercel serves `guide.html` at the extensionless path)
+- **Deliberately not i18n'd.** It does *not* load `i18n.js` — no lang switcher, no `data-i18n` attributes, `<html lang="ko">` is fixed. The audience is a Korean-language open chat. If it ever needs EN, add `guide.*` keys and wire `i18n.js` in; don't half-convert.
+- **Fonts:** guide headings use `'Libre Baskerville', 'Pretendard', serif` — Libre Baskerville has no Hangul glyphs, so Latin runs (e.g. the "Community Guide" eyebrow) render in the brand serif while Korean falls through to Pretendard. This avoids the unpredictable system-serif fallback that `html[lang="ko"] .section-title` produces on the other pages.
+- **Styles:** appended to `styles.css` under `/* === Guide Page (guide.html) === */`, all rules scoped to `.guide-*`. Purely additive — no existing selectors touched.
+- **JS:** `guide.js` — template copy-to-clipboard (with `execCommand` fallback for non-secure contexts) and the pre-post checklist. No dependency on `i18n.js`.
+- **Open Graph:** absolute `og:*` URLs point at `withteamhuman.com` so the KakaoTalk link preview renders. If the domain changes, update them.
+- **Source of truth for the copy:** `../Team-HUMAN-공유가이드-초안.md` in the PARA vault (includes organizer-internal sections that are deliberately **not** on the public page — escalation steps, moderation criteria). Edit the vault doc first, then mirror the public parts here.
+- **Not linked from the site nav** — shared as a direct link for now. Adding it to the header would mean `nav.guide` keys in both `i18n/en.json` and `i18n/ko.json` plus markup in `index.html` and `events.html`.
+- **`.pen` sync: pending.** `team-human-design.pen` has no `Guide` frame yet (the Pencil editor was not running when the page was built) — same status as the `Contact` frame.
 
 ### Contact form (Formspree)
 The `.contact` section on `index.html` (between `.community-cta` and the footer) is a **Formspree** contact form (name / email / message).
