@@ -62,7 +62,7 @@ Team cards are **randomly shuffled** on each page load via `shuffleTeamCards()` 
 ### Guide page (`guide.html`)
 The community **share guide** — the rules for posting hiring/product/event news in the KakaoTalk open chat. Written to be shared as a link into that chat, so it is **mobile-first and Korean-only**.
 
-- **URL:** `/guide` (Vercel serves `guide.html` at the extensionless path)
+- **URL:** `/guide` — via a rewrite in `vercel.json`. Vercel does **not** serve extensionless paths by default here (`cleanUrls` is off), so `/guide` 404s without it. The rewrite is scoped to this one path on purpose: turning on `cleanUrls` globally would 308-redirect `/index.html` and `/events.html` too. Add a rewrite entry for each new extensionless page.
 - **Deliberately not i18n'd.** It does *not* load `i18n.js` — no lang switcher, no `data-i18n` attributes, `<html lang="ko">` is fixed. The audience is a Korean-language open chat. If it ever needs EN, add `guide.*` keys and wire `i18n.js` in; don't half-convert.
 - **Fonts:** guide headings use `'Libre Baskerville', 'Pretendard', serif` — Libre Baskerville has no Hangul glyphs, so Latin runs (e.g. the "Community Guide" eyebrow) render in the brand serif while Korean falls through to Pretendard. This avoids the unpredictable system-serif fallback that `html[lang="ko"] .section-title` produces on the other pages.
 - **Styles:** appended to `styles.css` under `/* === Guide Page (guide.html) === */`, all rules scoped to `.guide-*`. Purely additive — no existing selectors touched.
