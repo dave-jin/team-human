@@ -128,9 +128,15 @@ pbpaste | gh secret set VERCEL_TOKEN -R dave-jin/team-human
 
 The argument after `set` is the secret **name**, not the token — and the value must be the bare token with nothing around it. The Vercel CLI rejects any token containing a space, `-`, `/` or `|` (`Error: You defined "--token", but its contents are invalid`), so a stray prompt or command line pasted along with it fails the deploy.
 
-Manual deploy from a local clone (needs the CLI logged in as the account owner): `vercel deploy --prod`. Preview deploys for PRs from forks are not covered — fork PRs cannot read repo secrets.
+Manual deploy from a local clone (needs the CLI logged in as the account owner): `vercel deploy --prod`. Or re-run the workflow: `gh workflow run deploy.yml -R dave-jin/team-human`.
+
+**PR previews** — `.github/workflows/preview.yml` deploys every PR to a preview URL and keeps a single bot comment on the PR updated with the link. It is skipped for PRs from forks: a fork PR gets no repository secrets (a GitHub security boundary, not a setting), so it cannot deploy. Contributors have write access and should push branches here instead — see `CONTRIBUTING.md`.
+
+Vercel's **deployment protection is off** (`ssoProtection: null`), so preview URLs open without a Vercel login. Without this, only members of the Vercel account could view a preview, which defeats the point of handing the link to a reviewer. The repo and the site are both public, so the previews expose nothing the production site doesn't. `gitForkProtection` stays on — it is why Vercel's Git integration never built fork PRs.
 
 ### Collaborators
-- dave-jin (owner)
-- erickimme (write access)
-- sijinjeon (write access)
+- dave-jin (admin)
+- helloselee (write)
+- sijinjeon (write)
+
+Contributors work on **branches in this repo, not forks** — a fork PR cannot read repository secrets, so its preview deploy is skipped. Onboarding doc for them: `CONTRIBUTING.md`.

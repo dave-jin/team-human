@@ -1,0 +1,66 @@
+name: Preview Deploy
+
+# Deploys every PR to a throwaway Vercel preview URL and comments the link
+# on the PR, so a reviewer can look at the real rendered page instead of
+# reading the diff and guessing.
+#
+# Only runs for PRs from branches in THIS repository. A PR from a fork gets
+# no repository secrets — that is a GitHub security boundary, not a setting
+# we can flip — so the job is skipped rather than failed. Contributors have
+# write access; they should push a branch here instead of forking. See
+# CONTRIBUTING.md.
+#
+# Like the production deploy, this strips .git before uploading. See the
+# comment in deploy.yml for why.
+
+on:
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: vercel-preview-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  preview:
+    name: Deploy preview
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    env:
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Strip git metadata
+        run: rm -rf .git
+
+      - name: Deploy preview
+        id: deploy
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          url=$(npx --yes vercel@50 deploy --yes --token="$VERCEL_TOKEN")
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+          echo "Preview: $url" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Comment the preview URL
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          URL: ${{ steps.deploy.outputs.url }}
+          PR: ${{ github.event.pull_request.number }}
+          SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          body=$(printf '**Preview:** %s\n\nCommit `%s`. Updates on every push to this PR.\n\n- Home %s\n- Events %s/events.html\n- Guide %s/guide\n' \
+            "$URL" "${SHA:0:7}" "$URL" "$URL" "$URL")
+          # Edit the existing bot comment instead of stacking a new one per push.
+          id=$(gh api "repos/$GITHUB_REPOSITORY/issues/$PR/comments" \
+                --jq '[.[] | select(.user.type=="Bot" and (.body | startswith("**Preview:**")))][0].id // empty')
+          if [ -n "$id" ]; then
+            gh api -X PATCH "repos/$GITHUB_REPOSITORY/issues/comments/$id" -f body="$body" >/dev/null
+          else
+            gh api -X POST "repos/$GITHUB_REPOSITORY/issues/$PR/comments" -f body="$body" >/dev/null
+          fi
