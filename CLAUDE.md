@@ -27,8 +27,10 @@ images/
   Event/                 # Event card images (YYMMDD<slug>.png)
 team-human-design.pen    # Pencil design source-of-truth mockup (Home + Events frames)
 vercel.json              # Rewrites + Git-integration config — see "Deployment" below
+CONTRIBUTING.md          # Contributor onboarding (Korean) — clone-don't-fork, branch/PR flow
 .github/workflows/
   deploy.yml             # Production deploy on push to main (Vercel CLI) — see "Deployment"
+  preview.yml            # Per-PR preview deploy + PR comment — see "Deployment"
 .vercel/                 # Vercel project config (gitignored, created by the CLI)
 ```
 
