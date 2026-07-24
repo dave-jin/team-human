@@ -58,3 +58,5 @@ Vercel의 Git 연동이 아니라 **GitHub Actions**가 배포합니다.
 부작용 하나: Vercel 대시보드의 각 배포에 커밋 메시지·작성자가 표시되지 않습니다. 이력은 GitHub Actions 쪽을 보세요.
 
 배포가 실패하면 PR 하단 체크나 [Actions 탭](https://github.com/dave-jin/team-human/actions)에 빨간 X로 뜹니다. 로그를 열어 확인하고, 토큰 만료처럼 저장소 설정이 원인이면 Dave에게 알려주세요.
+
+<!-- 프리뷰 배포 파이프라인 검증용 임시 줄 — 이 PR은 머지하지 않고 닫습니다. -->
