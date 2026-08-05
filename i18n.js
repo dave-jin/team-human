@@ -35,6 +35,12 @@
         el.placeholder = translations[key];
       }
     });
+    document.querySelectorAll('[data-i18n-alt]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n-alt');
+      if (translations[key] !== undefined) {
+        el.alt = translations[key];
+      }
+    });
     var titleKey = document.querySelector('title').getAttribute('data-i18n-title');
     if (titleKey && translations[titleKey]) {
       document.title = translations[titleKey];

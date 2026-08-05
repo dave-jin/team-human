@@ -17,6 +17,7 @@ body {
 html[lang="ko"] .section-title,
 html[lang="ko"] .events-title,
 html[lang="ko"] .featured-event-info h2,
+html[lang="ko"] .recap-title,
 html[lang="ko"] .logo,
 html[lang="ko"] .footer-logo {
   font-family: 'Libre Baskerville', serif;
@@ -37,6 +38,23 @@ html[lang="ko"] .featured-event-badge,
 html[lang="ko"] .featured-event-date,
 html[lang="ko"] .featured-event-location,
 html[lang="ko"] .events-section-title,
+html[lang="ko"] .stats-label,
+html[lang="ko"] .stat-label,
+html[lang="ko"] .moments-desc,
+html[lang="ko"] .moment-event,
+html[lang="ko"] .moment-where,
+html[lang="ko"] .press-desc,
+html[lang="ko"] .press-headline,
+html[lang="ko"] .press-outlet,
+html[lang="ko"] .press-event,
+html[lang="ko"] .recap-badge,
+html[lang="ko"] .recap-desc,
+html[lang="ko"] .recap-subtitle,
+html[lang="ko"] .recap-subdesc,
+html[lang="ko"] .recap-stat-label,
+html[lang="ko"] .recap-winner p,
+html[lang="ko"] .recap-winner-team,
+html[lang="ko"] .savedate-desc,
 html[lang="ko"] .lang-select {
   font-family: 'Pretendard', sans-serif;
 }
@@ -1553,5 +1571,514 @@ img {
 
   .footer {
     padding: 24px;
+  }
+}
+
+/* === Stats strip (index.html) === */
+.stats {
+  padding: 0 120px;
+}
+
+.stats-label {
+  display: block;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #8C8A87;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  border-top: 1px solid #D9D5CD;
+  padding-top: 28px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+a.stat {
+  transition: opacity 0.2s;
+}
+
+a.stat:hover {
+  opacity: 0.65;
+}
+
+.stat-value {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1;
+  color: #37210D;
+}
+
+.stat-label {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #37210D;
+  opacity: 0.8;
+  max-width: 200px;
+}
+
+/* === Moments (index.html) === */
+.moments {
+  padding: 80px 120px;
+}
+
+.moments .section-title {
+  margin-bottom: 12px;
+}
+
+.moments-desc {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #37210D;
+  opacity: 0.8;
+  margin-bottom: 32px;
+}
+
+.moments-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.moment {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.moment img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.moment figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.moment-event {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #37210D;
+}
+
+.moment-where {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 12px;
+  color: #8C8A87;
+}
+
+/* === Press (index.html) === */
+.press {
+  padding: 80px 120px;
+  /* The header is fixed, so an #press jump would slide under it. */
+  scroll-margin-top: 72px;
+}
+
+.press .section-title {
+  margin-bottom: 12px;
+}
+
+.press-desc {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #37210D;
+  opacity: 0.8;
+  margin-bottom: 32px;
+}
+
+.press-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.press-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: #FFFFFF;
+  border: 1px solid #DDDDDD;
+  border-radius: 12px;
+  padding: 18px 20px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.press-item:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.press-item-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.press-outlet {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #C45C26;
+}
+
+.press-date {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 12px;
+  color: #8C8A87;
+}
+
+.press-date::before {
+  content: "·";
+  margin-right: 8px;
+}
+
+.press-event {
+  margin-left: auto;
+  padding: 2px 8px;
+  background-color: rgba(55, 33, 13, 0.06);
+  border-radius: 4px;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  color: #37210D;
+  opacity: 0.7;
+  white-space: nowrap;
+}
+
+.press-headline {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #37210D;
+}
+
+/* === Save the date card (events.html) === */
+.featured-event--savedate {
+  border: 1px solid #DDDDDD;
+}
+
+.featured-event--savedate .featured-event-info {
+  flex: 1 1 100%;
+  padding: 36px 32px;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.savedate-desc {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #37210D;
+  opacity: 0.8;
+  max-width: 620px;
+}
+
+.savedate-cta {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 8px;
+  padding: 11px 20px;
+  background-color: #FEE500;
+  color: #181600;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  border-radius: 999px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.savedate-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 10px rgba(254, 229, 0, 0.35);
+}
+
+/* === Recap (events.html) === */
+.recap {
+  background: #FFFFFF;
+  border: 1px solid #DDDDDD;
+  border-radius: 16px;
+  padding: 40px;
+  margin-bottom: 56px;
+}
+
+.recap-head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.recap-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background-color: rgba(55, 33, 13, 0.06);
+  color: #37210D;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 4px;
+}
+
+.recap-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #37210D;
+}
+
+.recap-date {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #C45C26;
+}
+
+.recap-desc {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #37210D;
+  opacity: 0.8;
+  max-width: 680px;
+}
+
+.recap-hero {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 28px;
+}
+
+.recap-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  border-top: 1px solid #D9D5CD;
+  border-bottom: 1px solid #D9D5CD;
+  padding: 24px 0;
+  margin-bottom: 36px;
+}
+
+.recap-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.recap-stat-value {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1;
+  color: #37210D;
+}
+
+.recap-stat-label {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 12px;
+  color: #37210D;
+  opacity: 0.7;
+}
+
+.recap-subtitle {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #37210D;
+  margin-bottom: 6px;
+}
+
+.recap-subdesc {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 13px;
+  color: #37210D;
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+
+.recap-winners {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 36px;
+}
+
+.recap-winner {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: #F1F1ED;
+  border-radius: 12px;
+  padding: 18px;
+}
+
+.recap-winner--special {
+  background: rgba(196, 92, 38, 0.07);
+}
+
+.recap-winner-award {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #C45C26;
+  margin-bottom: 2px;
+}
+
+.recap-winner-product {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #37210D;
+}
+
+.recap-winner-team {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 12px;
+  color: #8C8A87;
+}
+
+.recap-winner p {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #37210D;
+  opacity: 0.8;
+  margin-top: 6px;
+}
+
+.recap-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.recap-gallery img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.recap-report-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #C45C26;
+  transition: gap 0.2s;
+}
+
+.recap-report-link:hover {
+  gap: 12px;
+}
+
+@media (max-width: 1024px) {
+  .stats {
+    padding: 0 48px;
+  }
+
+  .moments {
+    padding: 60px 48px;
+  }
+
+  .press {
+    padding: 60px 48px;
+  }
+
+  .recap {
+    padding: 28px;
+  }
+
+  .recap-winners {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .stats {
+    padding: 0 24px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .stat-value {
+    font-size: 32px;
+  }
+
+  .moments {
+    padding: 48px 24px;
+  }
+
+  .moments-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .press {
+    padding: 48px 24px;
+  }
+
+  .press-list {
+    grid-template-columns: 1fr;
+  }
+
+  .recap {
+    padding: 20px;
+  }
+
+  .recap-title {
+    font-size: 20px;
+  }
+
+  .recap-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .recap-winners {
+    grid-template-columns: 1fr;
+  }
+
+  .recap-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .featured-event--savedate .featured-event-info {
+    padding: 24px 20px;
   }
 }
