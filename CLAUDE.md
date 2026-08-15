@@ -72,8 +72,9 @@ Team cards are **randomly shuffled** on each page load via `shuffleTeamCards()` 
 The page has three zones and an event moves through them in order. **Keeping this current is the whole point of the page** — two events sat badged `Upcoming` for a month after they happened, which is what made the site read as abandoned.
 
 1. **Featured / save-the-date** (top) — the next event. Two variants:
-   - `.featured-event` with an image + `events.upcoming` badge, wrapped in an `<a>` to the Luma page. Use once registration is open.
-   - `.featured-event--savedate` — text-only, no image, `events.savedate` badge, KakaoTalk CTA instead of a Luma link. Use when the date is real but venue/registration/poster are not final yet. This is deliberately image-free: there is no poster at that stage and a placeholder would look worse than type.
+   - `.featured-event` with an image + `events.upcoming` badge, wrapped in an `<a>` to the Luma page. Use once registration is open. **More than one may be stacked** when several events have open registration — the page has shipped two at a time before (Jun 2026, and again Aug 2026).
+   - `.featured-event--savedate` — text-only, no image, `events.savedate` badge, KakaoTalk CTA instead of a Luma link. Use when the date is real but venue/registration/poster are not final yet. This is deliberately image-free: there is no poster at that stage and a placeholder would look worse than type. Currently unused, but keep `events.savedate` and the `.featured-event--savedate` / `.savedate-*` styles — the variant comes back every cycle.
+   - **`Toython` is the 뚝딱톤 / Physical AI Hackathon renamed, not a new event** (2026-08-15). It ran as an `events.physical.*` save-the-date until the Luma page opened; those keys were replaced by `events.toython.*`. Don't re-add 뚝딱톤 as a separate card. Project folder: `PARA/2. Projects/2026-08_해커톤-피지컬AI`.
 2. **`.recap`** (middle) — the most recent finished event. Only ever **one** recap lives here; when a new event finishes, replace this block rather than stacking them.
 3. **`.events-grid`** (bottom) — everything older, **most-recent first**.
 

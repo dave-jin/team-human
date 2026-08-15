@@ -2827,33 +2827,42 @@
             },
             {
               "type": "frame",
-              "id": "featuredSaveDate",
-              "name": "Save the Date",
+              "id": "featuredEvent1",
+              "name": "Featured Event 1",
               "width": "fill_container",
               "fill": "#FFFFFF",
-              "stroke": "#DDDDDD",
-              "strokeWidth": 1,
               "cornerRadius": 12,
               "metadata": {
-                "href": "https://open.kakao.com/o/pyheuCui"
+                "href": "https://luma.com/e8dzsazr"
               },
               "children": [
                 {
                   "type": "frame",
-                  "id": "saveDateInfo",
-                  "name": "Save Date Info",
-                  "width": "fill_container",
+                  "id": "featuredImage1",
+                  "name": "Featured Image",
+                  "metadata": {
+                    "type": "local",
+                    "src": "images/Event/260822toython.png",
+                    "alt": "Toython: Physical AI Hackathon"
+                  },
+                  "width": 600,
+                  "height": 320,
+                  "fill": "#D9D5CD"
+                },
+                {
+                  "type": "frame",
+                  "id": "featuredInfo1",
+                  "name": "Featured Info",
+                  "width": 600,
                   "layout": "vertical",
-                  "gap": 12,
-                  "padding": [
-                    36,
-                    32
-                  ],
+                  "gap": 10,
+                  "padding": 32,
+                  "justifyContent": "center",
                   "children": [
                     {
                       "type": "frame",
-                      "id": "saveDateBadge",
-                      "name": "Save The Date Badge",
+                      "id": "featuredBadge1",
+                      "name": "Upcoming Badge",
                       "fill": "#C45C26",
                       "cornerRadius": 4,
                       "padding": [
@@ -2863,10 +2872,10 @@
                       "children": [
                         {
                           "type": "text",
-                          "id": "saveDateBadgeText",
+                          "id": "featuredBadgeText1",
                           "name": "BadgeText",
                           "fill": "#FFFFFF",
-                          "content": "SAVE THE DATE",
+                          "content": "UPCOMING",
                           "fontFamily": "Pretendard",
                           "fontSize": 11,
                           "fontWeight": "semibold",
@@ -2876,18 +2885,18 @@
                     },
                     {
                       "type": "text",
-                      "id": "saveDateTitle",
-                      "name": "Save Date Title",
+                      "id": "featuredTitle1",
+                      "name": "Featured Title",
                       "fill": "#37210D",
-                      "content": "Physical AI Hackathon — 뚝딱톤",
+                      "content": "Toython: Physical AI Hackathon",
                       "fontFamily": "Libre Baskerville",
                       "fontSize": 24,
                       "fontWeight": "bold"
                     },
                     {
                       "type": "text",
-                      "id": "saveDateDate",
-                      "name": "Save Date Date",
+                      "id": "featuredDate1",
+                      "name": "Featured Date",
                       "fill": "#C45C26",
                       "content": "Aug 22, 2026",
                       "fontFamily": "Pretendard",
@@ -2896,52 +2905,114 @@
                     },
                     {
                       "type": "text",
-                      "id": "saveDateLoc",
-                      "name": "Save Date Location",
+                      "id": "featuredLoc1",
+                      "name": "Featured Location",
                       "fill": "#8C8A87",
                       "content": "Seocho-gu, Seoul — Seoul AI Hub",
+                      "lineHeight": 1.4,
                       "fontFamily": "Pretendard",
                       "fontSize": 13,
-                      "fontWeight": "normal",
-                      "lineHeight": 1.4
-                    },
-                    {
-                      "type": "text",
-                      "id": "saveDateDesc",
-                      "name": "Save Date Description",
-                      "fill": "#37210D",
-                      "content": "Vibe coding that leaves the screen. Up to 30 teams build a product that actually moves on your desk, with IoT boards supplied by our hardware partner nucode. Free to enter, beginners welcome. Venue details and registration to follow.",
-                      "fontFamily": "Pretendard",
-                      "fontSize": 14,
-                      "fontWeight": "normal",
-                      "lineHeight": 1.6,
-                      "opacity": 0.8
-                    },
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "featuredSpacer0",
+              "name": "Featured Spacer 0",
+              "width": 1,
+              "height": 32
+            },
+            {
+              "type": "frame",
+              "id": "featuredEvent2",
+              "name": "Featured Event 2",
+              "width": "fill_container",
+              "fill": "#FFFFFF",
+              "cornerRadius": 12,
+              "metadata": {
+                "href": "https://luma.com/06x2etd7"
+              },
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "featuredImage2",
+                  "name": "Featured Image",
+                  "metadata": {
+                    "type": "local",
+                    "src": "images/Event/261024cursor-hackathon-seoul-4th.png",
+                    "alt": "Cursor Hackathon Seoul vol.4"
+                  },
+                  "width": 600,
+                  "height": 320,
+                  "fill": "#D9D5CD"
+                },
+                {
+                  "type": "frame",
+                  "id": "featuredInfo2",
+                  "name": "Featured Info",
+                  "width": 600,
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 32,
+                  "justifyContent": "center",
+                  "children": [
                     {
                       "type": "frame",
-                      "id": "saveDateCta",
-                      "name": "Save Date CTA",
-                      "fill": "#FEE500",
-                      "cornerRadius": 999,
+                      "id": "featuredBadge2",
+                      "name": "Upcoming Badge",
+                      "fill": "#C45C26",
+                      "cornerRadius": 4,
                       "padding": [
-                        11,
-                        20
+                        4,
+                        12
                       ],
-                      "metadata": {
-                        "href": "https://open.kakao.com/o/pyheuCui"
-                      },
                       "children": [
                         {
                           "type": "text",
-                          "id": "saveDateCtaText",
-                          "name": "CtaText",
-                          "fill": "#181600",
-                          "content": "Get notified in our open chat",
+                          "id": "featuredBadgeText2",
+                          "name": "BadgeText",
+                          "fill": "#FFFFFF",
+                          "content": "UPCOMING",
                           "fontFamily": "Pretendard",
-                          "fontSize": 14,
-                          "fontWeight": "semibold"
+                          "fontSize": 11,
+                          "fontWeight": "semibold",
+                          "letterSpacing": 0.5
                         }
                       ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "featuredTitle2",
+                      "name": "Featured Title",
+                      "fill": "#37210D",
+                      "content": "Cursor Hackathon Seoul vol.4",
+                      "fontFamily": "Libre Baskerville",
+                      "fontSize": 24,
+                      "fontWeight": "bold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "featuredDate2",
+                      "name": "Featured Date",
+                      "fill": "#C45C26",
+                      "content": "Oct 24, 2026",
+                      "fontFamily": "Pretendard",
+                      "fontSize": 14,
+                      "fontWeight": "semibold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "featuredLoc2",
+                      "name": "Featured Location",
+                      "fill": "#8C8A87",
+                      "content": "Seoul — venue to be announced",
+                      "lineHeight": 1.4,
+                      "fontFamily": "Pretendard",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
                     }
                   ]
                 }
