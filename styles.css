@@ -16,7 +16,6 @@ body {
 /* Korean fonts: Libre Baskerville (serif titles) + Pretendard (sans-serif body) */
 html[lang="ko"] .section-title,
 html[lang="ko"] .events-title,
-html[lang="ko"] .featured-event-info h2,
 html[lang="ko"] .recap-title,
 html[lang="ko"] .logo,
 html[lang="ko"] .footer-logo {
@@ -28,16 +27,12 @@ html[lang="ko"] .events-subtitle,
 html[lang="ko"] .footer-tagline,
 html[lang="ko"] .belief-card p,
 html[lang="ko"] .team-card p,
-html[lang="ko"] .event-location,
+html[lang="ko"] .event-row-place,
 html[lang="ko"] .belief-card h3,
 html[lang="ko"] .team-card h3,
-html[lang="ko"] .event-info h3,
 html[lang="ko"] .nav-link,
-html[lang="ko"] .event-date,
-html[lang="ko"] .featured-event-badge,
-html[lang="ko"] .featured-event-date,
-html[lang="ko"] .featured-event-location,
-html[lang="ko"] .events-section-title,
+html[lang="ko"] .event-row-date,
+html[lang="ko"] .events-rail-label,
 html[lang="ko"] .stats-label,
 html[lang="ko"] .stat-label,
 html[lang="ko"] .moments-desc,
@@ -407,176 +402,183 @@ img {
 }
 
 /* === Events Page === */
+/* Single centred column, Luma-style. The old layout ran the full window width
+   with a half-width square poster per event, which left a large empty panel
+   beside each card and made two upcoming events fill three screens. */
 .events {
-  padding: 128px 120px 60px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 120px 32px 72px;
 }
 
 .events-title {
   font-family: 'Libre Baskerville', serif;
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 500;
-  line-height: 28px;
+  line-height: 32px;
   letter-spacing: -0.44px;
   color: #37210d;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
 
 .events-subtitle {
   font-family: 'Pretendard', sans-serif;
   font-size: 14px;
   font-weight: 400;
-  line-height: 16px;
-  color: #37210d;
-  margin-bottom: 56px;
-}
-
-/* === Featured Event === */
-.featured-event {
-  display: flex;
-  background: #FFFFFF;
-  border-radius: 12px;
-  overflow: hidden;
-  margin-bottom: 48px;
-  transition: box-shadow 0.2s, transform 0.2s;
-}
-
-.featured-event:hover {
-  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.1);
-  transform: translateY(-2px);
-}
-
-.featured-event-image {
-  flex: 1;
-  min-height: 280px;
-  overflow: hidden;
-}
-
-.featured-event-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.featured-event-info {
-  flex: 1;
-  padding: 32px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 10px;
-}
-
-.featured-event-badge {
-  display: inline-block;
-  width: fit-content;
-  padding: 4px 12px;
-  background-color: #C45C26;
-  color: #FFFFFF;
-  font-size: 11px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  border-radius: 4px;
-}
-
-.featured-event-info h2 {
-  font-family: 'Libre Baskerville', serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: #37210D;
-}
-
-.featured-event-date {
-  font-size: 14px;
-  color: #C45C26;
-  font-weight: 600;
-}
-
-.featured-event-location {
-  font-size: 13px;
-  color: #8C8A87;
-  line-height: 1.4;
-}
-
-.events-section-title {
-  font-family: 'Pretendard', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  color: #8C8A87;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 20px;
-}
-
-.events-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-.event-card {
-  background: #FFFFFF;
-  border: 1px solid #DDDDDD;
-  border-radius: 16px;
-  padding: 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  transition: box-shadow 0.2s, transform 0.2s;
-}
-
-.event-card:hover {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  transform: translateY(-2px);
-}
-
-.event-image {
-  width: 100%;
-  background-color: #F1F1ED;
-  aspect-ratio: 432 / 243;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.event-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.event-info {
-  padding: 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  color: #37210d;
-}
-
-.event-info h3 {
-  font-family: 'Pretendard', sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 18px;
-  color: #37210d;
-}
-
-.event-date {
-  font-family: 'Pretendard', sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 1.4;
-  color: #37210d;
-}
-
-.event-location {
-  font-family: 'Pretendard', sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 1.4;
+  line-height: 20px;
   color: #37210d;
   opacity: 0.6;
-  margin-top: -4px;
+  margin-bottom: 44px;
+}
+
+/* === Events timeline (dotted rail down the left) === */
+.events-timeline {
+  position: relative;
+  padding-left: 28px;
+}
+
+.events-timeline::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 8px;
+  bottom: 8px;
+  border-left: 1px dashed rgba(55, 33, 13, 0.2);
+}
+
+.events-rail-head {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 44px 0 14px;
+}
+
+.events-rail-head:first-child {
+  margin-top: 0;
+}
+
+.events-rail-dot {
+  position: absolute;
+  left: -28px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #C45C26;
+}
+
+.events-rail-label {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #37210d;
+}
+
+/* Year dividers inside "Past Events" sit one step quieter than the section head. */
+.events-rail-head--year {
+  margin: 28px 0 12px;
+}
+
+.events-rail-head--year .events-rail-dot {
+  width: 7px;
+  height: 7px;
+  left: -27px;
+  background-color: rgba(55, 33, 13, 0.28);
+}
+
+.events-rail-head--year .events-rail-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #37210d;
+  opacity: 0.45;
+}
+
+/* === Event row === */
+.event-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #FFFFFF;
+  border: 1px solid #DDDDDD;
+  border-radius: 20px;
+  padding: 12px 12px 12px 20px;
+  margin-bottom: 10px;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.event-row:hover {
+  border-color: #C45C26;
+  box-shadow: 0 4px 18px rgba(55, 33, 13, 0.08);
+  transform: translateY(-1px);
+}
+
+.event-row-body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.event-row-date {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: #37210d;
+  opacity: 0.45;
+}
+
+/* Latin runs get the brand serif; Hangul has no Libre Baskerville glyphs and
+   falls through to Pretendard rather than an unpredictable system serif — the
+   same stack guide.html uses. Do not add this to the html[lang="ko"] serif
+   override list, or the Pretendard fallback is lost. */
+.event-row-title {
+  font-family: 'Libre Baskerville', 'Pretendard', serif;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: #37210d;
+}
+
+.event-row-place {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #37210d;
+  opacity: 0.55;
+}
+
+.event-row-cover {
+  flex: none;
+  width: 120px;
+  height: 120px;
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: #F1F1ED;
+}
+
+.event-row-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Four of the older posters are 16:9 Luma banners (928x522) rather than the
+   1:1 the newer ones use. Centre-cropping those to the square tile cut 44% of
+   the width and sliced the event name in half, so they letterbox instead. */
+.event-row-cover--wide img {
+  object-fit: contain;
+}
+
+/* The two open-registration events carry the accent; past ones stay quiet. */
+.event-row--upcoming .event-row-date {
+  color: #C45C26;
+  font-weight: 600;
+  opacity: 1;
 }
 
 /* === Community CTA === */
@@ -1492,7 +1494,7 @@ img {
   }
 
   .events {
-    padding: 120px 48px 40px;
+    padding: 112px 32px 56px;
   }
 }
 
@@ -1545,28 +1547,46 @@ img {
   }
 
   .events {
-    padding: 120px 24px 32px;
+    padding: 104px 20px 40px;
   }
 
-  .featured-event {
-    flex-direction: column;
+  /* The row stays a row on mobile — stacking it is what made the old
+     layout scroll for screens. Only the cover and the padding shrink. */
+  .events-timeline {
+    padding-left: 20px;
   }
 
-  .featured-event-image {
-    min-height: 200px;
+  .events-rail-dot {
+    left: -20px;
   }
 
-  .featured-event-info {
-    padding: 20px;
+  .events-rail-head--year .events-rail-dot {
+    left: -19px;
   }
 
-  .featured-event-info h2 {
-    font-size: 20px;
+  .recap::before {
+    left: -21px;
   }
 
-  .events-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
+  .event-row {
+    gap: 12px;
+    padding: 10px 10px 10px 14px;
+    border-radius: 16px;
+  }
+
+  .event-row-cover {
+    width: 84px;
+    height: 84px;
+    border-radius: 10px;
+  }
+
+  .event-row-title {
+    font-size: 16px;
+  }
+
+  .event-row-date,
+  .event-row-place {
+    font-size: 12px;
   }
 
   .footer {
@@ -1774,16 +1794,17 @@ a.stat:hover {
   color: #37210D;
 }
 
-/* === Save the date card (events.html) === */
-.featured-event--savedate {
-  border: 1px solid #DDDDDD;
+/* === Save the date row (events.html) === */
+/* Currently unused — no event is in the pre-registration stage. Kept because
+   the variant comes back every cycle: a real date, no poster and no Luma page
+   yet, so the row runs cover-less and full width with a KakaoTalk CTA. */
+.event-row--savedate {
+  align-items: flex-start;
+  padding: 20px;
 }
 
-.featured-event--savedate .featured-event-info {
-  flex: 1 1 100%;
-  padding: 36px 32px;
-  gap: 12px;
-  align-items: flex-start;
+.event-row--savedate .event-row-body {
+  gap: 10px;
 }
 
 .savedate-desc {
@@ -1816,12 +1837,25 @@ a.stat:hover {
 }
 
 /* === Recap (events.html) === */
+/* Sits inside .events-timeline, so it carries its own rail dot. */
 .recap {
+  position: relative;
   background: #FFFFFF;
   border: 1px solid #DDDDDD;
-  border-radius: 16px;
-  padding: 40px;
-  margin-bottom: 56px;
+  border-radius: 20px;
+  padding: 32px;
+  margin-top: 44px;
+}
+
+.recap::before {
+  content: '';
+  position: absolute;
+  left: -29px;
+  top: 34px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: rgba(55, 33, 13, 0.28);
 }
 
 .recap-head {
@@ -1925,7 +1959,7 @@ a.stat:hover {
 
 .recap-winners {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 12px;
   margin-bottom: 36px;
 }
@@ -2078,7 +2112,7 @@ a.stat:hover {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .featured-event--savedate .featured-event-info {
-    padding: 24px 20px;
+  .event-row--savedate {
+    padding: 16px;
   }
 }

@@ -2788,12 +2788,12 @@
           "name": "Events Content",
           "width": "fill_container",
           "layout": "vertical",
-          "gap": 16,
+          "gap": 0,
           "padding": [
-            128,
             120,
-            60,
-            120
+            352,
+            72,
+            352
           ],
           "children": [
             {
@@ -2803,7 +2803,7 @@
               "fill": "#37210D",
               "content": "Events",
               "fontFamily": "Libre Baskerville",
-              "fontSize": 22,
+              "fontSize": 26,
               "fontWeight": "medium",
               "letterSpacing": -0.44
             },
@@ -2811,7 +2811,7 @@
               "type": "text",
               "id": "xNYjN",
               "name": "evSubtitle",
-              "fill": "#37210D",
+              "fill": "#8C8A87",
               "content": "Real events, real people, real conversations. Come build with us.",
               "lineHeight": 1.5,
               "fontFamily": "Pretendard",
@@ -2827,1435 +2827,1573 @@
             },
             {
               "type": "frame",
-              "id": "featuredEvent1",
-              "name": "Featured Event 1",
+              "id": "evTimeline",
+              "name": "Events Timeline",
               "width": "fill_container",
-              "fill": "#FFFFFF",
-              "cornerRadius": 12,
-              "metadata": {
-                "href": "https://luma.com/e8dzsazr"
-              },
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "featuredImage1",
-                  "name": "Featured Image",
-                  "metadata": {
-                    "type": "local",
-                    "src": "images/Event/260822toython.png",
-                    "alt": "Toython: Physical AI Hackathon"
-                  },
-                  "width": 600,
-                  "height": 320,
-                  "fill": "#D9D5CD"
-                },
-                {
-                  "type": "frame",
-                  "id": "featuredInfo1",
-                  "name": "Featured Info",
-                  "width": 600,
-                  "layout": "vertical",
-                  "gap": 10,
-                  "padding": 32,
-                  "justifyContent": "center",
-                  "children": [
-                    {
-                      "type": "frame",
-                      "id": "featuredBadge1",
-                      "name": "Upcoming Badge",
-                      "fill": "#C45C26",
-                      "cornerRadius": 4,
-                      "padding": [
-                        4,
-                        12
-                      ],
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "featuredBadgeText1",
-                          "name": "BadgeText",
-                          "fill": "#FFFFFF",
-                          "content": "UPCOMING",
-                          "fontFamily": "Pretendard",
-                          "fontSize": 11,
-                          "fontWeight": "semibold",
-                          "letterSpacing": 0.5
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "id": "featuredTitle1",
-                      "name": "Featured Title",
-                      "fill": "#37210D",
-                      "content": "Toython: Physical AI Hackathon",
-                      "fontFamily": "Libre Baskerville",
-                      "fontSize": 24,
-                      "fontWeight": "bold"
-                    },
-                    {
-                      "type": "text",
-                      "id": "featuredDate1",
-                      "name": "Featured Date",
-                      "fill": "#C45C26",
-                      "content": "Aug 22, 2026",
-                      "fontFamily": "Pretendard",
-                      "fontSize": 14,
-                      "fontWeight": "semibold"
-                    },
-                    {
-                      "type": "text",
-                      "id": "featuredLoc1",
-                      "name": "Featured Location",
-                      "fill": "#8C8A87",
-                      "content": "Seocho-gu, Seoul — Seoul AI Hub",
-                      "lineHeight": 1.4,
-                      "fontFamily": "Pretendard",
-                      "fontSize": 13,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "featuredSpacer0",
-              "name": "Featured Spacer 0",
-              "width": 1,
-              "height": 32
-            },
-            {
-              "type": "frame",
-              "id": "featuredEvent2",
-              "name": "Featured Event 2",
-              "width": "fill_container",
-              "fill": "#FFFFFF",
-              "cornerRadius": 12,
-              "metadata": {
-                "href": "https://luma.com/06x2etd7"
-              },
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "featuredImage2",
-                  "name": "Featured Image",
-                  "metadata": {
-                    "type": "local",
-                    "src": "images/Event/261024cursor-hackathon-seoul-4th.png",
-                    "alt": "Cursor Hackathon Seoul vol.4"
-                  },
-                  "width": 600,
-                  "height": 320,
-                  "fill": "#D9D5CD"
-                },
-                {
-                  "type": "frame",
-                  "id": "featuredInfo2",
-                  "name": "Featured Info",
-                  "width": 600,
-                  "layout": "vertical",
-                  "gap": 10,
-                  "padding": 32,
-                  "justifyContent": "center",
-                  "children": [
-                    {
-                      "type": "frame",
-                      "id": "featuredBadge2",
-                      "name": "Upcoming Badge",
-                      "fill": "#C45C26",
-                      "cornerRadius": 4,
-                      "padding": [
-                        4,
-                        12
-                      ],
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "featuredBadgeText2",
-                          "name": "BadgeText",
-                          "fill": "#FFFFFF",
-                          "content": "UPCOMING",
-                          "fontFamily": "Pretendard",
-                          "fontSize": 11,
-                          "fontWeight": "semibold",
-                          "letterSpacing": 0.5
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "id": "featuredTitle2",
-                      "name": "Featured Title",
-                      "fill": "#37210D",
-                      "content": "Cursor Hackathon Seoul vol.4",
-                      "fontFamily": "Libre Baskerville",
-                      "fontSize": 24,
-                      "fontWeight": "bold"
-                    },
-                    {
-                      "type": "text",
-                      "id": "featuredDate2",
-                      "name": "Featured Date",
-                      "fill": "#C45C26",
-                      "content": "Oct 24, 2026",
-                      "fontFamily": "Pretendard",
-                      "fontSize": 14,
-                      "fontWeight": "semibold"
-                    },
-                    {
-                      "type": "text",
-                      "id": "featuredLoc2",
-                      "name": "Featured Location",
-                      "fill": "#8C8A87",
-                      "content": "Seoul — venue to be announced",
-                      "lineHeight": 1.4,
-                      "fontFamily": "Pretendard",
-                      "fontSize": 13,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "featuredSpacer1",
-              "name": "Featured Spacer",
-              "width": 1,
-              "height": 32
-            },
-            {
-              "type": "frame",
-              "id": "recapVol3",
-              "name": "Recap vol.3",
-              "width": "fill_container",
-              "fill": "#FFFFFF",
-              "stroke": "#DDDDDD",
-              "strokeWidth": 1,
-              "cornerRadius": 16,
               "layout": "vertical",
-              "gap": 0,
-              "padding": 40,
+              "gap": 10,
+              "padding": [
+                0,
+                0,
+                0,
+                28
+              ],
+              "metadata": {
+                "note": "1px dashed rgba(55,33,13,0.2) rail runs down the left at x=4; rail-head dots sit on it."
+              },
               "children": [
                 {
                   "type": "frame",
-                  "id": "recapHead",
-                  "name": "Recap Head",
-                  "layout": "vertical",
+                  "id": "railUpcoming",
+                  "name": "Rail — UPCOMING",
+                  "layout": "horizontal",
                   "gap": 10,
+                  "alignItems": "center",
                   "children": [
                     {
                       "type": "frame",
-                      "id": "recapBadge",
-                      "name": "Recap Badge",
-                      "fill": "#F1EAE3",
-                      "cornerRadius": 4,
-                      "padding": [
-                        4,
-                        12
-                      ],
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "recapBadgeText",
-                          "name": "BadgeText",
-                          "fill": "#37210D",
-                          "content": "LATEST RECAP",
-                          "fontFamily": "Pretendard",
-                          "fontSize": 11,
-                          "fontWeight": "semibold",
-                          "letterSpacing": 0.5
-                        }
-                      ]
+                      "id": "railDotUpcoming",
+                      "name": "Rail Dot",
+                      "width": 9,
+                      "height": 9,
+                      "cornerRadius": 999,
+                      "fill": "#C45C26"
                     },
                     {
                       "type": "text",
-                      "id": "recapTitle",
-                      "name": "Recap Title",
+                      "id": "railLblUpcoming",
+                      "name": "Rail Label",
                       "fill": "#37210D",
-                      "content": "Cursor Hackathon Seoul vol.3",
-                      "fontFamily": "Libre Baskerville",
-                      "fontSize": 24,
-                      "fontWeight": "bold"
-                    },
-                    {
-                      "type": "text",
-                      "id": "recapDate",
-                      "name": "Recap Date",
-                      "fill": "#C45C26",
-                      "content": "Jun 27, 2026",
+                      "content": "UPCOMING",
                       "fontFamily": "Pretendard",
                       "fontSize": 14,
-                      "fontWeight": "semibold"
-                    },
-                    {
-                      "type": "text",
-                      "id": "recapDesc",
-                      "name": "Recap Description",
-                      "fill": "#37210D",
-                      "content": "One day at Seoul AI Hub. 29 teams, 67 builders — 90% of whom had never entered a hackathon — shipped working AI products. Hosted by Team Human, sponsored by Cursor, in partnership with Seoul AI Hub.",
-                      "fontFamily": "Pretendard",
-                      "fontSize": 14,
-                      "fontWeight": "normal",
-                      "lineHeight": 1.6,
-                      "opacity": 0.8
+                      "fontWeight": "semibold",
+                      "letterSpacing": 0.4
                     }
                   ]
                 },
                 {
                   "type": "frame",
-                  "id": "recapHeroImg",
-                  "name": "Recap Hero Image",
-                  "metadata": {
-                    "type": "local",
-                    "src": "images/Recap/vol3/hero-group.jpg",
-                    "alt": "Team Human group photo at Cursor Hackathon Seoul vol.3"
-                  },
+                  "id": "evRowToython",
+                  "name": "Toython: Physical AI Hackathon",
                   "width": "fill_container",
-                  "height": 430,
-                  "fill": "#D9D5CD",
-                  "cornerRadius": 12
-                },
-                {
-                  "type": "frame",
-                  "id": "recapStats",
-                  "name": "Recap Stats",
-                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "stroke": "#DDDDDD",
+                  "strokeWidth": 1,
+                  "cornerRadius": 20,
+                  "layout": "horizontal",
                   "gap": 16,
                   "padding": [
-                    24,
-                    0
+                    12,
+                    12,
+                    12,
+                    20
                   ],
+                  "alignItems": "center",
+                  "metadata": {
+                    "href": "https://luma.com/e8dzsazr"
+                  },
                   "children": [
                     {
                       "type": "frame",
-                      "id": "recapStatAppliedWrap",
-                      "name": "Stat 166",
+                      "id": "evRowToythonBody",
+                      "name": "Row Body",
+                      "width": "fill_container",
                       "layout": "vertical",
-                      "gap": 4,
+                      "gap": 6,
                       "children": [
                         {
                           "type": "text",
-                          "id": "recapStatAppliedVal",
-                          "name": "Value",
-                          "fill": "#37210D",
-                          "content": "166",
-                          "fontFamily": "Libre Baskerville",
-                          "fontSize": 30,
-                          "fontWeight": "bold"
+                          "id": "evRowToythonDate",
+                          "name": "Row Date",
+                          "fill": "#C45C26",
+                          "content": "Aug 22, 2026",
+                          "fontFamily": "Pretendard",
+                          "fontSize": 13,
+                          "fontWeight": "semibold"
                         },
                         {
                           "type": "text",
-                          "id": "recapStatAppliedLbl",
-                          "name": "Label",
+                          "id": "evRowToythonTitle",
+                          "name": "Row Title",
                           "fill": "#37210D",
-                          "content": "applied",
+                          "content": "Toython: Physical AI Hackathon",
+                          "fontFamily": "Libre Baskerville",
+                          "fontSize": 19,
+                          "fontWeight": "medium",
+                          "lineHeight": 1.35
+                        },
+                        {
+                          "type": "text",
+                          "id": "evRowToythonPlace",
+                          "name": "Row Place",
+                          "fill": "#91857A",
+                          "content": "Seocho-gu, Seoul — Seoul AI Hub",
                           "fontFamily": "Pretendard",
-                          "fontSize": 12,
+                          "fontSize": 13,
                           "fontWeight": "normal",
-                          "opacity": 0.7
+                          "lineHeight": 1.45
                         }
                       ]
                     },
                     {
                       "type": "frame",
-                      "id": "recapStatTeamsWrap",
-                      "name": "Stat 29",
-                      "layout": "vertical",
-                      "gap": 4,
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "recapStatTeamsVal",
-                          "name": "Value",
-                          "fill": "#37210D",
-                          "content": "29",
-                          "fontFamily": "Libre Baskerville",
-                          "fontSize": 30,
-                          "fontWeight": "bold"
-                        },
-                        {
-                          "type": "text",
-                          "id": "recapStatTeamsLbl",
-                          "name": "Label",
-                          "fill": "#37210D",
-                          "content": "teams shipped",
-                          "fontFamily": "Pretendard",
-                          "fontSize": 12,
-                          "fontWeight": "normal",
-                          "opacity": 0.7
-                        }
-                      ]
-                    },
-                    {
-                      "type": "frame",
-                      "id": "recapStatBuildersWrap",
-                      "name": "Stat 67",
-                      "layout": "vertical",
-                      "gap": 4,
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "recapStatBuildersVal",
-                          "name": "Value",
-                          "fill": "#37210D",
-                          "content": "67",
-                          "fontFamily": "Libre Baskerville",
-                          "fontSize": 30,
-                          "fontWeight": "bold"
-                        },
-                        {
-                          "type": "text",
-                          "id": "recapStatBuildersLbl",
-                          "name": "Label",
-                          "fill": "#37210D",
-                          "content": "builders on site",
-                          "fontFamily": "Pretendard",
-                          "fontSize": 12,
-                          "fontWeight": "normal",
-                          "opacity": 0.7
-                        }
-                      ]
-                    },
-                    {
-                      "type": "frame",
-                      "id": "recapStatFirstWrap",
-                      "name": "Stat 90%",
-                      "layout": "vertical",
-                      "gap": 4,
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "recapStatFirstVal",
-                          "name": "Value",
-                          "fill": "#37210D",
-                          "content": "90%",
-                          "fontFamily": "Libre Baskerville",
-                          "fontSize": 30,
-                          "fontWeight": "bold"
-                        },
-                        {
-                          "type": "text",
-                          "id": "recapStatFirstLbl",
-                          "name": "Label",
-                          "fill": "#37210D",
-                          "content": "first-time hackers",
-                          "fontFamily": "Pretendard",
-                          "fontSize": 12,
-                          "fontWeight": "normal",
-                          "opacity": 0.7
-                        }
-                      ]
+                      "id": "evRowToythonCover",
+                      "name": "Row Cover",
+                      "width": 120,
+                      "height": 120,
+                      "cornerRadius": 14,
+                      "fill": "#F1F1ED",
+                      "metadata": {
+                        "type": "local",
+                        "src": "images/Event/260822toython.png",
+                        "alt": "Toython: Physical AI Hackathon",
+                        "fit": "cover"
+                      }
                     }
                   ]
                 },
                 {
                   "type": "frame",
-                  "id": "recapWinnersHead",
-                  "name": "Recap Winners Head",
-                  "layout": "vertical",
-                  "gap": 6,
+                  "id": "evRowHack4",
+                  "name": "Cursor Hackathon Seoul vol.4",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "stroke": "#DDDDDD",
+                  "strokeWidth": 1,
+                  "cornerRadius": 20,
+                  "layout": "horizontal",
+                  "gap": 16,
+                  "padding": [
+                    12,
+                    12,
+                    12,
+                    20
+                  ],
+                  "alignItems": "center",
+                  "metadata": {
+                    "href": "https://luma.com/06x2etd7"
+                  },
                   "children": [
                     {
+                      "type": "frame",
+                      "id": "evRowHack4Body",
+                      "name": "Row Body",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 6,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "evRowHack4Date",
+                          "name": "Row Date",
+                          "fill": "#C45C26",
+                          "content": "Oct 24, 2026",
+                          "fontFamily": "Pretendard",
+                          "fontSize": 13,
+                          "fontWeight": "semibold"
+                        },
+                        {
+                          "type": "text",
+                          "id": "evRowHack4Title",
+                          "name": "Row Title",
+                          "fill": "#37210D",
+                          "content": "Cursor Hackathon Seoul vol.4",
+                          "fontFamily": "Libre Baskerville",
+                          "fontSize": 19,
+                          "fontWeight": "medium",
+                          "lineHeight": 1.35
+                        },
+                        {
+                          "type": "text",
+                          "id": "evRowHack4Place",
+                          "name": "Row Place",
+                          "fill": "#91857A",
+                          "content": "Seoul — venue to be announced",
+                          "fontFamily": "Pretendard",
+                          "fontSize": 13,
+                          "fontWeight": "normal",
+                          "lineHeight": 1.45
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "evRowHack4Cover",
+                      "name": "Row Cover",
+                      "width": 120,
+                      "height": 120,
+                      "cornerRadius": 14,
+                      "fill": "#F1F1ED",
+                      "metadata": {
+                        "type": "local",
+                        "src": "images/Event/261024cursor-hackathon-seoul-4th.png",
+                        "alt": "Cursor Hackathon Seoul vol.4",
+                        "fit": "cover"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "recapVol3",
+                  "name": "Recap vol.3",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "stroke": "#DDDDDD",
+                  "strokeWidth": 1,
+                  "cornerRadius": 20,
+                  "layout": "vertical",
+                  "gap": 0,
+                  "padding": 32,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "recapHead",
+                      "name": "Recap Head",
+                      "layout": "vertical",
+                      "gap": 10,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "recapBadge",
+                          "name": "Recap Badge",
+                          "fill": "#F1EAE3",
+                          "cornerRadius": 4,
+                          "padding": [
+                            4,
+                            12
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "recapBadgeText",
+                              "name": "BadgeText",
+                              "fill": "#37210D",
+                              "content": "LATEST RECAP",
+                              "fontFamily": "Pretendard",
+                              "fontSize": 11,
+                              "fontWeight": "semibold",
+                              "letterSpacing": 0.5
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "recapTitle",
+                          "name": "Recap Title",
+                          "fill": "#37210D",
+                          "content": "Cursor Hackathon Seoul vol.3",
+                          "fontFamily": "Libre Baskerville",
+                          "fontSize": 24,
+                          "fontWeight": "bold"
+                        },
+                        {
+                          "type": "text",
+                          "id": "recapDate",
+                          "name": "Recap Date",
+                          "fill": "#C45C26",
+                          "content": "Jun 27, 2026",
+                          "fontFamily": "Pretendard",
+                          "fontSize": 14,
+                          "fontWeight": "semibold"
+                        },
+                        {
+                          "type": "text",
+                          "id": "recapDesc",
+                          "name": "Recap Description",
+                          "fill": "#37210D",
+                          "content": "One day at Seoul AI Hub. 29 teams, 67 builders — 90% of whom had never entered a hackathon — shipped working AI products. Hosted by Team Human, sponsored by Cursor, in partnership with Seoul AI Hub.",
+                          "fontFamily": "Pretendard",
+                          "fontSize": 14,
+                          "fontWeight": "normal",
+                          "lineHeight": 1.6,
+                          "opacity": 0.8
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "recapHeroImg",
+                      "name": "Recap Hero Image",
+                      "metadata": {
+                        "type": "local",
+                        "src": "images/Recap/vol3/hero-group.jpg",
+                        "alt": "Team Human group photo at Cursor Hackathon Seoul vol.3"
+                      },
+                      "width": "fill_container",
+                      "height": 430,
+                      "fill": "#D9D5CD",
+                      "cornerRadius": 12
+                    },
+                    {
+                      "type": "frame",
+                      "id": "recapStats",
+                      "name": "Recap Stats",
+                      "width": "fill_container",
+                      "gap": 16,
+                      "padding": [
+                        24,
+                        0
+                      ],
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "recapStatAppliedWrap",
+                          "name": "Stat 166",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "recapStatAppliedVal",
+                              "name": "Value",
+                              "fill": "#37210D",
+                              "content": "166",
+                              "fontFamily": "Libre Baskerville",
+                              "fontSize": 30,
+                              "fontWeight": "bold"
+                            },
+                            {
+                              "type": "text",
+                              "id": "recapStatAppliedLbl",
+                              "name": "Label",
+                              "fill": "#37210D",
+                              "content": "applied",
+                              "fontFamily": "Pretendard",
+                              "fontSize": 12,
+                              "fontWeight": "normal",
+                              "opacity": 0.7
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "recapStatTeamsWrap",
+                          "name": "Stat 29",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "recapStatTeamsVal",
+                              "name": "Value",
+                              "fill": "#37210D",
+                              "content": "29",
+                              "fontFamily": "Libre Baskerville",
+                              "fontSize": 30,
+                              "fontWeight": "bold"
+                            },
+                            {
+                              "type": "text",
+                              "id": "recapStatTeamsLbl",
+                              "name": "Label",
+                              "fill": "#37210D",
+                              "content": "teams shipped",
+                              "fontFamily": "Pretendard",
+                              "fontSize": 12,
+                              "fontWeight": "normal",
+                              "opacity": 0.7
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "recapStatBuildersWrap",
+                          "name": "Stat 67",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "recapStatBuildersVal",
+                              "name": "Value",
+                              "fill": "#37210D",
+                              "content": "67",
+                              "fontFamily": "Libre Baskerville",
+                              "fontSize": 30,
+                              "fontWeight": "bold"
+                            },
+                            {
+                              "type": "text",
+                              "id": "recapStatBuildersLbl",
+                              "name": "Label",
+                              "fill": "#37210D",
+                              "content": "builders on site",
+                              "fontFamily": "Pretendard",
+                              "fontSize": 12,
+                              "fontWeight": "normal",
+                              "opacity": 0.7
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "recapStatFirstWrap",
+                          "name": "Stat 90%",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "recapStatFirstVal",
+                              "name": "Value",
+                              "fill": "#37210D",
+                              "content": "90%",
+                              "fontFamily": "Libre Baskerville",
+                              "fontSize": 30,
+                              "fontWeight": "bold"
+                            },
+                            {
+                              "type": "text",
+                              "id": "recapStatFirstLbl",
+                              "name": "Label",
+                              "fill": "#37210D",
+                              "content": "first-time hackers",
+                              "fontFamily": "Pretendard",
+                              "fontSize": 12,
+                              "fontWeight": "normal",
+                              "opacity": 0.7
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "recapWinnersHead",
+                      "name": "Recap Winners Head",
+                      "layout": "vertical",
+                      "gap": 6,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "recapWinnersTitle",
+                          "name": "Winners Title",
+                          "fill": "#37210D",
+                          "content": "Five winning teams",
+                          "fontFamily": "Libre Baskerville",
+                          "fontSize": 18,
+                          "fontWeight": "bold"
+                        },
+                        {
+                          "type": "text",
+                          "id": "recapWinnersDesc",
+                          "name": "Winners Desc",
+                          "fill": "#37210D",
+                          "content": "Ranked on the day, but the prize didn't follow the rank — all five teams took home $2,000 in Cursor credits each.",
+                          "fontFamily": "Pretendard",
+                          "fontSize": 13,
+                          "fontWeight": "normal",
+                          "opacity": 0.7
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "recapWinners",
+                      "name": "Recap Winners",
+                      "width": "fill_container",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "recapWinGcline",
+                          "name": "Winner GC Line",
+                          "width": 300,
+                          "fill": "#F1F1ED",
+                          "cornerRadius": 12,
+                          "padding": 18,
+                          "layout": "vertical",
+                          "gap": 4,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "recapWinGclineProd",
+                              "name": "Product",
+                              "fill": "#37210D",
+                              "content": "알바체인",
+                              "fontFamily": "Pretendard",
+                              "fontSize": 16,
+                              "fontWeight": "semibold"
+                            },
+                            {
+                              "type": "text",
+                              "id": "recapWinGclineTeam",
+                              "name": "Team",
+                              "fill": "#8C8A87",
+                              "content": "GC Line",
+                              "fontFamily": "Pretendard",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "recapWinGclineDesc",
+                              "name": "Desc",
+                              "fill": "#37210D",
+                              "content": "An all-in-one shift-management SaaS for stores, built on an AI ontology.",
+                              "fontFamily": "Pretendard",
+                              "fontSize": 13,
+                              "fontWeight": "normal",
+                              "lineHeight": 1.5,
+                              "opacity": 0.8
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "recapWinColdstart",
+                          "name": "Winner Cold Start",
+                          "width": 300,
+                          "fill": "#F1F1ED",
+                          "cornerRadius": 12,
+                          "padding": 18,
+                          "layout": "vertical",
+                          "gap": 4,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "recapWinColdstartProd",
+                              "name": "Product",
+                              "fill": "#37210D",
+                              "content": "OOOPS",
+                              "fontFamily": "Pretendard",
+                              "fontSize": 16,
+                              "fontWeight": "semibold"
+                            },
+                            {
+                              "type": "text",
+                              "id": "recapWinColdstartTeam",
+                              "name": "Team",
+                              "fill": "#8C8A87",
+                              "content": "Cold Start",
+                              "fontFamily": "Pretendard",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "recapWinColdstartDesc",
+                              "name": "Desc",
+                              "fill": "#37210D",
+                              "content": "Agent-based OS orchestrated operation and configuration.",
+                              "fontFamily": "Pretendard",
+                              "fontSize": 13,
+                              "fontWeight": "normal",
+                              "lineHeight": 1.5,
+                              "opacity": 0.8
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "recapWinMint",
+                          "name": "Winner 커서 뭐 될래",
+                          "width": 300,
+                          "fill": "#F1F1ED",
+                          "cornerRadius": 12,
+                          "padding": 18,
+                          "layout": "vertical",
+                          "gap": 4,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "recapWinMintProd",
+                              "name": "Product",
+                              "fill": "#37210D",
+                              "content": "Mint",
+                              "fontFamily": "Pretendard",
+                              "fontSize": 16,
+                              "fontWeight": "semibold"
+                            },
+                            {
+                              "type": "text",
+                              "id": "recapWinMintTeam",
+                              "name": "Team",
+                              "fill": "#8C8A87",
+                              "content": "커서 뭐 될래",
+                              "fontFamily": "Pretendard",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "recapWinMintDesc",
+                              "name": "Desc",
+                              "fill": "#37210D",
+                              "content": "Level up your coding skills like a game, and prove them with data.",
+                              "fontFamily": "Pretendard",
+                              "fontSize": 13,
+                              "fontWeight": "normal",
+                              "lineHeight": 1.5,
+                              "opacity": 0.8
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "recapWinYc",
+                          "name": "Winner YC",
+                          "width": 300,
+                          "fill": "#F1F1ED",
+                          "cornerRadius": 12,
+                          "padding": 18,
+                          "layout": "vertical",
+                          "gap": 4,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "recapWinYcProd",
+                              "name": "Product",
+                              "fill": "#37210D",
+                              "content": "True Agentic OS",
+                              "fontFamily": "Pretendard",
+                              "fontSize": 16,
+                              "fontWeight": "semibold"
+                            },
+                            {
+                              "type": "text",
+                              "id": "recapWinYcTeam",
+                              "name": "Team",
+                              "fill": "#8C8A87",
+                              "content": "YC",
+                              "fontFamily": "Pretendard",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "recapWinYcDesc",
+                              "name": "Desc",
+                              "fill": "#37210D",
+                              "content": "An agent OS that raises productivity without raising complexity.",
+                              "fontFamily": "Pretendard",
+                              "fontSize": 13,
+                              "fontWeight": "normal",
+                              "lineHeight": 1.5,
+                              "opacity": 0.8
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "recapWinFyo",
+                          "name": "Winner Find Your Own",
+                          "width": 300,
+                          "fill": "#F7E9E1",
+                          "cornerRadius": 12,
+                          "padding": 18,
+                          "layout": "vertical",
+                          "gap": 4,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "recapWinFyoAward",
+                              "name": "Award",
+                              "fill": "#C45C26",
+                              "content": "SEOUL AI HUB AWARD",
+                              "fontFamily": "Pretendard",
+                              "fontSize": 11,
+                              "fontWeight": "semibold",
+                              "letterSpacing": 0.5
+                            },
+                            {
+                              "type": "text",
+                              "id": "recapWinFyoProd",
+                              "name": "Product",
+                              "fill": "#37210D",
+                              "content": "받을지도",
+                              "fontFamily": "Pretendard",
+                              "fontSize": 16,
+                              "fontWeight": "semibold"
+                            },
+                            {
+                              "type": "text",
+                              "id": "recapWinFyoTeam",
+                              "name": "Team",
+                              "fill": "#8C8A87",
+                              "content": "Find Your Own",
+                              "fontFamily": "Pretendard",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "recapWinFyoDesc",
+                              "name": "Desc",
+                              "fill": "#37210D",
+                              "content": "AI reads a citizen's situation, finds the welfare benefits they qualify for, and helps them apply.",
+                              "fontFamily": "Pretendard",
+                              "fontSize": 13,
+                              "fontWeight": "normal",
+                              "lineHeight": 1.5,
+                              "opacity": 0.8
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
                       "type": "text",
-                      "id": "recapWinnersTitle",
-                      "name": "Winners Title",
+                      "id": "recapGalleryTitle",
+                      "name": "Gallery Title",
                       "fill": "#37210D",
-                      "content": "Five winning teams",
+                      "content": "One day, in frames",
                       "fontFamily": "Libre Baskerville",
                       "fontSize": 18,
                       "fontWeight": "bold"
                     },
                     {
-                      "type": "text",
-                      "id": "recapWinnersDesc",
-                      "name": "Winners Desc",
-                      "fill": "#37210D",
-                      "content": "Ranked on the day, but the prize didn't follow the rank — all five teams took home $2,000 in Cursor credits each.",
-                      "fontFamily": "Pretendard",
-                      "fontSize": 13,
-                      "fontWeight": "normal",
-                      "opacity": 0.7
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "recapWinners",
-                  "name": "Recap Winners",
-                  "width": "fill_container",
-                  "gap": 12,
-                  "children": [
-                    {
                       "type": "frame",
-                      "id": "recapWinGcline",
-                      "name": "Winner GC Line",
-                      "width": 300,
-                      "fill": "#F1F1ED",
-                      "cornerRadius": 12,
-                      "padding": 18,
-                      "layout": "vertical",
-                      "gap": 4,
+                      "id": "recapGallery",
+                      "name": "Recap Gallery",
+                      "width": "fill_container",
+                      "gap": 12,
                       "children": [
                         {
-                          "type": "text",
-                          "id": "recapWinGclineProd",
-                          "name": "Product",
-                          "fill": "#37210D",
-                          "content": "알바체인",
-                          "fontFamily": "Pretendard",
-                          "fontSize": 16,
-                          "fontWeight": "semibold"
+                          "type": "frame",
+                          "id": "recapPhoto1",
+                          "name": "Photo",
+                          "metadata": {
+                            "type": "local",
+                            "src": "images/Recap/vol3/g1.jpg",
+                            "alt": "Opening session — Seoul AI Hub and Cursor on the LED wall"
+                          },
+                          "width": 300,
+                          "height": 225,
+                          "fill": "#D9D5CD",
+                          "cornerRadius": 8
                         },
                         {
-                          "type": "text",
-                          "id": "recapWinGclineTeam",
-                          "name": "Team",
-                          "fill": "#8C8A87",
-                          "content": "GC Line",
-                          "fontFamily": "Pretendard",
-                          "fontSize": 12,
-                          "fontWeight": "normal"
+                          "type": "frame",
+                          "id": "recapPhoto2",
+                          "name": "Photo",
+                          "metadata": {
+                            "type": "local",
+                            "src": "images/Recap/vol3/g2.jpg",
+                            "alt": "The hacking floor at Seoul AI Hub, seen from above"
+                          },
+                          "width": 300,
+                          "height": 225,
+                          "fill": "#D9D5CD",
+                          "cornerRadius": 8
                         },
                         {
-                          "type": "text",
-                          "id": "recapWinGclineDesc",
-                          "name": "Desc",
-                          "fill": "#37210D",
-                          "content": "An all-in-one shift-management SaaS for stores, built on an AI ontology.",
-                          "fontFamily": "Pretendard",
-                          "fontSize": 13,
-                          "fontWeight": "normal",
-                          "lineHeight": 1.5,
-                          "opacity": 0.8
+                          "type": "frame",
+                          "id": "recapPhoto3",
+                          "name": "Photo",
+                          "metadata": {
+                            "type": "local",
+                            "src": "images/Recap/vol3/g3.jpg",
+                            "alt": "The 4F lounge in full swing"
+                          },
+                          "width": 300,
+                          "height": 225,
+                          "fill": "#D9D5CD",
+                          "cornerRadius": 8
+                        },
+                        {
+                          "type": "frame",
+                          "id": "recapPhoto4",
+                          "name": "Photo",
+                          "metadata": {
+                            "type": "local",
+                            "src": "images/Recap/vol3/g4.jpg",
+                            "alt": "A team demoing their product on stage"
+                          },
+                          "width": 300,
+                          "height": 225,
+                          "fill": "#D9D5CD",
+                          "cornerRadius": 8
+                        },
+                        {
+                          "type": "frame",
+                          "id": "recapPhoto5",
+                          "name": "Photo",
+                          "metadata": {
+                            "type": "local",
+                            "src": "images/Recap/vol3/g5.jpg",
+                            "alt": "Find Your Own receives the Seoul AI Hub Award"
+                          },
+                          "width": 300,
+                          "height": 225,
+                          "fill": "#D9D5CD",
+                          "cornerRadius": 8
+                        },
+                        {
+                          "type": "frame",
+                          "id": "recapPhoto6",
+                          "name": "Photo",
+                          "metadata": {
+                            "type": "local",
+                            "src": "images/Recap/vol3/g6.jpg",
+                            "alt": "Builders mid-hack"
+                          },
+                          "width": 300,
+                          "height": 225,
+                          "fill": "#D9D5CD",
+                          "cornerRadius": 8
                         }
                       ]
                     },
                     {
                       "type": "frame",
-                      "id": "recapWinColdstart",
-                      "name": "Winner Cold Start",
-                      "width": 300,
-                      "fill": "#F1F1ED",
-                      "cornerRadius": 12,
-                      "padding": 18,
-                      "layout": "vertical",
-                      "gap": 4,
+                      "id": "recapReportLink",
+                      "name": "Recap Report Link",
+                      "metadata": {
+                        "href": "https://cursor-hackathon-seoul-vol3.vercel.app/"
+                      },
                       "children": [
                         {
                           "type": "text",
-                          "id": "recapWinColdstartProd",
-                          "name": "Product",
-                          "fill": "#37210D",
-                          "content": "OOOPS",
-                          "fontFamily": "Pretendard",
-                          "fontSize": 16,
-                          "fontWeight": "semibold"
-                        },
-                        {
-                          "type": "text",
-                          "id": "recapWinColdstartTeam",
-                          "name": "Team",
-                          "fill": "#8C8A87",
-                          "content": "Cold Start",
-                          "fontFamily": "Pretendard",
-                          "fontSize": 12,
-                          "fontWeight": "normal"
-                        },
-                        {
-                          "type": "text",
-                          "id": "recapWinColdstartDesc",
-                          "name": "Desc",
-                          "fill": "#37210D",
-                          "content": "Agent-based OS orchestrated operation and configuration.",
-                          "fontFamily": "Pretendard",
-                          "fontSize": 13,
-                          "fontWeight": "normal",
-                          "lineHeight": 1.5,
-                          "opacity": 0.8
-                        }
-                      ]
-                    },
-                    {
-                      "type": "frame",
-                      "id": "recapWinMint",
-                      "name": "Winner 커서 뭐 될래",
-                      "width": 300,
-                      "fill": "#F1F1ED",
-                      "cornerRadius": 12,
-                      "padding": 18,
-                      "layout": "vertical",
-                      "gap": 4,
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "recapWinMintProd",
-                          "name": "Product",
-                          "fill": "#37210D",
-                          "content": "Mint",
-                          "fontFamily": "Pretendard",
-                          "fontSize": 16,
-                          "fontWeight": "semibold"
-                        },
-                        {
-                          "type": "text",
-                          "id": "recapWinMintTeam",
-                          "name": "Team",
-                          "fill": "#8C8A87",
-                          "content": "커서 뭐 될래",
-                          "fontFamily": "Pretendard",
-                          "fontSize": 12,
-                          "fontWeight": "normal"
-                        },
-                        {
-                          "type": "text",
-                          "id": "recapWinMintDesc",
-                          "name": "Desc",
-                          "fill": "#37210D",
-                          "content": "Level up your coding skills like a game, and prove them with data.",
-                          "fontFamily": "Pretendard",
-                          "fontSize": 13,
-                          "fontWeight": "normal",
-                          "lineHeight": 1.5,
-                          "opacity": 0.8
-                        }
-                      ]
-                    },
-                    {
-                      "type": "frame",
-                      "id": "recapWinYc",
-                      "name": "Winner YC",
-                      "width": 300,
-                      "fill": "#F1F1ED",
-                      "cornerRadius": 12,
-                      "padding": 18,
-                      "layout": "vertical",
-                      "gap": 4,
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "recapWinYcProd",
-                          "name": "Product",
-                          "fill": "#37210D",
-                          "content": "True Agentic OS",
-                          "fontFamily": "Pretendard",
-                          "fontSize": 16,
-                          "fontWeight": "semibold"
-                        },
-                        {
-                          "type": "text",
-                          "id": "recapWinYcTeam",
-                          "name": "Team",
-                          "fill": "#8C8A87",
-                          "content": "YC",
-                          "fontFamily": "Pretendard",
-                          "fontSize": 12,
-                          "fontWeight": "normal"
-                        },
-                        {
-                          "type": "text",
-                          "id": "recapWinYcDesc",
-                          "name": "Desc",
-                          "fill": "#37210D",
-                          "content": "An agent OS that raises productivity without raising complexity.",
-                          "fontFamily": "Pretendard",
-                          "fontSize": 13,
-                          "fontWeight": "normal",
-                          "lineHeight": 1.5,
-                          "opacity": 0.8
-                        }
-                      ]
-                    },
-                    {
-                      "type": "frame",
-                      "id": "recapWinFyo",
-                      "name": "Winner Find Your Own",
-                      "width": 300,
-                      "fill": "#F7E9E1",
-                      "cornerRadius": 12,
-                      "padding": 18,
-                      "layout": "vertical",
-                      "gap": 4,
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "recapWinFyoAward",
-                          "name": "Award",
+                          "id": "recapReportText",
+                          "name": "LinkText",
                           "fill": "#C45C26",
-                          "content": "SEOUL AI HUB AWARD",
+                          "content": "Read the full result report  →",
                           "fontFamily": "Pretendard",
-                          "fontSize": 11,
-                          "fontWeight": "semibold",
-                          "letterSpacing": 0.5
-                        },
-                        {
-                          "type": "text",
-                          "id": "recapWinFyoProd",
-                          "name": "Product",
-                          "fill": "#37210D",
-                          "content": "받을지도",
-                          "fontFamily": "Pretendard",
-                          "fontSize": 16,
+                          "fontSize": 14,
                           "fontWeight": "semibold"
-                        },
-                        {
-                          "type": "text",
-                          "id": "recapWinFyoTeam",
-                          "name": "Team",
-                          "fill": "#8C8A87",
-                          "content": "Find Your Own",
-                          "fontFamily": "Pretendard",
-                          "fontSize": 12,
-                          "fontWeight": "normal"
-                        },
-                        {
-                          "type": "text",
-                          "id": "recapWinFyoDesc",
-                          "name": "Desc",
-                          "fill": "#37210D",
-                          "content": "AI reads a citizen's situation, finds the welfare benefits they qualify for, and helps them apply.",
-                          "fontFamily": "Pretendard",
-                          "fontSize": 13,
-                          "fontWeight": "normal",
-                          "lineHeight": 1.5,
-                          "opacity": 0.8
                         }
                       ]
                     }
                   ]
                 },
                 {
-                  "type": "text",
-                  "id": "recapGalleryTitle",
-                  "name": "Gallery Title",
-                  "fill": "#37210D",
-                  "content": "One day, in frames",
-                  "fontFamily": "Libre Baskerville",
-                  "fontSize": 18,
-                  "fontWeight": "bold"
-                },
-                {
                   "type": "frame",
-                  "id": "recapGallery",
-                  "name": "Recap Gallery",
-                  "width": "fill_container",
-                  "gap": 12,
+                  "id": "railPast",
+                  "name": "Rail — PAST EVENTS",
+                  "layout": "horizontal",
+                  "gap": 10,
+                  "alignItems": "center",
                   "children": [
                     {
                       "type": "frame",
-                      "id": "recapPhoto1",
-                      "name": "Photo",
-                      "metadata": {
-                        "type": "local",
-                        "src": "images/Recap/vol3/g1.jpg",
-                        "alt": "Opening session — Seoul AI Hub and Cursor on the LED wall"
-                      },
-                      "width": 300,
-                      "height": 225,
-                      "fill": "#D9D5CD",
-                      "cornerRadius": 8
+                      "id": "railDotPast",
+                      "name": "Rail Dot",
+                      "width": 9,
+                      "height": 9,
+                      "cornerRadius": 999,
+                      "fill": "#C45C26"
                     },
-                    {
-                      "type": "frame",
-                      "id": "recapPhoto2",
-                      "name": "Photo",
-                      "metadata": {
-                        "type": "local",
-                        "src": "images/Recap/vol3/g2.jpg",
-                        "alt": "The hacking floor at Seoul AI Hub, seen from above"
-                      },
-                      "width": 300,
-                      "height": 225,
-                      "fill": "#D9D5CD",
-                      "cornerRadius": 8
-                    },
-                    {
-                      "type": "frame",
-                      "id": "recapPhoto3",
-                      "name": "Photo",
-                      "metadata": {
-                        "type": "local",
-                        "src": "images/Recap/vol3/g3.jpg",
-                        "alt": "The 4F lounge in full swing"
-                      },
-                      "width": 300,
-                      "height": 225,
-                      "fill": "#D9D5CD",
-                      "cornerRadius": 8
-                    },
-                    {
-                      "type": "frame",
-                      "id": "recapPhoto4",
-                      "name": "Photo",
-                      "metadata": {
-                        "type": "local",
-                        "src": "images/Recap/vol3/g4.jpg",
-                        "alt": "A team demoing their product on stage"
-                      },
-                      "width": 300,
-                      "height": 225,
-                      "fill": "#D9D5CD",
-                      "cornerRadius": 8
-                    },
-                    {
-                      "type": "frame",
-                      "id": "recapPhoto5",
-                      "name": "Photo",
-                      "metadata": {
-                        "type": "local",
-                        "src": "images/Recap/vol3/g5.jpg",
-                        "alt": "Find Your Own receives the Seoul AI Hub Award"
-                      },
-                      "width": 300,
-                      "height": 225,
-                      "fill": "#D9D5CD",
-                      "cornerRadius": 8
-                    },
-                    {
-                      "type": "frame",
-                      "id": "recapPhoto6",
-                      "name": "Photo",
-                      "metadata": {
-                        "type": "local",
-                        "src": "images/Recap/vol3/g6.jpg",
-                        "alt": "Builders mid-hack"
-                      },
-                      "width": 300,
-                      "height": 225,
-                      "fill": "#D9D5CD",
-                      "cornerRadius": 8
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "recapReportLink",
-                  "name": "Recap Report Link",
-                  "metadata": {
-                    "href": "https://cursor-hackathon-seoul-vol3.vercel.app/"
-                  },
-                  "children": [
                     {
                       "type": "text",
-                      "id": "recapReportText",
-                      "name": "LinkText",
-                      "fill": "#C45C26",
-                      "content": "Read the full result report  →",
+                      "id": "railLblPast",
+                      "name": "Rail Label",
+                      "fill": "#37210D",
+                      "content": "PAST EVENTS",
                       "fontFamily": "Pretendard",
                       "fontSize": 14,
-                      "fontWeight": "semibold"
+                      "fontWeight": "semibold",
+                      "letterSpacing": 0.4
                     }
                   ]
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "featuredSpacer2",
-              "name": "Featured Spacer 2",
-              "width": 1,
-              "height": 32
-            },
-            {
-              "type": "text",
-              "id": "pastEventsTitle",
-              "name": "Past Events Heading",
-              "fill": "#8C8A87",
-              "content": "PAST EVENTS",
-              "fontFamily": "Pretendard",
-              "fontSize": 14,
-              "fontWeight": "semibold",
-              "letterSpacing": 1
-            },
-            {
-              "type": "frame",
-              "id": "i7ie8",
-              "name": "Events Grid",
-              "width": "fill_container",
-              "gap": 24,
-              "children": [
+                },
                 {
                   "type": "frame",
-                  "id": "evHack3",
+                  "id": "rail2026",
+                  "name": "Rail — 2026",
+                  "layout": "horizontal",
+                  "gap": 10,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "railDot2026",
+                      "name": "Rail Dot",
+                      "width": 7,
+                      "height": 7,
+                      "cornerRadius": 999,
+                      "fill": "#BDB7AE"
+                    },
+                    {
+                      "type": "text",
+                      "id": "railLbl2026",
+                      "name": "Rail Label",
+                      "fill": "#9D9388",
+                      "content": "2026",
+                      "fontFamily": "Pretendard",
+                      "fontSize": 12,
+                      "fontWeight": "semibold",
+                      "letterSpacing": 1
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "evRowHack3",
                   "name": "Cursor Hackathon Seoul vol.3",
-                  "width": 390,
+                  "width": "fill_container",
                   "fill": "#FFFFFF",
                   "stroke": "#DDDDDD",
                   "strokeWidth": 1,
-                  "cornerRadius": 16,
-                  "layout": "vertical",
-                  "gap": 8,
-                  "padding": 8,
+                  "cornerRadius": 20,
+                  "layout": "horizontal",
+                  "gap": 16,
+                  "padding": [
+                    12,
+                    12,
+                    12,
+                    20
+                  ],
+                  "alignItems": "center",
                   "metadata": {
                     "href": "https://luma.com/6y8qjtgr"
                   },
                   "children": [
                     {
                       "type": "frame",
-                      "id": "evHack3Img",
-                      "name": "Event Image",
-                      "metadata": {
-                        "type": "local",
-                        "src": "images/Event/260627cursor-hackathon-seoul-3rd.png",
-                        "alt": "Cursor Hackathon Seoul vol.3"
-                      },
-                      "width": "fill_container",
-                      "fill": "#F1F1ED",
-                      "cornerRadius": 8
-                    },
-                    {
-                      "type": "frame",
-                      "id": "evHack3Info",
-                      "name": "evHack3Info",
+                      "id": "evRowHack3Body",
+                      "name": "Row Body",
                       "width": "fill_container",
                       "layout": "vertical",
-                      "gap": 10,
-                      "padding": 8,
+                      "gap": 6,
                       "children": [
                         {
                           "type": "text",
-                          "id": "evHack3Title",
-                          "name": "evHack3Title",
-                          "fill": "#37210D",
-                          "content": "Cursor Hackathon Seoul vol.3",
-                          "fontFamily": "Pretendard",
-                          "fontSize": 15,
-                          "fontWeight": "semibold"
-                        },
-                        {
-                          "type": "text",
-                          "id": "evHack3Date",
-                          "name": "evHack3Date",
-                          "fill": "#37210D",
+                          "id": "evRowHack3Date",
+                          "name": "Row Date",
+                          "fill": "#A59B92",
                           "content": "Jun 27, 2026",
                           "fontFamily": "Pretendard",
-                          "fontSize": 12,
+                          "fontSize": 13,
                           "fontWeight": "medium"
                         },
                         {
                           "type": "text",
-                          "id": "evHack3Loc",
-                          "name": "evHack3Loc",
-                          "fill": "#8C8A87",
-                          "content": "서울특별시 서초구 태봉로 108 서울 AI 허브",
+                          "id": "evRowHack3Title",
+                          "name": "Row Title",
+                          "fill": "#37210D",
+                          "content": "Cursor Hackathon Seoul vol.3",
+                          "fontFamily": "Libre Baskerville",
+                          "fontSize": 19,
+                          "fontWeight": "medium",
+                          "lineHeight": 1.35
+                        },
+                        {
+                          "type": "text",
+                          "id": "evRowHack3Place",
+                          "name": "Row Place",
+                          "fill": "#91857A",
+                          "content": "Seocho-gu, Seoul — Seoul AI Hub",
                           "fontFamily": "Pretendard",
-                          "fontSize": 11,
+                          "fontSize": 13,
                           "fontWeight": "normal",
-                          "lineHeight": 1.4
+                          "lineHeight": 1.45
                         }
                       ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "evRowHack3Cover",
+                      "name": "Row Cover",
+                      "width": 120,
+                      "height": 120,
+                      "cornerRadius": 14,
+                      "fill": "#F1F1ED",
+                      "metadata": {
+                        "type": "local",
+                        "src": "images/Event/260627cursor-hackathon-seoul-3rd.png",
+                        "alt": "Cursor Hackathon Seoul vol.3",
+                        "fit": "cover"
+                      }
                     }
                   ]
                 },
                 {
                   "type": "frame",
-                  "id": "evPushToProd",
+                  "id": "evRowPush",
                   "name": "Push to Prod SEOUL",
-                  "width": 390,
+                  "width": "fill_container",
                   "fill": "#FFFFFF",
                   "stroke": "#DDDDDD",
                   "strokeWidth": 1,
-                  "cornerRadius": 16,
-                  "layout": "vertical",
-                  "gap": 8,
-                  "padding": 8,
+                  "cornerRadius": 20,
+                  "layout": "horizontal",
+                  "gap": 16,
+                  "padding": [
+                    12,
+                    12,
+                    12,
+                    20
+                  ],
+                  "alignItems": "center",
                   "metadata": {
                     "href": "https://luma.com/elhey8nv?tk=ANT130"
                   },
                   "children": [
                     {
                       "type": "frame",
-                      "id": "evPushToProdImg",
-                      "name": "Event Image",
-                      "metadata": {
-                        "type": "local",
-                        "src": "images/Event/260618push-to-prod-seoul.png",
-                        "alt": "Push to Prod SEOUL"
-                      },
-                      "width": "fill_container",
-                      "fill": "#F1F1ED",
-                      "cornerRadius": 8
-                    },
-                    {
-                      "type": "frame",
-                      "id": "evPushToProdInfo",
-                      "name": "evPushToProdInfo",
+                      "id": "evRowPushBody",
+                      "name": "Row Body",
                       "width": "fill_container",
                       "layout": "vertical",
-                      "gap": 10,
-                      "padding": 8,
+                      "gap": 6,
                       "children": [
                         {
                           "type": "text",
-                          "id": "evPushToProdTitle",
-                          "name": "evPushToProdTitle",
-                          "fill": "#37210D",
-                          "content": "Push to Prod SEOUL",
-                          "fontFamily": "Pretendard",
-                          "fontSize": 15,
-                          "fontWeight": "semibold"
-                        },
-                        {
-                          "type": "text",
-                          "id": "evPushToProdDate",
-                          "name": "evPushToProdDate",
-                          "fill": "#37210D",
+                          "id": "evRowPushDate",
+                          "name": "Row Date",
+                          "fill": "#A59B92",
                           "content": "Jun 18, 2026",
                           "fontFamily": "Pretendard",
-                          "fontSize": 12,
+                          "fontSize": 13,
                           "fontWeight": "medium"
                         },
                         {
                           "type": "text",
-                          "id": "evPushToProdLoc",
-                          "name": "evPushToProdLoc",
-                          "fill": "#8C8A87",
-                          "content": "서울특별시 강남구 영동대로",
+                          "id": "evRowPushTitle",
+                          "name": "Row Title",
+                          "fill": "#37210D",
+                          "content": "Push to Prod SEOUL",
+                          "fontFamily": "Libre Baskerville",
+                          "fontSize": 19,
+                          "fontWeight": "medium",
+                          "lineHeight": 1.35
+                        },
+                        {
+                          "type": "text",
+                          "id": "evRowPushPlace",
+                          "name": "Row Place",
+                          "fill": "#91857A",
+                          "content": "Yeongdong-daero, Gangnam-gu, Seoul",
                           "fontFamily": "Pretendard",
-                          "fontSize": 11,
+                          "fontSize": 13,
                           "fontWeight": "normal",
-                          "lineHeight": 1.4
+                          "lineHeight": 1.45
                         }
                       ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "evRowPushCover",
+                      "name": "Row Cover",
+                      "width": 120,
+                      "height": 120,
+                      "cornerRadius": 14,
+                      "fill": "#F1F1ED",
+                      "metadata": {
+                        "type": "local",
+                        "src": "images/Event/260618push-to-prod-seoul.png",
+                        "alt": "Push to Prod SEOUL",
+                        "fit": "cover"
+                      }
                     }
                   ]
                 },
                 {
                   "type": "frame",
-                  "id": "evPobaco",
-                  "name": "POBACO",
-                  "width": 390,
+                  "id": "evRowPobaco",
+                  "name": "POBACO: Potluck + Vibe Coding",
+                  "width": "fill_container",
                   "fill": "#FFFFFF",
                   "stroke": "#DDDDDD",
                   "strokeWidth": 1,
-                  "cornerRadius": 16,
-                  "layout": "vertical",
-                  "gap": 8,
-                  "padding": 8,
+                  "cornerRadius": 20,
+                  "layout": "horizontal",
+                  "gap": 16,
+                  "padding": [
+                    12,
+                    12,
+                    12,
+                    20
+                  ],
+                  "alignItems": "center",
                   "metadata": {
                     "href": "https://luma.com/0go3dkbs"
                   },
                   "children": [
                     {
                       "type": "frame",
-                      "id": "evPobacoImg",
-                      "name": "Event Image",
-                      "metadata": {
-                        "type": "local",
-                        "src": "images/Event/260505pobaco.png",
-                        "alt": "POBACO: Potluck + Vibe Coding"
-                      },
-                      "width": "fill_container",
-                      "fill": "#F1F1ED",
-                      "cornerRadius": 8
-                    },
-                    {
-                      "type": "frame",
-                      "id": "evPobacoInfo",
-                      "name": "evPobacoInfo",
+                      "id": "evRowPobacoBody",
+                      "name": "Row Body",
                       "width": "fill_container",
                       "layout": "vertical",
-                      "gap": 10,
-                      "padding": 8,
+                      "gap": 6,
                       "children": [
                         {
                           "type": "text",
-                          "id": "evPobacoTitle",
-                          "name": "evPobacoTitle",
-                          "fill": "#37210D",
-                          "content": "POBACO: Potluck + Vibe Coding",
-                          "fontFamily": "Pretendard",
-                          "fontSize": 15,
-                          "fontWeight": "semibold"
-                        },
-                        {
-                          "type": "text",
-                          "id": "evPobacoDate",
-                          "name": "evPobacoDate",
-                          "fill": "#37210D",
+                          "id": "evRowPobacoDate",
+                          "name": "Row Date",
+                          "fill": "#A59B92",
                           "content": "May 05, 2026",
                           "fontFamily": "Pretendard",
-                          "fontSize": 12,
+                          "fontSize": 13,
                           "fontWeight": "medium"
                         },
                         {
                           "type": "text",
-                          "id": "evPobacoLoc",
-                          "name": "evPobacoLoc",
-                          "fill": "#8C8A87",
-                          "content": "서울특별시 강남구 역삼로 557 한국투자액셀러레이터",
-                          "lineHeight": 1.4,
+                          "id": "evRowPobacoTitle",
+                          "name": "Row Title",
+                          "fill": "#37210D",
+                          "content": "POBACO: Potluck + Vibe Coding",
+                          "fontFamily": "Libre Baskerville",
+                          "fontSize": 19,
+                          "fontWeight": "medium",
+                          "lineHeight": 1.35
+                        },
+                        {
+                          "type": "text",
+                          "id": "evRowPobacoPlace",
+                          "name": "Row Place",
+                          "fill": "#91857A",
+                          "content": "Gangnam-gu, Seoul — Korea Investment Accelerator",
                           "fontFamily": "Pretendard",
-                          "fontSize": 11,
-                          "fontWeight": "normal"
+                          "fontSize": 13,
+                          "fontWeight": "normal",
+                          "lineHeight": 1.45
                         }
                       ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "evRowPobacoCover",
+                      "name": "Row Cover",
+                      "width": 120,
+                      "height": 120,
+                      "cornerRadius": 14,
+                      "fill": "#F1F1ED",
+                      "metadata": {
+                        "type": "local",
+                        "src": "images/Event/260505pobaco.png",
+                        "alt": "POBACO: Potluck + Vibe Coding",
+                        "fit": "cover"
+                      }
                     }
                   ]
                 },
                 {
                   "type": "frame",
-                  "id": "evHackathon2",
-                  "name": "Eureka Cursor Hackathon Seoul",
-                  "width": 390,
+                  "id": "evRowHack2",
+                  "name": "Eureka! Cursor Hackathon Seoul",
+                  "width": "fill_container",
                   "fill": "#FFFFFF",
                   "stroke": "#DDDDDD",
                   "strokeWidth": 1,
-                  "cornerRadius": 16,
-                  "layout": "vertical",
-                  "gap": 8,
-                  "padding": 8,
+                  "cornerRadius": 20,
+                  "layout": "horizontal",
+                  "gap": 16,
+                  "padding": [
+                    12,
+                    12,
+                    12,
+                    20
+                  ],
+                  "alignItems": "center",
                   "metadata": {
                     "href": "https://luma.com/5xmpcai9"
                   },
                   "children": [
                     {
                       "type": "frame",
-                      "id": "evHackathon2Img",
-                      "name": "Event Image",
-                      "metadata": {
-                        "type": "local",
-                        "src": "images/Event/260404cursor-hackthon-seoul.png",
-                        "alt": "Eureka! Cursor Hackathon Seoul"
-                      },
-                      "width": "fill_container",
-                      "fill": "#F1F1ED",
-                      "cornerRadius": 8
-                    },
-                    {
-                      "type": "frame",
-                      "id": "evHackathon2Info",
-                      "name": "evHackathon2Info",
+                      "id": "evRowHack2Body",
+                      "name": "Row Body",
                       "width": "fill_container",
                       "layout": "vertical",
-                      "gap": 10,
-                      "padding": 8,
+                      "gap": 6,
                       "children": [
                         {
                           "type": "text",
-                          "id": "evHackathon2Title",
-                          "name": "evHackathon2Title",
-                          "fill": "#37210D",
-                          "content": "Eureka! Cursor Hackathon Seoul",
-                          "fontFamily": "Pretendard",
-                          "fontSize": 15,
-                          "fontWeight": "semibold"
-                        },
-                        {
-                          "type": "text",
-                          "id": "evHackathon2Date",
-                          "name": "evHackathon2Date",
-                          "fill": "#37210D",
+                          "id": "evRowHack2Date",
+                          "name": "Row Date",
+                          "fill": "#A59B92",
                           "content": "Apr 04, 2026",
                           "fontFamily": "Pretendard",
-                          "fontSize": 12,
+                          "fontSize": 13,
                           "fontWeight": "medium"
                         },
                         {
                           "type": "text",
-                          "id": "evHackathon2Loc",
-                          "name": "evHackathon2Loc",
-                          "fill": "#8C8A87",
-                          "content": "서울특별시 광진구 강변스파랜드",
-                          "lineHeight": 1.4,
+                          "id": "evRowHack2Title",
+                          "name": "Row Title",
+                          "fill": "#37210D",
+                          "content": "Eureka! Cursor Hackathon Seoul",
+                          "fontFamily": "Libre Baskerville",
+                          "fontSize": 19,
+                          "fontWeight": "medium",
+                          "lineHeight": 1.35
+                        },
+                        {
+                          "type": "text",
+                          "id": "evRowHack2Place",
+                          "name": "Row Place",
+                          "fill": "#91857A",
+                          "content": "Gwangjin-gu, Seoul — Gangbyeon Spa Land",
                           "fontFamily": "Pretendard",
-                          "fontSize": 11,
-                          "fontWeight": "normal"
+                          "fontSize": 13,
+                          "fontWeight": "normal",
+                          "lineHeight": 1.45
                         }
                       ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "evRowHack2Cover",
+                      "name": "Row Cover",
+                      "width": 120,
+                      "height": 120,
+                      "cornerRadius": 14,
+                      "fill": "#F1F1ED",
+                      "metadata": {
+                        "type": "local",
+                        "src": "images/Event/260404cursor-hackthon-seoul.png",
+                        "alt": "Eureka! Cursor Hackathon Seoul",
+                        "fit": "cover"
+                      }
                     }
                   ]
                 },
                 {
                   "type": "frame",
-                  "id": "evBuildDay",
+                  "id": "evRowBuild",
                   "name": "Cursor Network Build Day",
-                  "width": 390,
+                  "width": "fill_container",
                   "fill": "#FFFFFF",
                   "stroke": "#DDDDDD",
                   "strokeWidth": 1,
-                  "cornerRadius": 16,
-                  "layout": "vertical",
-                  "gap": 8,
-                  "padding": 8,
+                  "cornerRadius": 20,
+                  "layout": "horizontal",
+                  "gap": 16,
+                  "padding": [
+                    12,
+                    12,
+                    12,
+                    20
+                  ],
+                  "alignItems": "center",
                   "metadata": {
                     "href": "https://luma.com/mnvs3c78"
                   },
                   "children": [
                     {
                       "type": "frame",
-                      "id": "evBuildDayImg",
-                      "name": "Event Image",
-                      "metadata": {
-                        "type": "local",
-                        "src": "images/Event/260304cursor-network-build-day.png",
-                        "alt": "Cursor Network Build Day"
-                      },
-                      "width": "fill_container",
-                      "fill": "#F1F1ED",
-                      "cornerRadius": 8
-                    },
-                    {
-                      "type": "frame",
-                      "id": "evBuildDayInfo",
-                      "name": "evBuildDayInfo",
+                      "id": "evRowBuildBody",
+                      "name": "Row Body",
                       "width": "fill_container",
                       "layout": "vertical",
-                      "gap": 10,
-                      "padding": 8,
+                      "gap": 6,
                       "children": [
                         {
                           "type": "text",
-                          "id": "evBuildDayTitle",
-                          "name": "evBuildDayTitle",
-                          "fill": "#37210D",
-                          "content": "Cursor Network Build Day",
-                          "fontFamily": "Pretendard",
-                          "fontSize": 15,
-                          "fontWeight": "semibold"
-                        },
-                        {
-                          "type": "text",
-                          "id": "evBuildDayDate",
-                          "name": "evBuildDayDate",
-                          "fill": "#37210D",
+                          "id": "evRowBuildDate",
+                          "name": "Row Date",
+                          "fill": "#A59B92",
                           "content": "Mar 04, 2026",
                           "fontFamily": "Pretendard",
-                          "fontSize": 12,
+                          "fontSize": 13,
                           "fontWeight": "medium"
                         },
                         {
                           "type": "text",
-                          "id": "evBuildDayLoc",
-                          "name": "evBuildDayLoc",
-                          "fill": "#8C8A87",
-                          "content": "서울특별시 강남구 역삼로 55/7 패스트파이브 4층 대강당",
-                          "lineHeight": 1.4,
+                          "id": "evRowBuildTitle",
+                          "name": "Row Title",
+                          "fill": "#37210D",
+                          "content": "Cursor Network Build Day",
+                          "fontFamily": "Libre Baskerville",
+                          "fontSize": 19,
+                          "fontWeight": "medium",
+                          "lineHeight": 1.35
+                        },
+                        {
+                          "type": "text",
+                          "id": "evRowBuildPlace",
+                          "name": "Row Place",
+                          "fill": "#91857A",
+                          "content": "Gangnam-gu, Seoul — FastFive 4F Grand Hall",
                           "fontFamily": "Pretendard",
-                          "fontSize": 11,
-                          "fontWeight": "normal"
+                          "fontSize": 13,
+                          "fontWeight": "normal",
+                          "lineHeight": 1.45
                         }
                       ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "evRowBuildCover",
+                      "name": "Row Cover",
+                      "width": 120,
+                      "height": 120,
+                      "cornerRadius": 14,
+                      "fill": "#F1F1ED",
+                      "metadata": {
+                        "type": "local",
+                        "src": "images/Event/260304cursor-network-build-day.png",
+                        "alt": "Cursor Network Build Day",
+                        "fit": "contain"
+                      }
                     }
                   ]
                 },
                 {
                   "type": "frame",
-                  "id": "wG8C6",
+                  "id": "evRowHack1",
                   "name": "Cursor Hackathon Seoul",
-                  "width": 390,
+                  "width": "fill_container",
                   "fill": "#FFFFFF",
                   "stroke": "#DDDDDD",
                   "strokeWidth": 1,
-                  "cornerRadius": 16,
-                  "layout": "vertical",
-                  "gap": 8,
-                  "padding": 8,
+                  "cornerRadius": 20,
+                  "layout": "horizontal",
+                  "gap": 16,
+                  "padding": [
+                    12,
+                    12,
+                    12,
+                    20
+                  ],
+                  "alignItems": "center",
                   "metadata": {
                     "href": "https://luma.com/2s524ldj"
                   },
                   "children": [
                     {
                       "type": "frame",
-                      "id": "BgSm7",
-                      "name": "Event Image",
-                      "metadata": {
-                        "type": "local",
-                        "src": "images/Event/260207cursor-hackthon-seoul.png",
-                        "alt": "Cursor Hackathon Seoul"
-                      },
-                      "width": "fill_container",
-                      "fill": "#F1F1ED",
-                      "cornerRadius": 8
-                    },
-                    {
-                      "type": "frame",
-                      "id": "twiLp",
-                      "name": "ev1Info",
+                      "id": "evRowHack1Body",
+                      "name": "Row Body",
                       "width": "fill_container",
                       "layout": "vertical",
-                      "gap": 10,
-                      "padding": 8,
+                      "gap": 6,
                       "children": [
                         {
                           "type": "text",
-                          "id": "S6dQ7",
-                          "name": "ev1Title",
-                          "fill": "#37210D",
-                          "content": "Cursor Hackathon Seoul",
-                          "fontFamily": "Pretendard",
-                          "fontSize": 15,
-                          "fontWeight": "semibold"
-                        },
-                        {
-                          "type": "text",
-                          "id": "felQN",
-                          "name": "ev1Date",
-                          "fill": "#37210D",
+                          "id": "evRowHack1Date",
+                          "name": "Row Date",
+                          "fill": "#A59B92",
                           "content": "Feb 07, 2026",
                           "fontFamily": "Pretendard",
-                          "fontSize": 12,
+                          "fontSize": 13,
                           "fontWeight": "medium"
                         },
                         {
                           "type": "text",
-                          "id": "Hy7b4",
-                          "name": "ev1Loc",
-                          "fill": "#8C8A87",
-                          "content": "서울특별시 강남구 역삼로 55/7 패스트파이브 4층 대강당",
-                          "lineHeight": 1.4,
+                          "id": "evRowHack1Title",
+                          "name": "Row Title",
+                          "fill": "#37210D",
+                          "content": "Cursor Hackathon Seoul",
+                          "fontFamily": "Libre Baskerville",
+                          "fontSize": 19,
+                          "fontWeight": "medium",
+                          "lineHeight": 1.35
+                        },
+                        {
+                          "type": "text",
+                          "id": "evRowHack1Place",
+                          "name": "Row Place",
+                          "fill": "#91857A",
+                          "content": "Gangnam-gu, Seoul — FastFive 4F Grand Hall",
                           "fontFamily": "Pretendard",
-                          "fontSize": 11,
-                          "fontWeight": "normal"
+                          "fontSize": 13,
+                          "fontWeight": "normal",
+                          "lineHeight": 1.45
                         }
                       ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "evRowHack1Cover",
+                      "name": "Row Cover",
+                      "width": 120,
+                      "height": 120,
+                      "cornerRadius": 14,
+                      "fill": "#F1F1ED",
+                      "metadata": {
+                        "type": "local",
+                        "src": "images/Event/260207cursor-hackthon-seoul.png",
+                        "alt": "Cursor Hackathon Seoul",
+                        "fit": "contain"
+                      }
                     }
                   ]
                 },
                 {
                   "type": "frame",
-                  "id": "FVLHu",
-                  "name": "Cursor Meetup Design Build Ship",
-                  "width": 390,
+                  "id": "rail2025",
+                  "name": "Rail — 2025",
+                  "layout": "horizontal",
+                  "gap": 10,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "railDot2025",
+                      "name": "Rail Dot",
+                      "width": 7,
+                      "height": 7,
+                      "cornerRadius": 999,
+                      "fill": "#BDB7AE"
+                    },
+                    {
+                      "type": "text",
+                      "id": "railLbl2025",
+                      "name": "Rail Label",
+                      "fill": "#9D9388",
+                      "content": "2025",
+                      "fontFamily": "Pretendard",
+                      "fontSize": 12,
+                      "fontWeight": "semibold",
+                      "letterSpacing": 1
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "evRowDBS",
+                  "name": "Cursor Meetup: Design, Build, Ship",
+                  "width": "fill_container",
                   "fill": "#FFFFFF",
                   "stroke": "#DDDDDD",
                   "strokeWidth": 1,
-                  "cornerRadius": 16,
-                  "layout": "vertical",
-                  "gap": 8,
-                  "padding": 8,
+                  "cornerRadius": 20,
+                  "layout": "horizontal",
+                  "gap": 16,
+                  "padding": [
+                    12,
+                    12,
+                    12,
+                    20
+                  ],
+                  "alignItems": "center",
                   "metadata": {
                     "href": "https://event-us.kr/sireal/event/113472"
                   },
                   "children": [
                     {
                       "type": "frame",
-                      "id": "LUC3z",
-                      "name": "Event Image",
-                      "metadata": {
-                        "type": "local",
-                        "src": "images/Event/251025cursor-meetup-design.png",
-                        "alt": "Cursor Meetup: Design, Build, Ship"
-                      },
-                      "width": "fill_container",
-                      "fill": "#F1F1ED",
-                      "cornerRadius": 8
-                    },
-                    {
-                      "type": "frame",
-                      "id": "3CxZL",
-                      "name": "ev3Info",
+                      "id": "evRowDBSBody",
+                      "name": "Row Body",
                       "width": "fill_container",
                       "layout": "vertical",
-                      "gap": 10,
-                      "padding": 8,
+                      "gap": 6,
                       "children": [
                         {
                           "type": "text",
-                          "id": "rqzNE",
-                          "name": "ev3Title",
-                          "fill": "#37210D",
-                          "content": "Cursor Meetup: Design, Build, Ship",
-                          "fontFamily": "Pretendard",
-                          "fontSize": 15,
-                          "fontWeight": "semibold"
-                        },
-                        {
-                          "type": "text",
-                          "id": "L8s8U",
-                          "name": "ev3Date",
-                          "fill": "#37210D",
+                          "id": "evRowDBSDate",
+                          "name": "Row Date",
+                          "fill": "#A59B92",
                           "content": "Oct 25, 2025",
                           "fontFamily": "Pretendard",
-                          "fontSize": 12,
+                          "fontSize": 13,
                           "fontWeight": "medium"
                         },
                         {
                           "type": "text",
-                          "id": "yaMmx",
-                          "name": "ev3Loc",
-                          "fill": "#8C8A87",
-                          "content": "서울특별시 서초구 서초대로 67 단군소프트 3층",
-                          "lineHeight": 1.4,
+                          "id": "evRowDBSTitle",
+                          "name": "Row Title",
+                          "fill": "#37210D",
+                          "content": "Cursor Meetup: Design, Build, Ship",
+                          "fontFamily": "Libre Baskerville",
+                          "fontSize": 19,
+                          "fontWeight": "medium",
+                          "lineHeight": 1.35
+                        },
+                        {
+                          "type": "text",
+                          "id": "evRowDBSPlace",
+                          "name": "Row Place",
+                          "fill": "#91857A",
+                          "content": "Seocho-gu, Seoul — Dangunsoft 3F",
                           "fontFamily": "Pretendard",
-                          "fontSize": 11,
-                          "fontWeight": "normal"
+                          "fontSize": 13,
+                          "fontWeight": "normal",
+                          "lineHeight": 1.45
                         }
                       ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "evRowDBSCover",
+                      "name": "Row Cover",
+                      "width": 120,
+                      "height": 120,
+                      "cornerRadius": 14,
+                      "fill": "#F1F1ED",
+                      "metadata": {
+                        "type": "local",
+                        "src": "images/Event/251025cursor-meetup-design.png",
+                        "alt": "Cursor Meetup: Design, Build, Ship",
+                        "fit": "contain"
+                      }
                     }
                   ]
                 },
                 {
                   "type": "frame",
-                  "id": "rNZQZ",
+                  "id": "evRowMeetup",
                   "name": "Cursor Meetup Seoul",
-                  "width": 390,
+                  "width": "fill_container",
                   "fill": "#FFFFFF",
                   "stroke": "#DDDDDD",
                   "strokeWidth": 1,
-                  "cornerRadius": 16,
-                  "layout": "vertical",
-                  "gap": 8,
-                  "padding": 8,
+                  "cornerRadius": 20,
+                  "layout": "horizontal",
+                  "gap": 16,
+                  "padding": [
+                    12,
+                    12,
+                    12,
+                    20
+                  ],
+                  "alignItems": "center",
                   "metadata": {
                     "href": "https://luma.com/cursor_seoul_250614"
                   },
                   "children": [
                     {
                       "type": "frame",
-                      "id": "GUdbz",
-                      "name": "Event Image",
-                      "metadata": {
-                        "type": "local",
-                        "src": "images/Event/250614cursor-meetup-seoul.png",
-                        "alt": "Cursor Meetup Seoul"
-                      },
-                      "width": "fill_container",
-                      "fill": "#F1F1ED",
-                      "cornerRadius": 8
-                    },
-                    {
-                      "type": "frame",
-                      "id": "n7QSB",
-                      "name": "ev4Info",
+                      "id": "evRowMeetupBody",
+                      "name": "Row Body",
                       "width": "fill_container",
                       "layout": "vertical",
-                      "gap": 10,
-                      "padding": 8,
+                      "gap": 6,
                       "children": [
                         {
                           "type": "text",
-                          "id": "FVpbz",
-                          "name": "ev4Title",
-                          "fill": "#37210D",
-                          "content": "Cursor Meetup Seoul",
-                          "fontFamily": "Pretendard",
-                          "fontSize": 15,
-                          "fontWeight": "semibold"
-                        },
-                        {
-                          "type": "text",
-                          "id": "gmYxp",
-                          "name": "ev4Date",
-                          "fill": "#37210D",
+                          "id": "evRowMeetupDate",
+                          "name": "Row Date",
+                          "fill": "#A59B92",
                           "content": "Jun 14, 2025",
                           "fontFamily": "Pretendard",
-                          "fontSize": 12,
+                          "fontSize": 13,
                           "fontWeight": "medium"
                         },
                         {
                           "type": "text",
-                          "id": "Msi9k",
-                          "name": "ev4Loc",
-                          "fill": "#8C8A87",
-                          "content": "서울 강남구 강남대로 374 케이스퀘어(강남)2 20층 패시드라운지",
-                          "lineHeight": 1.4,
+                          "id": "evRowMeetupTitle",
+                          "name": "Row Title",
+                          "fill": "#37210D",
+                          "content": "Cursor Meetup Seoul",
+                          "fontFamily": "Libre Baskerville",
+                          "fontSize": 19,
+                          "fontWeight": "medium",
+                          "lineHeight": 1.35
+                        },
+                        {
+                          "type": "text",
+                          "id": "evRowMeetupPlace",
+                          "name": "Row Place",
+                          "fill": "#91857A",
+                          "content": "Gangnam-gu, Seoul — K-Square 20F Facid Lounge",
                           "fontFamily": "Pretendard",
-                          "fontSize": 11,
-                          "fontWeight": "normal"
+                          "fontSize": 13,
+                          "fontWeight": "normal",
+                          "lineHeight": 1.45
                         }
                       ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "evRowMeetupCover",
+                      "name": "Row Cover",
+                      "width": 120,
+                      "height": 120,
+                      "cornerRadius": 14,
+                      "fill": "#F1F1ED",
+                      "metadata": {
+                        "type": "local",
+                        "src": "images/Event/250614cursor-meetup-seoul.png",
+                        "alt": "Cursor Meetup Seoul",
+                        "fit": "contain"
+                      }
                     }
                   ]
                 }

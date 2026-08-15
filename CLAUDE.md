@@ -69,16 +69,21 @@ Team cards are **randomly shuffled** on each page load via `shuffleTeamCards()` 
 
 ### Events page state machine (`events.html`)
 
-The page has three zones and an event moves through them in order. **Keeping this current is the whole point of the page** — two events sat badged `Upcoming` for a month after they happened, which is what made the site read as abandoned.
+The whole page is **one `.events-timeline`** — a single 800px centred column with a dashed rail down the left, rail-head dots marking each section. Modelled on `luma.com/seoul` (2026-08-15 redesign). **Every event is the same `.event-row`**, whatever its state; only its position on the timeline and the accent on its date change. **Keeping this current is the whole point of the page** — two events sat badged `Upcoming` for a month after they happened, which is what made the site read as abandoned.
 
-1. **Featured / save-the-date** (top) — the next event. Two variants:
-   - `.featured-event` with an image + `events.upcoming` badge, wrapped in an `<a>` to the Luma page. Use once registration is open. **More than one may be stacked** when several events have open registration — the page has shipped two at a time before (Jun 2026, and again Aug 2026).
-   - `.featured-event--savedate` — text-only, no image, `events.savedate` badge, KakaoTalk CTA instead of a Luma link. Use when the date is real but venue/registration/poster are not final yet. This is deliberately image-free: there is no poster at that stage and a placeholder would look worse than type. Currently unused, but keep `events.savedate` and the `.featured-event--savedate` / `.savedate-*` styles — the variant comes back every cycle.
+Order down the rail:
+
+1. **`UPCOMING` rail head** → one `.event-row.event-row--upcoming` per event with open registration, wrapped in an `<a>` to the Luma page. The `--upcoming` modifier is the only difference: it turns the date accent orange. **More than one may be stacked** (Jun 2026, Aug 2026). There is deliberately **no per-row `Upcoming` badge** — the rail head already says it, and repeating it on every row was the redundancy that made the old cards feel heavy.
+   - `.event-row--savedate` — cover-less full-width variant with a description and a KakaoTalk CTA, for when the date is real but venue/registration/poster are not final. Currently unused; keep it and `events.savedate` / `.savedate-*`, the variant comes back every cycle.
    - **`Toython` is the 뚝딱톤 / Physical AI Hackathon renamed, not a new event** (2026-08-15). It ran as an `events.physical.*` save-the-date until the Luma page opened; those keys were replaced by `events.toython.*`. Don't re-add 뚝딱톤 as a separate card. Project folder: `PARA/2. Projects/2026-08_해커톤-피지컬AI`.
-2. **`.recap`** (middle) — the most recent finished event. Only ever **one** recap lives here; when a new event finishes, replace this block rather than stacking them.
-3. **`.events-grid`** (bottom) — everything older, **most-recent first**.
+2. **`.recap`** — the most recent finished event, carrying its own rail dot via `.recap::before`. Only ever **one** recap lives here; when a new event finishes, replace this block rather than stacking them.
+3. **`PAST EVENTS` rail head** → **year sub-heads** (`.events-rail-head--year`, one per calendar year) → plain `.event-row`s, **most-recent first**. Add a new year sub-head when the first event of a new year rolls off.
 
-**When an event finishes**, do all four: move the featured card into `.events-grid` at position 1 · replace `.recap` with the new event · move the old recap's stats/winners/photos out (or drop them) · add the next event to the featured slot.
+**When an event finishes**, do all four: drop `--upcoming` from its row and move it under the right year sub-head · replace `.recap` with the new event · move the old recap's stats/winners/photos out (or drop them) · add the next event under `UPCOMING`.
+
+**Row covers are 120px squares** (`.event-row-cover`, 84px on mobile). Newer posters are 1:1 and fill it with `object-fit: cover`. The four older Luma banners (`250614`, `251025`, `260207`, `260304`) are 928×522 16:9 — square-cropping them cut 44% of the width and sliced the event name in half, so they carry `.event-row-cover--wide` and letterbox with `object-fit: contain` instead. **Check a new poster's ratio before adding a row**: 1:1 → plain cover, 16:9 → add `--wide`.
+
+**The row must stay a row on mobile.** The old featured card stacked to a column under 768px, which is exactly what made two events scroll for three screens. Only the cover and the padding shrink.
 
 ### Recap section (`.recap` on `events.html`)
 
@@ -95,7 +100,7 @@ Four **cumulative** numbers under the hero — they describe the whole community
 
 | Stat | Value | Where it comes from |
 |---|---|---|
-| events | **8** | count the cards on `events.html` (grid + featured) |
+| events | **8** | count the `.event-row`s on `events.html` (upcoming + past) |
 | teams | **83** | 26 (vol.1) + 28 (vol.2) + 29 (vol.3) |
 | builders | **200+** | ~70 (vol.1) + 70+ (vol.2) + 67 (vol.3), rounded **down** |
 | credits | **$30,000** | 3 hackathons × 5 winning teams × $2,000 |
@@ -158,7 +163,8 @@ The `.contact` section on `index.html` (between `.community-cta` and the footer)
 - **Fonts:** `Libre Baskerville` (serif, titles + logo wordmark — though the rendered logo is now `images/logo.svg`) and `Pretendard` (sans-serif, body + nav + buttons + Korean)
 - **Logo:** `images/logo.svg` is the wordmark (header 20px, footer 18px). The `✦` star prefix is retired.
 - **Header:** `position: fixed; z-index: 100; background: #F1F1ED` — no bottom border. Page top-padding compensates: hero `120px`, events `128px`.
-- **Cards:** white `#FFFFFF` with `1px solid #DDDDDD` border, `border-radius: 16px`, inner `padding: 8px`. Featured event keeps `border-radius: 12px` and no border.
+- **Cards:** white `#FFFFFF` with `1px solid #DDDDDD` border, `border-radius: 16px`, inner `padding: 8px`. Event rows use `border-radius: 20px` and `padding: 12px 12px 12px 20px`; on hover the border turns accent `#C45C26` rather than lifting on a shadow alone.
+- **Events column:** `max-width: 800px`, centred, `padding: 120px 32px 72px`. The page is deliberately narrower than the window — running it full-width is what made two events fill three screens.
 - **Buttons:** LinkedIn button uses `rgba(55, 33, 13, 0.05)` background + `#37210D` text (no dark-fill style anymore).
 - **Responsive breakpoints:** 1024px, 768px
 
@@ -166,7 +172,7 @@ The `.contact` section on `index.html` (between `.community-cta` and the footer)
 `team-human-design.pen` is the Pencil mockup mirror of the live site. It must stay in sync with `index.html` + `events.html` + `styles.css` + `i18n/en.json`. Whenever any of the following change in code, update the matching frame/node in the `.pen` file in the **same commit**:
 
 - **Team roster** — adding/removing/renaming a member, swapping their photo, updating their description, or changing their LinkedIn URL → update the corresponding card in the `Team Grid` frame (name, `metadata.src` for photo, description text, `metadata.href` on the LinkedIn button).
-- **Events** — adding a new event, archiving the featured/upcoming event into past events, changing date/location/title, or swapping the event image → update the `Save the Date` frame and/or the cards inside `Events Grid` (title, date, location, `metadata.src`, `metadata.href`). The featured/save-the-date event has its own frame; past events live in `Events Grid`, ordered most-recent first. Event images live in `images/Event/` and follow the `YYMMDD<slug>.png` naming convention.
+- **Events** — adding a new event, moving an upcoming event into the past, changing date/location/title, or swapping the event image → update the matching row inside the `Events Timeline` frame (`Row Date`, `Row Title`, `Row Place`, `Row Cover.metadata.src`, the row's `metadata.href`). The timeline mirrors the page order exactly: `Rail — UPCOMING` → upcoming rows → `Recap vol.3` → `Rail — PAST EVENTS` → `Rail — 2026` / `Rail — 2025` year heads → past rows, most-recent first. Covers are 120×120 with `metadata.fit` set to `cover` (1:1 posters) or `contain` (16:9 banners), matching `.event-row-cover--wide` in CSS. Event images live in `images/Event/` and follow the `YYMMDD<slug>.png` naming convention.
 - **Recap** — the `Recap vol.3` frame mirrors the `.recap` block on `events.html` (badge, title, date, description, hero image, 4 stats, 5 winner cards, 6 gallery photos, report link). When the recap is replaced with a newer event, replace this frame too.
 - **Stats / Moments / Press** — the `Stats`, `Moments` and `Press` frames on `Home Page` mirror `.stats`, `.moments` and `.press` on `index.html`. Keep stat values, moment `metadata.src`/caption text, and press outlet/date/headline/`metadata.href` aligned with the English copy.
 - **Hero slider** — the `.hero-slider` inside `.hero` is a scroll-snap carousel with 3 slides (vol.3 group photo + earlier group photo + YouTube recap), navigated by dots, prev/next arrows, swipe, and keyboard left/right. Slide 1 is `images/hero-vol3-group.jpg`, cropped from the 4:3 original to the slider's exact `1376/774` ratio and **anchored to the bottom** — the ceiling is empty and the people are not. Only slide 1 loads eagerly; the rest carry `loading="lazy"`. Slider logic lives in `i18n.js → initHeroSlider()`. To rotate the recap video, change the iframe `src` in `index.html` and update `metadata.videoId` + `metadata.url` on `Hero Slider → Slide 2` in `.pen`. To swap the hero photo, replace `images/hackathon-hero.png` (or update the `src` in both `index.html` and the slider's `Slide 1` frame). When adding/removing slides, keep the dot count (`.hero-slider-dot`) and the .pen `Slider Dots.metadata.items` in sync.
@@ -175,7 +181,7 @@ The `.contact` section on `index.html` (between `.community-cta` and the footer)
 - **Beliefs** — copy changes to any of the 4 belief titles/descriptions → update `Value 1–4` frames in the `Beliefs Grid`.
 - **Hero text / subtitles / footer tagline** — keep `Hero Text`, `teamSubtitle`, `evSubtitle`, `footerTagline` content in sync with `i18n/en.json` (the .pen mirrors the English copy).
 - **Header / nav** — keep the `Lang Select` dropdown (English / 한국어), fixed positioning (`metadata.position: "fixed"`), and `images/logo.svg` reference in both Home and Events headers in sync with the live markup.
-- **Design tokens** — if any of the values in **Design tokens** above change in `styles.css` (colors `#F1F1ED`, `#37210D`, `#C45C26`, `#8C8A87`, `#DDDDDD`, `#D9D5CD`; fonts Libre Baskerville / Pretendard; corner radii 16/12/8/4; header padding 20×32; hero padding 120/32/80/32; events padding 128/120/60/120), mirror them in the matching `.pen` node properties.
+- **Design tokens** — if any of the values in **Design tokens** above change in `styles.css` (colors `#F1F1ED`, `#37210D`, `#C45C26`, `#8C8A87`, `#DDDDDD`, `#D9D5CD`; fonts Libre Baskerville / Pretendard; corner radii 20/16/14/8/4; header padding 20×32; hero padding 120/32/80/32; events padding 120/32/72/32 inside an 800px centred column), mirror them in the matching `.pen` node properties. The `.pen` Events frame is 1440 wide, so the 800px column is expressed as `Events Content.padding: [120, 352, 72, 352]`.
 
 The .pen file uses the convention `metadata.src` for local image paths (e.g. `images/PFP/Dave.png`, `images/logo.svg`), `metadata.href` for outbound links (LinkedIn, Luma, Event-Us), and `metadata.control: "select"` to represent the language dropdown. Do not introduce Unsplash placeholder images — the live site always uses local assets. Validate after editing: `python3 -c "import json; json.load(open('team-human-design.pen'))"` must succeed.
 
