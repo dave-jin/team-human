@@ -1977,6 +1977,11 @@ a.stat:hover {
   background: rgba(196, 92, 38, 0.07);
 }
 
+/* The podium winner takes the full width of the two-column grid. */
+.recap-winner--first {
+  grid-column: 1 / -1;
+}
+
 .recap-winner-award {
   font-family: 'Pretendard', sans-serif;
   font-size: 11px;

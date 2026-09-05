@@ -75,7 +75,7 @@ Order down the rail:
 
 1. **`UPCOMING` rail head** → one `.event-row.event-row--upcoming` per event with open registration, wrapped in an `<a>` to the Luma page. The `--upcoming` modifier is the only difference: it turns the date accent orange. **More than one may be stacked** (Jun 2026, Aug 2026). There is deliberately **no per-row `Upcoming` badge** — the rail head already says it, and repeating it on every row was the redundancy that made the old cards feel heavy.
    - `.event-row--savedate` — cover-less full-width variant with a description and a KakaoTalk CTA, for when the date is real but venue/registration/poster are not final. Currently unused; keep it and `events.savedate` / `.savedate-*`, the variant comes back every cycle.
-   - **`Toython` is the 뚝딱톤 / Physical AI Hackathon renamed, not a new event** (2026-08-15). It ran as an `events.physical.*` save-the-date until the Luma page opened; those keys were replaced by `events.toython.*`. Don't re-add 뚝딱톤 as a separate card. Project folder: `PARA/2. Projects/2026-08_해커톤-피지컬AI`.
+   - **`Toython` is the 뚝딱톤 / Physical AI Hackathon renamed, not a new event** (2026-08-15). It ran as an `events.physical.*` save-the-date until the Luma page opened; those keys were replaced by `events.toython.*`. Don't re-add 뚝딱톤 as a separate card. It ran on 2026-08-22 and is now the `.recap`. Project folder: `PARA/5. Archive/2026-08_해커톤-토이톤` (archived after the event).
 2. **`.recap`** — the most recent finished event, carrying its own rail dot via `.recap::before`. Only ever **one** recap lives here; when a new event finishes, replace this block rather than stacking them.
 3. **`PAST EVENTS` rail head** → **year sub-heads** (`.events-rail-head--year`, one per calendar year) → plain `.event-row`s, **most-recent first**. Add a new year sub-head when the first event of a new year rolls off.
 
@@ -87,12 +87,13 @@ Order down the rail:
 
 ### Recap section (`.recap` on `events.html`)
 
-Currently **Cursor Hackathon Seoul vol.3 (2026-06-27)**.
+Currently **Toython: Physical AI Hackathon (2026-08-22)**, replacing the vol.3 recap on 2026-09-06.
 
-- **Numbers are `29 teams / 67 builders`** — on-site figures. Do not use `27 teams / 71 명`: 71 counts the 4 crew, and 27 was a draft figure in an early planning doc. `29 / 67` is what the published English report and every press article state, so the site, the report, and the press must not disagree. Full chain: 166 applied → 142 scored → 81 approved (37 teams) → 67 on site (29 teams). The 90% first-timer / 33% student / 96% GitHub percentages are from the **81-approved** survey cohort, not the 67 who showed.
-- **Winners** — 5 teams, joint award, **no ranking**, $2,000 Cursor credits each. Only Find Your Own (받을지도) carries the `.recap-winner--special` treatment + Seoul AI Hub Award badge (it also got Seoul AI Hub residency bonus points). Team names and product names are proper nouns — never translated, only the one-line descriptions are i18n'd.
-- **Photos** live in `images/Recap/vol3/`, resized from `5. Archive (iCloud Only)/2026-06_행사-CursorHackathon-v3/07_결과보고서/` with `sips -Z 1000` (gallery) / `-Z 1600` (hero). Source filenames there are unreliable — `09_서울AI허브상_트로피.jpg` is a photo of the *building's* architecture plaque, not the award. **Look at every image before shipping it.**
-- **Full report** links to `https://cursor-hackathon-seoul-vol3.vercel.app/` — a separate, already-deployed Vercel project (`cursor-hackathon-seoul-vol3`) whose source is `07_결과보고서/web-en/` in that archive folder. It is not part of this repo; it contains no participant contact details.
+- **Numbers are `200+ applied / 41 teams shipped / 107 builders / 37% first hardware`.** They come from `5. Archive/2026-08_해커톤-토이톤/11_결과보고/readme.md`, which is the single source three partner reports (Seoul AI Hub, OpenAI, 한국투자AC) already agree on — **change the site and those reports together or not at all.** Note `42 teams registered` but `41 submitted`: the site says "teams shipped", so it uses 41. The 107 is participants only; total door count was 124 including 18 crew.
+- **Winners** — 3 teams, **ranked, and the prize follows the rank** ($5,000 / $3,000 / $1,000 in OpenAI API credits). This is the opposite of the Cursor hackathons' equal-payout structure, so the copy must not be recycled between them. 1st place (지구를 지켜라) carries `.recap-winner--special` **and** `.recap-winner--first`, which spans the two-column grid so three cards read as a podium. Team names are proper nouns — never translated; only the one-line descriptions are i18n'd.
+- **Photos** live in `images/Recap/toython/`, resized from `5. Archive/2026-08_해커톤-토이톤/11_결과보고/_assets/` with `sips -Z 1000` (gallery) / `-Z 1600` (hero). That `_assets/` folder is the 30 already-curated shots; the full 397-photo set is in `06_디자인/07_행사사진/`. Filenames there are reliable, but **look at every image before shipping it** anyway — that rule was written after a vol.3 file named `09_서울AI허브상_트로피.jpg` turned out to be a photo of the building's architecture plaque.
+- **There is no public Toython report to link to**, so the `.recap-report-link` block is absent. The three partner PDFs are audience-specific and carry internal framing plus a 42-team appendix with participant names; `toython-arena.vercel.app` is gated behind a team code. If a public recap page is ever built, the link slot comes back.
+- **The vol.3 full report is still live** at `https://cursor-hackathon-seoul-vol3.vercel.app/` but is **no longer linked from anywhere on this site** — it left with the old recap block. `images/Recap/vol3/` was deliberately kept on disk so the block can be restored.
 
 ### Stats strip (`.stats` on `index.html`)
 
@@ -100,16 +101,16 @@ Four **cumulative** numbers under the hero — they describe the whole community
 
 | Stat | Value | Where it comes from |
 |---|---|---|
-| events | **8** | count the `.event-row`s on `events.html` (upcoming + past) |
-| teams | **83** | 26 (vol.1) + 28 (vol.2) + 29 (vol.3) |
-| builders | **200+** | ~70 (vol.1) + 70+ (vol.2) + 67 (vol.3), rounded **down** |
-| credits | **$30,000** | 3 hackathons × 5 winning teams × $2,000 |
+| events | **9** | count the `.event-row`s on `events.html` that have **already happened** — upcoming rows are not counted until the day passes |
+| teams | **124** | 26 (vol.1) + 28 (vol.2) + 29 (vol.3) + 41 (Toython) |
+| builders | **300+** | ~70 (vol.1) + 70+ (vol.2) + 67 (vol.3) + 107 (Toython), rounded **down** |
+| credits | **$39,000** | $30,000 Cursor (3 hackathons × 5 teams × $2,000) + $9,000 OpenAI (Toython, $5k/$3k/$1k) |
 
 Per-hackathon sourcing: **vol.1** 디지털투데이 — 250+ applied → 26 teams / ~70 people, 5 hours, all participants $100 credits, 5 winners × $2,000. **vol.2** 서울경제·아크로팬·인더뉴스 — 70+ people at 강변스파랜드; the 28-team count is from the team-building sheet, not press. **vol.3** — see "Recap section".
 
 **Bump `stats.events.value` when you add an event** — it is the one number that goes stale silently. It links to `events.html`.
 
-**The award structure is fixed and does not vary by event: 5 winning teams, ranked on the day, but every team gets the same $2,000 in Cursor credits** (confirmed by Dave, 2026-07-28). So the credits total is just `hackathons × $10,000` — bump it by $10,000 per new hackathon.
+**The award structure is fixed for the *Cursor* hackathons: 5 winning teams, ranked on the day, but every team gets the same $2,000 in Cursor credits** (confirmed by Dave, 2026-07-28) — so each new Cursor hackathon adds $10,000. **Toython broke that pattern** (3 teams, $5k/$3k/$1k in OpenAI credits), which is why the label reads "in sponsored AI credits" rather than "in Cursor credits". Check the actual prize structure per event now instead of assuming.
 
 **Say "ranked, equal prize" — not "no ranking".** Ranks are real and visible in the record (vol.2 ceremony photos project `제 2위` / `제 3위`; vol.1 press reports "1위는 ffx 팀"), and the site links to that press, so claiming there was no ranking would contradict a source one click away. What is actually distinctive is that the rank doesn't change the payout. The vol.3 result report's own "순위 없음" phrasing is the outlier here — it described intent, not the ceremony.
 

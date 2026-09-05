@@ -276,7 +276,7 @@
                       "id": "statEventsVal",
                       "name": "Value",
                       "fill": "#37210D",
-                      "content": "8",
+                      "content": "9",
                       "fontFamily": "Libre Baskerville",
                       "fontSize": 40,
                       "fontWeight": "bold"
@@ -307,7 +307,7 @@
                       "id": "statTeamsVal",
                       "name": "Value",
                       "fill": "#37210D",
-                      "content": "83",
+                      "content": "124",
                       "fontFamily": "Libre Baskerville",
                       "fontSize": 40,
                       "fontWeight": "bold"
@@ -338,7 +338,7 @@
                       "id": "statBuildersVal",
                       "name": "Value",
                       "fill": "#37210D",
-                      "content": "200+",
+                      "content": "300+",
                       "fontFamily": "Libre Baskerville",
                       "fontSize": 40,
                       "fontWeight": "bold"
@@ -369,7 +369,7 @@
                       "id": "statPressVal",
                       "name": "Value",
                       "fill": "#37210D",
-                      "content": "$30,000",
+                      "content": "$39,000",
                       "fontFamily": "Libre Baskerville",
                       "fontSize": 40,
                       "fontWeight": "bold"
@@ -379,7 +379,7 @@
                       "id": "statPressLbl",
                       "name": "Label",
                       "fill": "#37210D",
-                      "content": "in Cursor credits, split evenly across 15 winning teams",
+                      "content": "in sponsored AI credits, awarded to 18 winning teams",
                       "fontFamily": "Pretendard",
                       "fontSize": 13,
                       "fontWeight": "normal",
@@ -2874,8 +2874,8 @@
                 },
                 {
                   "type": "frame",
-                  "id": "evRowToython",
-                  "name": "Toython: Physical AI Hackathon",
+                  "id": "evRowAiForGood",
+                  "name": "AI IMPACT: AI for Good Hackathon",
                   "width": "fill_container",
                   "fill": "#FFFFFF",
                   "stroke": "#DDDDDD",
@@ -2891,12 +2891,12 @@
                   ],
                   "alignItems": "center",
                   "metadata": {
-                    "href": "https://luma.com/e8dzsazr"
+                    "href": "https://luma.com/sfdsjsxi"
                   },
                   "children": [
                     {
                       "type": "frame",
-                      "id": "evRowToythonBody",
+                      "id": "evRowAiForGoodBody",
                       "name": "Row Body",
                       "width": "fill_container",
                       "layout": "vertical",
@@ -2904,20 +2904,20 @@
                       "children": [
                         {
                           "type": "text",
-                          "id": "evRowToythonDate",
+                          "id": "evRowAiForGoodDate",
                           "name": "Row Date",
                           "fill": "#C45C26",
-                          "content": "Aug 22, 2026",
+                          "content": "Sep 18, 2026",
                           "fontFamily": "Pretendard",
                           "fontSize": 13,
                           "fontWeight": "semibold"
                         },
                         {
                           "type": "text",
-                          "id": "evRowToythonTitle",
+                          "id": "evRowAiForGoodTitle",
                           "name": "Row Title",
                           "fill": "#37210D",
-                          "content": "Toython: Physical AI Hackathon",
+                          "content": "AI IMPACT: AI for Good Hackathon",
                           "fontFamily": "Libre Baskerville",
                           "fontSize": 19,
                           "fontWeight": "medium",
@@ -2925,7 +2925,7 @@
                         },
                         {
                           "type": "text",
-                          "id": "evRowToythonPlace",
+                          "id": "evRowAiForGoodPlace",
                           "name": "Row Place",
                           "fill": "#91857A",
                           "content": "Seocho-gu, Seoul — Seoul AI Hub",
@@ -2938,7 +2938,7 @@
                     },
                     {
                       "type": "frame",
-                      "id": "evRowToythonCover",
+                      "id": "evRowAiForGoodCover",
                       "name": "Row Cover",
                       "width": 120,
                       "height": 120,
@@ -2946,8 +2946,8 @@
                       "fill": "#F1F1ED",
                       "metadata": {
                         "type": "local",
-                        "src": "images/Event/260822toython.png",
-                        "alt": "Toython: Physical AI Hackathon",
+                        "src": "images/Event/260918ai-for-good.png",
+                        "alt": "AI IMPACT: AI for Good Hackathon",
                         "fit": "cover"
                       }
                     }
@@ -3036,8 +3036,8 @@
                 },
                 {
                   "type": "frame",
-                  "id": "recapVol3",
-                  "name": "Recap vol.3",
+                  "id": "recapToython",
+                  "name": "Recap Toython",
                   "width": "fill_container",
                   "fill": "#FFFFFF",
                   "stroke": "#DDDDDD",
@@ -3083,7 +3083,7 @@
                           "id": "recapTitle",
                           "name": "Recap Title",
                           "fill": "#37210D",
-                          "content": "Cursor Hackathon Seoul vol.3",
+                          "content": "Toython: Physical AI Hackathon",
                           "fontFamily": "Libre Baskerville",
                           "fontSize": 24,
                           "fontWeight": "bold"
@@ -3093,7 +3093,7 @@
                           "id": "recapDate",
                           "name": "Recap Date",
                           "fill": "#C45C26",
-                          "content": "Jun 27, 2026",
+                          "content": "Aug 22, 2026",
                           "fontFamily": "Pretendard",
                           "fontSize": 14,
                           "fontWeight": "semibold"
@@ -3103,7 +3103,7 @@
                           "id": "recapDesc",
                           "name": "Recap Description",
                           "fill": "#37210D",
-                          "content": "One day at Seoul AI Hub. 29 teams, 67 builders — 90% of whom had never entered a hackathon — shipped working AI products. Hosted by Team Human, sponsored by Cursor, in partnership with Seoul AI Hub.",
+                          "content": "Five hours at Seoul AI Hub. 107 builders formed 42 teams and turned a Bluetooth board and AI voice coding into toys that actually move — 37% of them had never touched hardware before. Hosted by Team Human with NUCODE, sponsored by OpenAI, in partnership with Seoul AI Hub and Korea Investment Accelerator.",
                           "fontFamily": "Pretendard",
                           "fontSize": 14,
                           "fontWeight": "normal",
@@ -3118,8 +3118,8 @@
                       "name": "Recap Hero Image",
                       "metadata": {
                         "type": "local",
-                        "src": "images/Recap/vol3/hero-group.jpg",
-                        "alt": "Team Human group photo at Cursor Hackathon Seoul vol.3"
+                        "src": "images/Recap/toython/hero-group.jpg",
+                        "alt": "Toython group photo under the LED wall at Seoul AI Hub"
                       },
                       "width": "fill_container",
                       "height": 430,
@@ -3140,7 +3140,7 @@
                         {
                           "type": "frame",
                           "id": "recapStatAppliedWrap",
-                          "name": "Stat 166",
+                          "name": "Stat 200+",
                           "layout": "vertical",
                           "gap": 4,
                           "children": [
@@ -3149,7 +3149,7 @@
                               "id": "recapStatAppliedVal",
                               "name": "Value",
                               "fill": "#37210D",
-                              "content": "166",
+                              "content": "200+",
                               "fontFamily": "Libre Baskerville",
                               "fontSize": 30,
                               "fontWeight": "bold"
@@ -3170,7 +3170,7 @@
                         {
                           "type": "frame",
                           "id": "recapStatTeamsWrap",
-                          "name": "Stat 29",
+                          "name": "Stat 41",
                           "layout": "vertical",
                           "gap": 4,
                           "children": [
@@ -3179,7 +3179,7 @@
                               "id": "recapStatTeamsVal",
                               "name": "Value",
                               "fill": "#37210D",
-                              "content": "29",
+                              "content": "41",
                               "fontFamily": "Libre Baskerville",
                               "fontSize": 30,
                               "fontWeight": "bold"
@@ -3200,7 +3200,7 @@
                         {
                           "type": "frame",
                           "id": "recapStatBuildersWrap",
-                          "name": "Stat 67",
+                          "name": "Stat 107",
                           "layout": "vertical",
                           "gap": 4,
                           "children": [
@@ -3209,7 +3209,7 @@
                               "id": "recapStatBuildersVal",
                               "name": "Value",
                               "fill": "#37210D",
-                              "content": "67",
+                              "content": "107",
                               "fontFamily": "Libre Baskerville",
                               "fontSize": 30,
                               "fontWeight": "bold"
@@ -3230,7 +3230,7 @@
                         {
                           "type": "frame",
                           "id": "recapStatFirstWrap",
-                          "name": "Stat 90%",
+                          "name": "Stat 37%",
                           "layout": "vertical",
                           "gap": 4,
                           "children": [
@@ -3239,7 +3239,7 @@
                               "id": "recapStatFirstVal",
                               "name": "Value",
                               "fill": "#37210D",
-                              "content": "90%",
+                              "content": "37%",
                               "fontFamily": "Libre Baskerville",
                               "fontSize": 30,
                               "fontWeight": "bold"
@@ -3249,7 +3249,7 @@
                               "id": "recapStatFirstLbl",
                               "name": "Label",
                               "fill": "#37210D",
-                              "content": "first-time hackers",
+                              "content": "had never touched hardware",
                               "fontFamily": "Pretendard",
                               "fontSize": 12,
                               "fontWeight": "normal",
@@ -3271,7 +3271,7 @@
                           "id": "recapWinnersTitle",
                           "name": "Winners Title",
                           "fill": "#37210D",
-                          "content": "Five winning teams",
+                          "content": "Three winning teams",
                           "fontFamily": "Libre Baskerville",
                           "fontSize": 18,
                           "fontWeight": "bold"
@@ -3281,7 +3281,7 @@
                           "id": "recapWinnersDesc",
                           "name": "Winners Desc",
                           "fill": "#37210D",
-                          "content": "Ranked on the day, but the prize didn't follow the rank — all five teams took home $2,000 in Cursor credits each.",
+                          "content": "Ranked on the day by 928 peer scores, with $9,000 in OpenAI API credits split across the podium.",
                           "fontFamily": "Pretendard",
                           "fontSize": 13,
                           "fontWeight": "normal",
@@ -3298,10 +3298,10 @@
                       "children": [
                         {
                           "type": "frame",
-                          "id": "recapWinGcline",
-                          "name": "Winner GC Line",
-                          "width": 300,
-                          "fill": "#F1F1ED",
+                          "id": "recapWinSaveTheEarth",
+                          "name": "Winner 지구를 지켜라",
+                          "width": "fill_container",
+                          "fill": "rgba(196, 92, 38, 0.07)",
                           "cornerRadius": 12,
                           "padding": 18,
                           "layout": "vertical",
@@ -3309,190 +3309,10 @@
                           "children": [
                             {
                               "type": "text",
-                              "id": "recapWinGclineProd",
-                              "name": "Product",
-                              "fill": "#37210D",
-                              "content": "알바체인",
-                              "fontFamily": "Pretendard",
-                              "fontSize": 16,
-                              "fontWeight": "semibold"
-                            },
-                            {
-                              "type": "text",
-                              "id": "recapWinGclineTeam",
-                              "name": "Team",
-                              "fill": "#8C8A87",
-                              "content": "GC Line",
-                              "fontFamily": "Pretendard",
-                              "fontSize": 12,
-                              "fontWeight": "normal"
-                            },
-                            {
-                              "type": "text",
-                              "id": "recapWinGclineDesc",
-                              "name": "Desc",
-                              "fill": "#37210D",
-                              "content": "An all-in-one shift-management SaaS for stores, built on an AI ontology.",
-                              "fontFamily": "Pretendard",
-                              "fontSize": 13,
-                              "fontWeight": "normal",
-                              "lineHeight": 1.5,
-                              "opacity": 0.8
-                            }
-                          ]
-                        },
-                        {
-                          "type": "frame",
-                          "id": "recapWinColdstart",
-                          "name": "Winner Cold Start",
-                          "width": 300,
-                          "fill": "#F1F1ED",
-                          "cornerRadius": 12,
-                          "padding": 18,
-                          "layout": "vertical",
-                          "gap": 4,
-                          "children": [
-                            {
-                              "type": "text",
-                              "id": "recapWinColdstartProd",
-                              "name": "Product",
-                              "fill": "#37210D",
-                              "content": "OOOPS",
-                              "fontFamily": "Pretendard",
-                              "fontSize": 16,
-                              "fontWeight": "semibold"
-                            },
-                            {
-                              "type": "text",
-                              "id": "recapWinColdstartTeam",
-                              "name": "Team",
-                              "fill": "#8C8A87",
-                              "content": "Cold Start",
-                              "fontFamily": "Pretendard",
-                              "fontSize": 12,
-                              "fontWeight": "normal"
-                            },
-                            {
-                              "type": "text",
-                              "id": "recapWinColdstartDesc",
-                              "name": "Desc",
-                              "fill": "#37210D",
-                              "content": "Agent-based OS orchestrated operation and configuration.",
-                              "fontFamily": "Pretendard",
-                              "fontSize": 13,
-                              "fontWeight": "normal",
-                              "lineHeight": 1.5,
-                              "opacity": 0.8
-                            }
-                          ]
-                        },
-                        {
-                          "type": "frame",
-                          "id": "recapWinMint",
-                          "name": "Winner 커서 뭐 될래",
-                          "width": 300,
-                          "fill": "#F1F1ED",
-                          "cornerRadius": 12,
-                          "padding": 18,
-                          "layout": "vertical",
-                          "gap": 4,
-                          "children": [
-                            {
-                              "type": "text",
-                              "id": "recapWinMintProd",
-                              "name": "Product",
-                              "fill": "#37210D",
-                              "content": "Mint",
-                              "fontFamily": "Pretendard",
-                              "fontSize": 16,
-                              "fontWeight": "semibold"
-                            },
-                            {
-                              "type": "text",
-                              "id": "recapWinMintTeam",
-                              "name": "Team",
-                              "fill": "#8C8A87",
-                              "content": "커서 뭐 될래",
-                              "fontFamily": "Pretendard",
-                              "fontSize": 12,
-                              "fontWeight": "normal"
-                            },
-                            {
-                              "type": "text",
-                              "id": "recapWinMintDesc",
-                              "name": "Desc",
-                              "fill": "#37210D",
-                              "content": "Level up your coding skills like a game, and prove them with data.",
-                              "fontFamily": "Pretendard",
-                              "fontSize": 13,
-                              "fontWeight": "normal",
-                              "lineHeight": 1.5,
-                              "opacity": 0.8
-                            }
-                          ]
-                        },
-                        {
-                          "type": "frame",
-                          "id": "recapWinYc",
-                          "name": "Winner YC",
-                          "width": 300,
-                          "fill": "#F1F1ED",
-                          "cornerRadius": 12,
-                          "padding": 18,
-                          "layout": "vertical",
-                          "gap": 4,
-                          "children": [
-                            {
-                              "type": "text",
-                              "id": "recapWinYcProd",
-                              "name": "Product",
-                              "fill": "#37210D",
-                              "content": "True Agentic OS",
-                              "fontFamily": "Pretendard",
-                              "fontSize": 16,
-                              "fontWeight": "semibold"
-                            },
-                            {
-                              "type": "text",
-                              "id": "recapWinYcTeam",
-                              "name": "Team",
-                              "fill": "#8C8A87",
-                              "content": "YC",
-                              "fontFamily": "Pretendard",
-                              "fontSize": 12,
-                              "fontWeight": "normal"
-                            },
-                            {
-                              "type": "text",
-                              "id": "recapWinYcDesc",
-                              "name": "Desc",
-                              "fill": "#37210D",
-                              "content": "An agent OS that raises productivity without raising complexity.",
-                              "fontFamily": "Pretendard",
-                              "fontSize": 13,
-                              "fontWeight": "normal",
-                              "lineHeight": 1.5,
-                              "opacity": 0.8
-                            }
-                          ]
-                        },
-                        {
-                          "type": "frame",
-                          "id": "recapWinFyo",
-                          "name": "Winner Find Your Own",
-                          "width": 300,
-                          "fill": "#F7E9E1",
-                          "cornerRadius": 12,
-                          "padding": 18,
-                          "layout": "vertical",
-                          "gap": 4,
-                          "children": [
-                            {
-                              "type": "text",
-                              "id": "recapWinFyoAward",
+                              "id": "recapWinSaveTheEarthAward",
                               "name": "Award",
                               "fill": "#C45C26",
-                              "content": "SEOUL AI HUB AWARD",
+                              "content": "1ST PLACE — $5,000",
                               "fontFamily": "Pretendard",
                               "fontSize": 11,
                               "fontWeight": "semibold",
@@ -3500,30 +3320,112 @@
                             },
                             {
                               "type": "text",
-                              "id": "recapWinFyoProd",
+                              "id": "recapWinSaveTheEarthProd",
                               "name": "Product",
                               "fill": "#37210D",
-                              "content": "받을지도",
+                              "content": "지구를 지켜라",
                               "fontFamily": "Pretendard",
                               "fontSize": 16,
                               "fontWeight": "semibold"
                             },
                             {
                               "type": "text",
-                              "id": "recapWinFyoTeam",
-                              "name": "Team",
-                              "fill": "#8C8A87",
-                              "content": "Find Your Own",
+                              "id": "recapWinSaveTheEarthDesc",
+                              "name": "Desc",
+                              "fill": "#37210D",
+                              "content": "“Save the Earth, Doggy Blaster” — an alien-invader taming project, built as a blaster you pick up and actually fire.",
                               "fontFamily": "Pretendard",
-                              "fontSize": 12,
-                              "fontWeight": "normal"
+                              "fontSize": 13,
+                              "fontWeight": "normal",
+                              "lineHeight": 1.5,
+                              "opacity": 0.8
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "recapWinAntiTurtle",
+                          "name": "Winner 안티터틀",
+                          "width": 300,
+                          "fill": "#F1F1ED",
+                          "cornerRadius": 12,
+                          "padding": 18,
+                          "layout": "vertical",
+                          "gap": 4,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "recapWinAntiTurtleAward",
+                              "name": "Award",
+                              "fill": "#C45C26",
+                              "content": "2ND PLACE — $3,000",
+                              "fontFamily": "Pretendard",
+                              "fontSize": 11,
+                              "fontWeight": "semibold",
+                              "letterSpacing": 0.5
                             },
                             {
                               "type": "text",
-                              "id": "recapWinFyoDesc",
+                              "id": "recapWinAntiTurtleProd",
+                              "name": "Product",
+                              "fill": "#37210D",
+                              "content": "안티터틀 🐢",
+                              "fontFamily": "Pretendard",
+                              "fontSize": 16,
+                              "fontWeight": "semibold"
+                            },
+                            {
+                              "type": "text",
+                              "id": "recapWinAntiTurtleDesc",
                               "name": "Desc",
                               "fill": "#37210D",
-                              "content": "AI reads a citizen's situation, finds the welfare benefits they qualify for, and helps them apply.",
+                              "content": "Two 6-axis IMU sensors read your posture and warn you the moment your neck creeps forward.",
+                              "fontFamily": "Pretendard",
+                              "fontSize": 13,
+                              "fontWeight": "normal",
+                              "lineHeight": 1.5,
+                              "opacity": 0.8
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "recapWinDevicenet",
+                          "name": "Winner Devicenet",
+                          "width": 300,
+                          "fill": "#F1F1ED",
+                          "cornerRadius": 12,
+                          "padding": 18,
+                          "layout": "vertical",
+                          "gap": 4,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "recapWinDevicenetAward",
+                              "name": "Award",
+                              "fill": "#C45C26",
+                              "content": "3RD PLACE — $1,000",
+                              "fontFamily": "Pretendard",
+                              "fontSize": 11,
+                              "fontWeight": "semibold",
+                              "letterSpacing": 0.5
+                            },
+                            {
+                              "type": "text",
+                              "id": "recapWinDevicenetProd",
+                              "name": "Product",
+                              "fill": "#37210D",
+                              "content": "Devicenet",
+                              "fontFamily": "Pretendard",
+                              "fontSize": 16,
+                              "fontWeight": "semibold"
+                            },
+                            {
+                              "type": "text",
+                              "id": "recapWinDevicenetDesc",
+                              "name": "Desc",
+                              "fill": "#37210D",
+                              "content": "A sensor-equipped smart helmet that watches for hazards on industrial sites.",
                               "fontFamily": "Pretendard",
                               "fontSize": 13,
                               "fontWeight": "normal",
@@ -3539,7 +3441,7 @@
                       "id": "recapGalleryTitle",
                       "name": "Gallery Title",
                       "fill": "#37210D",
-                      "content": "One day, in frames",
+                      "content": "Five hours, in frames",
                       "fontFamily": "Libre Baskerville",
                       "fontSize": 18,
                       "fontWeight": "bold"
@@ -3557,8 +3459,8 @@
                           "name": "Photo",
                           "metadata": {
                             "type": "local",
-                            "src": "images/Recap/vol3/g1.jpg",
-                            "alt": "Opening session — Seoul AI Hub and Cursor on the LED wall"
+                            "src": "images/Recap/toython/g1.jpg",
+                            "alt": "Opening session — the Toython key visual on the LED wall"
                           },
                           "width": 300,
                           "height": 225,
@@ -3571,8 +3473,8 @@
                           "name": "Photo",
                           "metadata": {
                             "type": "local",
-                            "src": "images/Recap/vol3/g2.jpg",
-                            "alt": "The hacking floor at Seoul AI Hub, seen from above"
+                            "src": "images/Recap/toython/g2.jpg",
+                            "alt": "A workbench of sensors, servos and printed parts"
                           },
                           "width": 300,
                           "height": 225,
@@ -3585,8 +3487,8 @@
                           "name": "Photo",
                           "metadata": {
                             "type": "local",
-                            "src": "images/Recap/vol3/g3.jpg",
-                            "alt": "The 4F lounge in full swing"
+                            "src": "images/Recap/toython/g3.jpg",
+                            "alt": "The build floor at Seoul AI Hub, seen from the balcony above"
                           },
                           "width": 300,
                           "height": 225,
@@ -3599,8 +3501,8 @@
                           "name": "Photo",
                           "metadata": {
                             "type": "local",
-                            "src": "images/Recap/vol3/g4.jpg",
-                            "alt": "A team demoing their product on stage"
+                            "src": "images/Recap/toython/g4.jpg",
+                            "alt": "A maker filming the blaster he built in five hours"
                           },
                           "width": 300,
                           "height": 225,
@@ -3613,8 +3515,8 @@
                           "name": "Photo",
                           "metadata": {
                             "type": "local",
-                            "src": "images/Recap/vol3/g5.jpg",
-                            "alt": "Find Your Own receives the Seoul AI Hub Award"
+                            "src": "images/Recap/toython/g5.jpg",
+                            "alt": "Devicenet presents its smart safety helmet, worn on stage"
                           },
                           "width": 300,
                           "height": 225,
@@ -3627,33 +3529,13 @@
                           "name": "Photo",
                           "metadata": {
                             "type": "local",
-                            "src": "images/Recap/vol3/g6.jpg",
-                            "alt": "Builders mid-hack"
+                            "src": "images/Recap/toython/g6.jpg",
+                            "alt": "지구를 지켜라 takes first place"
                           },
                           "width": 300,
                           "height": 225,
                           "fill": "#D9D5CD",
                           "cornerRadius": 8
-                        }
-                      ]
-                    },
-                    {
-                      "type": "frame",
-                      "id": "recapReportLink",
-                      "name": "Recap Report Link",
-                      "metadata": {
-                        "href": "https://cursor-hackathon-seoul-vol3.vercel.app/"
-                      },
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "recapReportText",
-                          "name": "LinkText",
-                          "fill": "#C45C26",
-                          "content": "Read the full result report  →",
-                          "fontFamily": "Pretendard",
-                          "fontSize": 14,
-                          "fontWeight": "semibold"
                         }
                       ]
                     }
@@ -3716,6 +3598,87 @@
                       "fontSize": 12,
                       "fontWeight": "semibold",
                       "letterSpacing": 1
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "evRowToython",
+                  "name": "Toython: Physical AI Hackathon",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "stroke": "#DDDDDD",
+                  "strokeWidth": 1,
+                  "cornerRadius": 20,
+                  "layout": "horizontal",
+                  "gap": 16,
+                  "padding": [
+                    12,
+                    12,
+                    12,
+                    20
+                  ],
+                  "alignItems": "center",
+                  "metadata": {
+                    "href": "https://luma.com/e8dzsazr"
+                  },
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "evRowToythonBody",
+                      "name": "Row Body",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 6,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "evRowToythonDate",
+                          "name": "Row Date",
+                          "fill": "#A59B92",
+                          "content": "Aug 22, 2026",
+                          "fontFamily": "Pretendard",
+                          "fontSize": 13,
+                          "fontWeight": "semibold"
+                        },
+                        {
+                          "type": "text",
+                          "id": "evRowToythonTitle",
+                          "name": "Row Title",
+                          "fill": "#37210D",
+                          "content": "Toython: Physical AI Hackathon",
+                          "fontFamily": "Libre Baskerville",
+                          "fontSize": 19,
+                          "fontWeight": "medium",
+                          "lineHeight": 1.35
+                        },
+                        {
+                          "type": "text",
+                          "id": "evRowToythonPlace",
+                          "name": "Row Place",
+                          "fill": "#91857A",
+                          "content": "Seocho-gu, Seoul — Seoul AI Hub",
+                          "fontFamily": "Pretendard",
+                          "fontSize": 13,
+                          "fontWeight": "normal",
+                          "lineHeight": 1.45
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "evRowToythonCover",
+                      "name": "Row Cover",
+                      "width": 120,
+                      "height": 120,
+                      "cornerRadius": 14,
+                      "fill": "#F1F1ED",
+                      "metadata": {
+                        "type": "local",
+                        "src": "images/Event/260822toython.png",
+                        "alt": "Toython: Physical AI Hackathon",
+                        "fit": "cover"
+                      }
                     }
                   ]
                 },
