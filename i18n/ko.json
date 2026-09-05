@@ -24,7 +24,7 @@
   "team.annie.desc": "모든 훌륭한 프로덕트 뒤에는 서로를 찾은 팀이 있습니다. 그 만남이 일어나도록 돕습니다.",
   "team.smu.desc": "도구는 계속 바뀌어도, 함께 만들고 배우려는 마음은 그대로입니다. 그래서 저는 이곳을 계속 찾게 됩니다.",
   "press.title": "언론 보도",
-  "press.desc": "해커톤 3회를 다룬 기사 11건입니다.",
+  "press.desc": "해커톤 4회를 다룬 기사 16건입니다.",
   "press.mt.title": "166명이 모여 하루만에 AI 서비스 29개 만들었다",
   "press.businesskorea.title": "서울 AI 허브서 빌더 166명 하루 29개 서비스 만들었다!",
   "press.techworld.title": "서울 AI 허브 “AI 빌더 166명이 하루 만에 29개 서비스를 만들었다”",
@@ -95,7 +95,7 @@
   "stats.builders.value": "300+",
   "stats.builders.label": "명의 현장 빌더",
   "moments.title": "현장의 순간들",
-  "moments.desc": "세 번의 해커톤, 완전히 다른 세 개의 공간.",
+  "moments.desc": "해커톤 네 번. 회사 강당에서 찜질방 바닥을 지나 센서가 널린 작업대까지.",
   "moments.vol1.where": "2026년 2월 — 한국투자액셀러레이터",
   "moments.vol2.where": "2026년 4월 — 강변스파랜드",
   "moments.vol3.where": "2026년 6월 — 서울 AI 허브",
@@ -119,5 +119,13 @@
   "recap.photo.parts": "센서와 서보, 출력한 부품이 놓인 작업대. 그 위에 완성한 블래스터가 있다",
   "recap.photo.floor": "발코니에서 내려다본 서울 AI 허브 제작 현장",
   "recap.photo.blaster": "다섯 시간 만에 만든 블래스터를 직접 찍는 메이커",
-  "recap.photo.helmet": "Devicenet 팀이 스마트 안전모를 쓰고 무대에서 발표한다"
+  "recap.photo.helmet": "Devicenet 팀이 스마트 안전모를 쓰고 무대에서 발표한다",
+  "moments.toython.where": "2026년 8월 — 서울 AI 허브",
+  "moments.toythonfloor.alt": "보드와 부품이 널린 책상들. 발코니에서 내려다본 토이톤 제작 현장",
+  "moments.toythonblaster.alt": "개발 보드와 서보, 출력 부품으로 만든 블래스터를 직접 찍는 빌더",
+  "press.wowtale2.title": "한국투자액셀러레이터, ‘Seoul Vibe Hackathon: Toython’ 개최",
+  "press.itchosun.title": "화면 밖 현실된 AI… 서울 AI 허브, 피지컬 AI 해커톤 연다",
+  "press.newstap2.title": "서울 AI 허브, OpenAI와 ‘피지컬 AI’ 해커톤…100명 빌더 모인다",
+  "press.aitimeskr.title": "AI가 화면 밖 현실로…서울 AI 허브, ‘피지컬 AI’ 해커톤 개최",
+  "press.zdnet2.title": "“피지컬 AI 실험장”…서울AI허브, 해커톤 ‘토이톤’ 개최"
 }

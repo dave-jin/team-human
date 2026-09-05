@@ -24,7 +24,7 @@
   "team.annie.desc": "Behind every great product is a team that found each other. I help make those introductions happen.",
   "team.smu.desc": "The tools keep changing, but the urge to build and learn together doesn't. That's what keeps me coming back.",
   "press.title": "In the press",
-  "press.desc": "11 stories across three hackathons.",
+  "press.desc": "16 stories across four hackathons.",
   "press.mt.title": "166 builders gathered and shipped 29 AI services in a single day",
   "press.businesskorea.title": "166 builders shipped 29 services in one day at Seoul AI Hub",
   "press.techworld.title": "Seoul AI Hub: \"166 AI builders shipped 29 services in one day\"",
@@ -95,7 +95,7 @@
   "stats.builders.value": "300+",
   "stats.builders.label": "builders on site",
   "moments.title": "Moments",
-  "moments.desc": "Three hackathons, three very different rooms.",
+  "moments.desc": "Four hackathons — from a corporate hall to a sauna floor to a bench covered in sensors.",
   "moments.vol1.where": "Feb 2026 — Korea Investment Accelerator",
   "moments.vol2.where": "Apr 2026 — Gangbyeon Spa Land",
   "moments.vol3.where": "Jun 2026 — Seoul AI Hub",
@@ -119,5 +119,13 @@
   "recap.photo.parts": "A workbench of sensors, servos and printed parts, a finished blaster resting on top",
   "recap.photo.floor": "The build floor at Seoul AI Hub, seen from the balcony above",
   "recap.photo.blaster": "A maker filming the blaster he built in five hours",
-  "recap.photo.helmet": "Devicenet presents its smart safety helmet, worn on stage"
+  "recap.photo.helmet": "Devicenet presents its smart safety helmet, worn on stage",
+  "moments.toython.where": "Aug 2026 — Seoul AI Hub",
+  "moments.toythonfloor.alt": "The Toython build floor, tables covered in boards and parts, seen from the balcony above",
+  "moments.toythonblaster.alt": "A builder filming the blaster he assembled from a dev board, servos and printed parts",
+  "press.wowtale2.title": "Korea Investment Accelerator holds Seoul Vibe Hackathon: Toython",
+  "press.itchosun.title": "AI steps off the screen — Seoul AI Hub opens a physical AI hackathon",
+  "press.newstap2.title": "Seoul AI Hub and OpenAI on a physical AI hackathon — 100 builders coming together",
+  "press.aitimeskr.title": "AI moves off the screen into the real world — Seoul AI Hub holds a physical AI hackathon",
+  "press.zdnet2.title": "\"A testbed for physical AI\" — Seoul AI Hub holds the Toython hackathon"
 }
