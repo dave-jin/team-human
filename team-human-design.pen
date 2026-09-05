@@ -1634,6 +1634,77 @@
                       ]
                     }
                   ]
+                },
+                {
+                  "type": "frame",
+                  "id": "chloeCard",
+                  "name": "Chloe Kim Card",
+                  "width": 350,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "chloePhoto",
+                      "name": "Photo",
+                      "metadata": {
+                        "type": "local",
+                        "src": "images/PFP/Chloe.png",
+                        "alt": "Chloe Kim"
+                      },
+                      "width": "fill_container",
+                      "height": 200,
+                      "fill": "#D9D5CD",
+                      "cornerRadius": 8
+                    },
+                    {
+                      "type": "text",
+                      "id": "chloeName",
+                      "name": "card9Name",
+                      "fill": "#37210D",
+                      "content": "Chloe Kim",
+                      "fontFamily": "Pretendard",
+                      "fontSize": 16,
+                      "fontWeight": "bold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "chloeDesc",
+                      "name": "card9Desc",
+                      "fill": "#37210D",
+                      "content": "I spend my days designing how a product creates connection. Here I get to see it happen in a room.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Pretendard",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "chloeBtn",
+                      "name": "card9Btn",
+                      "fill": "#EDE9E2",
+                      "cornerRadius": 4,
+                      "padding": [
+                        6,
+                        10
+                      ],
+                      "metadata": {
+                        "href": "https://www.linkedin.com/in/chaennnnnn"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "chloeBtnText",
+                          "name": "card9BtnText",
+                          "fill": "#37210D",
+                          "content": "LinkedIn",
+                          "fontFamily": "Pretendard",
+                          "fontSize": 14,
+                          "fontWeight": "medium"
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             }

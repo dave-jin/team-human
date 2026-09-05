@@ -56,7 +56,7 @@ When adding/editing team members, update **3 files**:
 
 Team cards are **randomly shuffled** on each page load via `shuffleTeamCards()` in `i18n.js`.
 
-### Current Team (7 members)
+### Current Team (9 members)
 | Name | i18n Key | LinkedIn |
 |------|----------|----------|
 | Danny Kim | team.danny | /in/jydkim |
@@ -66,6 +66,10 @@ Team cards are **randomly shuffled** on each page load via `shuffleTeamCards()` 
 | Rachel Lee | team.rachel | /in/rachelselee |
 | Sireal Jeon | team.sireal | /in/sijinjeon |
 | Annie Seo | team.annie | /in/ga-on-seo-8b5989165 |
+| SMU | team.smu | /in/smu00 |
+| Chloe Kim | team.chloe | /in/chaennnnnn |
+
+**Profile photos are all `1584 x 672`** (the LinkedIn banner ratio) on a flat warm-greige backdrop, `#C9C3B3`, subject centred with the head near the top and the frame cutting off around chest level. The card renders them at `height: 200px; object-fit: cover`, so it centre-crops — **vertical framing is what matters, the wide empty sides get cut.** When a new member only has snapshots, the house style is reproduced by editing them through the `codex` CLI (see the `draw-image` skill) and then cropping to spec with `sips`; Chloe's was built that way on 2026-09-06 from a personal snapshot (Dave picked the variant; the 1672x941 source is archived at `PARA/1. Inbox/01_Images/Chloe_원본_1672x941_20260906.png`, cropped here with `sips -c 709 1672 --cropOffset 34 0` then scaled to 1584x672). **A generated portrait must be shown to the person before it ships** — it is their face.
 
 ### Events page state machine (`events.html`)
 
