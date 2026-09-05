@@ -24,7 +24,7 @@
   "team.annie.desc": "모든 훌륭한 프로덕트 뒤에는 서로를 찾은 팀이 있습니다. 그 만남이 일어나도록 돕습니다.",
   "team.smu.desc": "도구는 계속 바뀌어도, 함께 만들고 배우려는 마음은 그대로입니다. 그래서 저는 이곳을 계속 찾게 됩니다.",
   "press.title": "언론 보도",
-  "press.desc": "해커톤 4회를 다룬 기사 16건입니다.",
+  "press.desc": "해커톤 4회를 다룬 기사 17건입니다.",
   "press.mt.title": "166명이 모여 하루만에 AI 서비스 29개 만들었다",
   "press.businesskorea.title": "서울 AI 허브서 빌더 166명 하루 29개 서비스 만들었다!",
   "press.techworld.title": "서울 AI 허브 “AI 빌더 166명이 하루 만에 29개 서비스를 만들었다”",
@@ -127,5 +127,6 @@
   "press.itchosun.title": "화면 밖 현실된 AI… 서울 AI 허브, 피지컬 AI 해커톤 연다",
   "press.newstap2.title": "서울 AI 허브, OpenAI와 ‘피지컬 AI’ 해커톤…100명 빌더 모인다",
   "press.aitimeskr.title": "AI가 화면 밖 현실로…서울 AI 허브, ‘피지컬 AI’ 해커톤 개최",
-  "press.zdnet2.title": "“피지컬 AI 실험장”…서울AI허브, 해커톤 ‘토이톤’ 개최"
+  "press.zdnet2.title": "“피지컬 AI 실험장”…서울AI허브, 해커톤 ‘토이톤’ 개최",
+  "press.platum.title": "5시간 만에 움직이는 시제품 44개… 한국투자액셀러레이터 피지컬 AI 해커톤"
 }

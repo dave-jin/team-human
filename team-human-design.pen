@@ -1667,7 +1667,7 @@
               "id": "pressDesc",
               "name": "Press Desc",
               "fill": "#37210D",
-              "content": "16 stories across four hackathons.",
+              "content": "17 stories across four hackathons.",
               "fontFamily": "Pretendard",
               "fontSize": 14,
               "fontWeight": "normal",
@@ -1681,6 +1681,90 @@
               "width": "fill_container",
               "gap": 12,
               "children": [
+                {
+                  "type": "frame",
+                  "id": "pressPlatum",
+                  "name": "Press 플래텀",
+                  "width": 580,
+                  "fill": "#FFFFFF",
+                  "stroke": "#DDDDDD",
+                  "strokeWidth": 1,
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": [
+                    18,
+                    20
+                  ],
+                  "metadata": {
+                    "href": "https://platum.kr/archives/293470"
+                  },
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "pressPlatumMeta",
+                      "name": "Meta",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "pressPlatumOutlet",
+                          "name": "Outlet",
+                          "fill": "#C45C26",
+                          "content": "플래텀",
+                          "fontFamily": "Pretendard",
+                          "fontSize": 12,
+                          "fontWeight": "semibold"
+                        },
+                        {
+                          "type": "text",
+                          "id": "pressPlatumDate",
+                          "name": "Date",
+                          "fill": "#8C8A87",
+                          "content": "· Aug 28, 2026",
+                          "fontFamily": "Pretendard",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "pressPlatumEventTag",
+                          "name": "Event Tag",
+                          "fill": "#F1EAE3",
+                          "cornerRadius": 4,
+                          "padding": [
+                            2,
+                            8
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "pressPlatumEvent",
+                              "name": "Event",
+                              "fill": "#37210D",
+                              "content": "Toython",
+                              "fontFamily": "Pretendard",
+                              "fontSize": 11,
+                              "fontWeight": "medium",
+                              "opacity": 0.7
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "pressPlatumHeadline",
+                      "name": "Headline",
+                      "fill": "#37210D",
+                      "content": "44 working prototypes in five hours — Korea Investment Accelerator's physical AI hackathon",
+                      "fontFamily": "Pretendard",
+                      "fontSize": 14,
+                      "fontWeight": "medium",
+                      "lineHeight": 1.5
+                    }
+                  ]
+                },
                 {
                   "type": "frame",
                   "id": "pressWowtale2",

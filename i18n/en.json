@@ -24,7 +24,7 @@
   "team.annie.desc": "Behind every great product is a team that found each other. I help make those introductions happen.",
   "team.smu.desc": "The tools keep changing, but the urge to build and learn together doesn't. That's what keeps me coming back.",
   "press.title": "In the press",
-  "press.desc": "16 stories across four hackathons.",
+  "press.desc": "17 stories across four hackathons.",
   "press.mt.title": "166 builders gathered and shipped 29 AI services in a single day",
   "press.businesskorea.title": "166 builders shipped 29 services in one day at Seoul AI Hub",
   "press.techworld.title": "Seoul AI Hub: \"166 AI builders shipped 29 services in one day\"",
@@ -127,5 +127,6 @@
   "press.itchosun.title": "AI steps off the screen — Seoul AI Hub opens a physical AI hackathon",
   "press.newstap2.title": "Seoul AI Hub and OpenAI on a physical AI hackathon — 100 builders coming together",
   "press.aitimeskr.title": "AI moves off the screen into the real world — Seoul AI Hub holds a physical AI hackathon",
-  "press.zdnet2.title": "\"A testbed for physical AI\" — Seoul AI Hub holds the Toython hackathon"
+  "press.zdnet2.title": "\"A testbed for physical AI\" — Seoul AI Hub holds the Toython hackathon",
+  "press.platum.title": "44 working prototypes in five hours — Korea Investment Accelerator's physical AI hackathon"
 }
