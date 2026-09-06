@@ -28,6 +28,7 @@ images/
   Recap/vol3/            # vol.3 recap photos — hero-group.jpg + g1–g6.jpg (web-resized, see "Recap section")
   Moments/               # homepage gallery — 2 photos per hackathon, vol<N>-<slug>.jpg (see "Moments")
 team-human-design.pen    # Pencil design source-of-truth mockup (Home + Events frames)
+tools/pfp/               # portrait framing tool (Vision + CoreGraphics) — see "Current Team"
 vercel.json              # Rewrites + Git-integration config — see "Deployment" below
 CONTRIBUTING.md          # Contributor onboarding (Korean) — clone-don't-fork, branch/PR flow
 .github/workflows/
@@ -69,7 +70,20 @@ Team cards are **randomly shuffled** on each page load via `shuffleTeamCards()` 
 | SMU | team.smu | /in/smu00 |
 | Chloe Kim | team.chloe | /in/chaennnnnn |
 
-**Profile photos are all `1584 x 672`** (the LinkedIn banner ratio) on a flat warm-greige backdrop, `#C9C3B3`, subject centred with the head near the top and the frame cutting off around chest level. The card renders them at `height: 200px; object-fit: cover`, so it centre-crops — **vertical framing is what matters, the wide empty sides get cut.** When a new member only has snapshots, the house style is reproduced by editing them through the `codex` CLI (see the `draw-image` skill) and then cropping to spec with `sips`; Chloe's was built that way on 2026-09-06 from a personal snapshot (Dave picked the variant; the 1672x941 source is archived at `PARA/1. Inbox/01_Images/Chloe_원본_1672x941_20260906.png`, cropped here with `sips -c 709 1672 --cropOffset 34 0` then scaled to 1584x672). **A generated portrait must be shown to the person before it ships** — it is their face.
+**Profile photos are all `1584 x 672`** (the LinkedIn banner ratio) on a flat warm-greige backdrop, subject on a plain top, frame cutting off around chest level. The card renders them at `height: 200px; object-fit: cover`, so it also centre-crops horizontally — **vertical framing is what the visitor sees; the wide empty sides get cut.**
+
+🔴 **Do not eyeball the crop — run `tools/pfp/fit-portrait.swift`.** The photos come from different shoots, and left alone the faces land at wildly different sizes: measured 2026-09-06, face width ran from **157px (Sireal) to 223px (Chloe)**, a 1.42x spread, with the eye line moving 56px between cards. In a nine-card grid that reads as sloppiness, and it is not fixable by eye. The tool detects the face with Vision and scales/positions the photo into one house frame — **face width 185px, eye line y=245, face centred at x=792** — which brought those spreads to 4px and 2px. `tools/pfp/readme.md` has the full rationale; `tools/pfp/fit-all.sh` re-fits the whole roster if the constants ever change.
+
+```bash
+swift tools/pfp/fit-portrait.swift <source>.png images/PFP/Name.png   # fit a new member
+swift tools/pfp/fit-portrait.swift images/PFP/Name.png --measure-only # check, change nothing
+```
+
+Normalise on **face** width, not head or shoulder width — hair volume is a person's own attribute and should not drive the layout. Always fit from the original photo, never from an already-fitted file; each pass resamples.
+
+**The backdrop *colour* is still not normalised** — it ranges from `#AEA794` (Annie) to `#D7D3CA` (Rachel), and Annie's card reads visibly darker than the rest. The tool deliberately leaves colour alone, because masking a backdrop recolour off a subject risks haloing their hair.
+
+When a new member only has snapshots, the house look is reproduced by editing them through the `codex` CLI (see the `draw-image` skill) onto a flat greige backdrop, then fitting with the tool above. Chloe's was built that way on 2026-09-06 from a personal snapshot; sources are archived in `PARA/1. Inbox/01_Images/`. **A generated portrait must be shown to the person before it ships** — it is their face.
 
 ### Events page state machine (`events.html`)
 
