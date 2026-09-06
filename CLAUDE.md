@@ -81,7 +81,11 @@ swift tools/pfp/fit-portrait.swift images/PFP/Name.png --measure-only # check, c
 
 Normalise on **face** width, not head or shoulder width — hair volume is a person's own attribute and should not drive the layout. Always fit from the original photo, never from an already-fitted file; each pass resamples.
 
-**The backdrop *colour* is still not normalised** — it ranges from `#AEA794` (Annie) to `#D7D3CA` (Rachel), and Annie's card reads visibly darker than the rest. The tool deliberately leaves colour alone, because masking a backdrop recolour off a subject risks haloing their hair.
+**The backdrop colour is levelled by a second tool, `tools/pfp/level-backdrop.swift`** — the shoots ranged from `#AEA794` (Annie, visibly the darkest card) to `#D7D3CA` (Rachel); they are now all `#C9C3B3`. Its mask is a **flood fill inward from the border, not a colour threshold**: a threshold wide enough to catch hair edges also caught Rachel's cheek, which sits only 30 levels from her backdrop, and shifted her skin. Flood fill cannot reach a face because hair and clothing enclose it. Run it **after** `fit-all.sh` — fitting stretches edge pixels to fill margins, so level the colour once the geometry is final.
+
+```bash
+tools/pfp/fit-all.sh && tools/pfp/level-all.sh    # the full pass, in order
+```
 
 When a new member only has snapshots, the house look is reproduced by editing them through the `codex` CLI (see the `draw-image` skill) onto a flat greige backdrop, then fitting with the tool above. Chloe's was built that way on 2026-09-06 from a personal snapshot; sources are archived in `PARA/1. Inbox/01_Images/`. **A generated portrait must be shown to the person before it ships** — it is their face.
 
