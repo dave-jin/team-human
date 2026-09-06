@@ -14,7 +14,7 @@ over 56px between cards. In a nine-card grid that reads as sloppiness.
 | | |
 |---|---|
 | canvas | `1584 x 672` |
-| face width | **185 px** |
+| face width | **216 px** |
 | eye line | **y = 245** |
 | face centre | **x = 792** (frame centre) |
 
@@ -40,18 +40,36 @@ Needs macOS with the Xcode command line tools — it uses Vision for face
 detection and CoreGraphics to render. No other dependency, and nothing is added
 to the site build (there isn't one).
 
-## How the margins are filled
+## Why it refuses photos instead of padding them
 
 Scaling a photo **up** just crops in, so it always covers the canvas. Scaling
-**down** leaves margins. Those are filled by stretching the source's own two
-outermost pixel rows/columns outward. It is seamless here for two reasons: the
-backdrop is flat (measured deviation 0–5 per channel), and the torso leaves the
-bottom edge close to vertical, so extending the bottom row continues the body
-straight down instead of leaving a hole.
+**down** leaves margins, and a margin under the subject cannot be filled
+honestly — there is no record of what was there.
 
-If a future photo has a gradient backdrop or a subject that leaves the bottom
-edge at an angle, this trick will show — re-shoot or re-cut the subject onto a
-flat backdrop first.
+The first version filled it by stretching the source's last row downward. That
+looked fine on the short-haired portraits and **tore Chloe's and Rachel's long
+hair into vertical streaks**, because their hair crosses the bottom edge with
+real horizontal texture that a single stretched row turns into stripes. The
+face-size target was raised from 185 to 216 partly to make that case rare, and
+the padding was removed outright.
+
+Now a photo that does not reach far enough below the eye line is **rejected**,
+with the shortfall printed:
+
+```
+Chloe.png: photo stops 19px short of the bottom of the frame. The subject
+crosses that edge, so there is nothing honest to put there — use an original
+with more room below the chest. It needs 442px below the eye line; this one
+has 422.
+```
+
+That is what happened to Chloe: her `images/PFP/Chloe.png` had already been
+cropped once, so it was re-fitted from the uncropped `1672x941` original in
+`PARA/1. Inbox/01_Images/`.
+
+Side and top margins **are** filled, with the flat backdrop colour — those
+edges are pure backdrop and the tool checks that before doing it, refusing if
+they are not.
 
 ## Levelling the backdrop colour
 

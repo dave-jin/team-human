@@ -3,13 +3,20 @@
 //   swift fit-portrait.swift <input> <output.png> [--measure-only]
 //
 // Detects the face with Vision, then scales and positions the photo so every
-// portrait on the team page shares one face size and one eye line. Margins
-// created by scaling down are filled by stretching the source's own edge
-// pixels, which is seamless because the studio backdrop is flat and the torso
-// leaves the bottom edge vertically.
+// portrait on the team page shares one face size and one eye line.
+//
+// It never invents pixels underneath a subject. An earlier version filled the
+// bottom margin by stretching the source's last row downward; that is fine for
+// short hair but it tore Chloe's and Rachel's long hair into vertical streaks,
+// because their hair crosses the bottom edge with real horizontal texture. So
+// a photo that does not reach far enough below the eye line is now REJECTED
+// with the shortfall printed — supply a less-cropped original instead.
+//
+// Side and top margins are filled with the flat backdrop colour, which is
+// safe: the tool verifies those edges really are backdrop before it does it.
 //
 // House frame (see CLAUDE.md -> Current Team):
-//   canvas 1584x672 · face width 185px · eye line y=245 · face centred at x=792
+//   canvas 1584x672 · face width 216px · eye line y=245 · face centred at x=792
 
 import Foundation
 import Vision
@@ -18,7 +25,7 @@ import ImageIO
 import UniformTypeIdentifiers
 
 let OUT_W = 1584.0, OUT_H = 672.0
-let TARGET_FACE_W = 185.0, TARGET_EYE_Y = 245.0, TARGET_FACE_CX = 792.0
+let TARGET_FACE_W = 216.0, TARGET_EYE_Y = 245.0, TARGET_FACE_CX = 792.0
 
 let args = CommandLine.arguments
 guard args.count >= 2 else {
@@ -85,9 +92,43 @@ guard !outPath.isEmpty else {
     FileHandle.standardError.write("missing <output.png>\n".data(using: .utf8)!); exit(2)
 }
 
-// ---- render ---------------------------------------------------------------
+// ---- refuse to invent pixels ----------------------------------------------
 let tx = TARGET_FACE_CX - faceCX * scale
 let ty = TARGET_EYE_Y   - eyeY   * scale
+let dwPre = SW * scale, dhPre = SH * scale
+
+func die(_ m: String) -> Never {
+    FileHandle.standardError.write("\(( inPath as NSString).lastPathComponent): \(m)\n".data(using: .utf8)!)
+    exit(3)
+}
+if ty + dhPre < OUT_H {
+    let short = OUT_H - (ty + dhPre)
+    die(String(format: "photo stops %.0fpx short of the bottom of the frame. The subject crosses that edge, "
+        + "so there is nothing honest to put there — use an original with more room below the chest. "
+        + "It needs %.0fpx below the eye line; this one has %.0f.",
+        short, (OUT_H - TARGET_EYE_Y) / scale, SH - eyeY))
+}
+// side and top margins get a flat backdrop fill, so check those edges really are backdrop
+func edgeIsBackdrop(_ pts: [(Int, Int)]) -> Bool {
+    for (x, y) in pts {
+        let i = (y * img.width + x) * 4
+        let d = max(abs(Double(buf[i]) - Double(bgR)),
+                    max(abs(Double(buf[i+1]) - Double(bgG)), abs(Double(buf[i+2]) - Double(bgB))))
+        if d > 26 { return false }
+    }
+    return true
+}
+if ty > 0, !edgeIsBackdrop((0..<img.width).filter { $0 % 8 == 0 }.map { ($0, 1) }) {
+    die("needs a top margin but the top edge of the photo is not clean backdrop.")
+}
+if tx > 0, !edgeIsBackdrop((0..<img.height).filter { $0 % 8 == 0 }.map { (1, $0) }) {
+    die("needs a left margin but the left edge of the photo is not clean backdrop.")
+}
+if tx + dwPre < OUT_W, !edgeIsBackdrop((0..<img.height).filter { $0 % 8 == 0 }.map { (img.width - 2, $0) }) {
+    die("needs a right margin but the right edge of the photo is not clean backdrop.")
+}
+
+// ---- render ---------------------------------------------------------------
 guard let ctx = CGContext(data: nil, width: Int(OUT_W), height: Int(OUT_H), bitsPerComponent: 8,
                           bytesPerRow: 0, space: cs,
                           bitmapInfo: CGImageAlphaInfo.noneSkipLast.rawValue) else { exit(1) }
@@ -98,20 +139,9 @@ ctx.fill(CGRect(x: 0, y: 0, width: OUT_W, height: OUT_H))
 func rect(_ x: Double, _ y: Double, _ w: Double, _ h: Double) -> CGRect {   // top-left -> CG
     CGRect(x: x, y: OUT_H - y - h, width: w, height: h)
 }
-let dw = SW * scale, dh = SH * scale, edge = 2
-if ty > 0, let s = img.cropping(to: CGRect(x: 0, y: 0, width: img.width, height: edge)) {
-    ctx.draw(s, in: rect(tx, 0, dw, ty))
-}
-if ty + dh < OUT_H, let s = img.cropping(to: CGRect(x: 0, y: img.height - edge, width: img.width, height: edge)) {
-    ctx.draw(s, in: rect(tx, ty + dh, dw, OUT_H - (ty + dh)))
-}
-if tx > 0, let s = img.cropping(to: CGRect(x: 0, y: 0, width: edge, height: img.height)) {
-    ctx.draw(s, in: rect(0, ty, tx, dh))
-}
-if tx + dw < OUT_W, let s = img.cropping(to: CGRect(x: img.width - edge, y: 0, width: edge, height: img.height)) {
-    ctx.draw(s, in: rect(tx + dw, ty, OUT_W - (tx + dw), dh))
-}
-ctx.draw(img, in: rect(tx, ty, dw, dh))
+// the canvas is already flooded with the backdrop colour, so any side or top
+// margin is simply that flat colour — nothing is stretched or invented
+ctx.draw(img, in: rect(tx, ty, dwPre, dhPre))
 
 guard let out = ctx.makeImage(),
       let dest = CGImageDestinationCreateWithURL(URL(fileURLWithPath: outPath) as CFURL,
